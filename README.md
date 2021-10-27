@@ -2,7 +2,55 @@
 
 > [Airnode](https://api3.org/airnode) API Documentation
 
-{{ Give an overview of the API. Describe what it does. }}
+<h3>Free <a href="https://financialmodelingprep.com/developer/docs">financial statement API</a>. <br> Real-time and historical data of stock prices.</h3>
+
+Supports over **25000 stocks** across multiple exchanges. <br />
+<br />
+<br />
+
+<div align="center">
+  <span>
+    <img alt="Apple" src="/images/image-1.png" width="50">
+    <img alt="Netflix" src="/images/image-2.png" width="50">
+    <img alt="Tesla" src="/images/image-3.png" width="50">
+    <img alt="Bitcoin" src="/images/image-4.png" width="50">
+    <img alt="Lyft" src="/images/image-5.png" width="50">
+  </span>
+</div>
+
+<br />
+
+<p align="center">
+  <b>Whole U.S. market, XETRA, EURONEX, TSX, SEDAR, SEHK and more.</b>
+</p>
+<h4 align="center">
+  <b><a href="https://financialmodelingprep.com">Home Page</a></b>
+  •
+  <a href="https://financialmodelingprep.com/register">Register</a>
+  •
+  <a href="https://financialmodelingprep.com/developer/docs">Documentation</a>
+  •
+  <a href="mailto:info@financialmodelingprep.com">Support</a>
+</h4>
+<p></p>
+
+<!-- 🏠 🚪 ℹ️ 🛠 -->
+
+<h1 align="center">Key Features  <p> </p> </h1>
+
+Use our data that goes up to 30 years back in history. Earnings calendar, financial statements, multiple exchanges and more. We provide one of the most accurate data available on the market. <br />
+
+<p align="center">
+
+[![Trusted By 30.000 Customers !](https://img.shields.io/badge/Trusted%20by-30K+%20Customers-1abc9c.svg)](https://financialmodelingprep.com/developer)
+[![Twitter Follow](https://img.shields.io/twitter/follow/financial_mod?style=social)](https://twitter.com/financial_mod)
+[![GitHub Repo stars](https://img.shields.io/github/stars/antoinevulcain/Financial-Modeling-Prep-API?style=social)](https://github.com/antoinevulcain/Financial-Modeling-Prep-API)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/company/financial-modeling-prep)
+[![Status](https://img.shields.io/badge/Status-success)](https://financialmodelingprep.com/developer/docs/status)
+[![Docs](https://img.shields.io/badge/API%20Docs-red)](https://financialmodelingprep.com/developer/docs/)
+
+</p>
+
 
 **Home Page:** {{ URL to API home page }}  
 **Web2 Docs:** {{ URL to API documentation }}
