@@ -4,12 +4,10 @@
 
 <h3>Free <a href="https://financialmodelingprep.com/developer/docs">financial statement API</a>. <br> Real-time and historical data of stock prices.</h3>
 
-Supports over **25000 stocks** across multiple exchanges. <br />
-<br />
+Supports over **25000 stocks** across multiple exchanges. <b>Whole U.S. market, XETRA, EURONEX, TSX, SEDAR, SEHK and more.</b>
 
-<p align="center">
-  <b>Whole U.S. market, XETRA, EURONEX, TSX, SEDAR, SEHK and more.</b>
-</p>
+Use our data that goes up to 30 years back in history. Earnings calendar, financial statements, multiple exchanges and more. We provide one of the most accurate data available on the market. <br />
+
 <h4 align="center">
   <b><a href="https://financialmodelingprep.com">Home Page</a></b>
   •
@@ -20,8 +18,6 @@ Supports over **25000 stocks** across multiple exchanges. <br />
   <a href="mailto:info@financialmodelingprep.com">Support</a>
 </h4>
 <p></p>
-
-Use our data that goes up to 30 years back in history. Earnings calendar, financial statements, multiple exchanges and more. We provide one of the most accurate data available on the market. <br />
 
 **Home Page:** https://financialmodelingprep.com/developer
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs
