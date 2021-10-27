@@ -4,22 +4,9 @@
 
 <h3>Free <a href="https://financialmodelingprep.com/developer/docs">financial statement API</a>. <br> Real-time and historical data of stock prices.</h3>
 
-Supports over **25000 stocks** across multiple exchanges. <b>Whole U.S. market, XETRA, EURONEX, TSX, SEDAR, SEHK and more.</b>
+Supports over **25000 stocks** across multiple exchanges. Whole U.S. market, XETRA, EURONEX, TSX, SEDAR, SEHK and more. Use our data that goes up to 30 years back in history. Earnings calendar, financial statements, multiple exchanges and more. We provide one of the most accurate data available on the market. <br />
 
-Use our data that goes up to 30 years back in history. Earnings calendar, financial statements, multiple exchanges and more. We provide one of the most accurate data available on the market. <br />
-
-<h4 align="center">
-  <b><a href="https://financialmodelingprep.com">Home Page</a></b>
-  •
-  <a href="https://financialmodelingprep.com/register">Register</a>
-  •
-  <a href="https://financialmodelingprep.com/developer/docs">Documentation</a>
-  •
-  <a href="mailto:info@financialmodelingprep.com">Support</a>
-</h4>
-<p></p>
-
-**Home Page:** https://financialmodelingprep.com/developer
+**Home Page:** https://financialmodelingprep.com/developer <br />
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs
 
 ## Call this Airnode API
