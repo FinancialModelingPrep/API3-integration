@@ -6,7 +6,6 @@
 
 Supports over **25000 stocks** across multiple exchanges. <br />
 <br />
-<br />
 
 <p align="center">
   <b>Whole U.S. market, XETRA, EURONEX, TSX, SEDAR, SEHK and more.</b>
@@ -22,12 +21,10 @@ Supports over **25000 stocks** across multiple exchanges. <br />
 </h4>
 <p></p>
 
-<h1 align="center">Key Features  <p> </p> </h1>
-
 Use our data that goes up to 30 years back in history. Earnings calendar, financial statements, multiple exchanges and more. We provide one of the most accurate data available on the market. <br />
 
-**Home Page:** {{ URL to API home page }}  
-**Web2 Docs:** {{ URL to API documentation }}
+**Home Page:** https://financialmodelingprep.com/developer
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs
 
 ## Call this Airnode API
 
