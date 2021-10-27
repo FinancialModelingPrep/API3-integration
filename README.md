@@ -34,8 +34,6 @@ Supports over **25000 stocks** across multiple exchanges. <br />
 </h4>
 <p></p>
 
-<!-- 🏠 🚪 ℹ️ 🛠 -->
-
 <h1 align="center">Key Features  <p> </p> </h1>
 
 Use our data that goes up to 30 years back in history. Earnings calendar, financial statements, multiple exchanges and more. We provide one of the most accurate data available on the market. <br />
@@ -221,9 +219,9 @@ Read the [Airnode developer documentation](https://docs.api3.org/d/call-an-airno
 ---
 ## GET /v3/financial-statement-symbol-lists <a name="0x7a92e04086a7612f85e55d8d791e1323dc4469f5c510176ac3e7b997d87cf8bd"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+List of symbols that have financial statements.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs#Financial-Statements-List
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -238,7 +236,20 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  "02M.DE", "0A00.L", "0A02.L", "0A05.L", "0A0C.L", "0A0D.L", "0A0E.L", "0A0F.L", "0A0H.L", "0A0I.L", "0A0J.L", 
+  "0A0K.L", "0A0L.L", "0A0M.L", "0A0S.L", "0A0V.L", "0A0W.L", "0A0X.L", "0A10.L", "0A14.L", "0A15.L", "0A18.L", "0A1C.L", 
+  "0A1J.L", "0A1K.L", "0A1L.L", "0A1M.L", "0A1N.L", "0A1O.L", "0A1R.L", "0A1S.L", "0A1U.L", "0A1V.L", "0A1W.L", "0A1X.L",
+  "0A20.L", "0A21.L", "0A23.L", "0A26.L", "0A27.L", "0A28.L", "0A29.L", "0A2A.L", "0A2G.L", "0A2H.L", "0A2I.L", "0A2O.L", 
+  "0A2P.L", "0A2S.L", "0A2T.L", "0A2X.L", "0A2Z.L", "0A33.L", "0A34.L", "0A36.L", "0A37.L", "0A39.L", "0ACT.L", "0AH3.L",
+  "0AH7.L", "0AHI.L", "0AHJ.L", "0AI4.L", "0AJ1.L", "0AR9.L", "0B67.L", "0BDR.L", "0BFA.L", "0BJP.L", "0BNT.L", "0C6Y.L", 
+  "0CDX.L", "0CHZ.L", "0CIJ.L", "0CUM.L", "0CUN.L", "0CXC.L", "0D00.L", "0D1X.L", "0DDP.L", "0DH7.L", "0DHC.L", "0DHJ.L", 
+  "0DI7.L", "0DJI.L", "0DJV.L", "0DK7.L","0DK9.L", "0DKX.L", "0DLI.L", "0DMQ.L", "0DNH.L", "0DNW.L", "0DO7.L", "0DOL.L", 
+  "0DOS.L", "0DP0.L", "0DP4.L", "0DPB.L", "0DPM.L", "0DPU.L", "0DQ7.L", "0DQK.L", "0DQZ.L", "0DRH.L", "0DRV.L", "0DSJ.L", 
+  "0DTF.L", "0DTI.L", "0DTK.L", "0DU3.L", "0DUI.L", "0DUK.L", "0DVE.L", "0DVR.L", "0DWL.L", "0DWV.L", "0DXG.L", "0DXU.L", 
+  "0DYD.L", "0DYQ.L", "0DZ0.L", "0DZC.L", "0DZJ.L", "0E1L.L", "0E1Y.L", "0E3C.L", "0E4K.L", "0E4Q.L", "0E5M.L", "0E6Y.L", 
+  "0E7S.L", "0E7Z.L", "0E9V.L", "0EA2.L", "0EAQ.L", "0EAW.L", "0EBQ.L", "0EDD.L", "0EDE.L", ...
+]
 ```
 ----
 ## GET /v3/income-statement/{symbol} <a name="0x3e60ef161562c598d9beaf07a3eb49681695fb1a2598991e6dfbfe2e52f7d9db"></a>
