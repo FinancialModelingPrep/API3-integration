@@ -620,9 +620,9 @@ datatype : csv
 ----
 ## GET /v3/income-statement/{symbol} <a name="0x3e60ef161562c598d9beaf07a3eb49681695fb1a2598991e6dfbfe2e52f7d9db"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Financial statement reports, such as the income statement, balance sheet statement, and cash flow statement, are available.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/international-filings
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -631,21 +631,62 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
+datatype : csv
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-10-31",
+    "symbol" : "RY.TO",
+    "reportedCurrency" : "CAD",
+    "fillingDate" : "2020-10-31",
+    "acceptedDate" : "2020-10-31",
+    "period" : "FY",
+    "revenue" : 47104000000,
+    "costOfRevenue" : 0.0,
+    "grossProfit" : 0.0,
+    "grossProfitRatio" : 0.0,
+    "researchAndDevelopmentExpenses" : 0.0,
+    "generalAndAdministrativeExpenses" : 19924000000,
+    "sellingAndMarketingExpenses" : 0.0,
+    "sellingGeneralAndAdministrativeExpenses" : 0.0,
+    "otherExpenses" : 0.0,
+    "operatingExpenses" : 0.0,
+    "costAndExpenses" : 0.0,
+    "interestExpense" : 14048000000,
+    "depreciationAndAmortization" : 1273000000,
+    "ebitda" : 0.0,
+    "ebitdaratio" : 0.0,
+    "operatingIncome" : 0.0,
+    "operatingIncomeRatio" : 0.0,
+    "totalOtherIncomeExpensesNet" : 0.0,
+    "incomeBeforeTax" : 14389000000,
+    "incomeBeforeTaxRatio" : 0.305472995923913,
+    "incomeTaxExpense" : 2952000000,
+    "netIncome" : 11432000000,
+    "netIncomeRatio" : 0.24269701086956522,
+    "eps" : 7.9677776159255185,
+    "epsdiluted" : 7.9677776159255185,
+    "weightedAverageShsOut" : 1434779000,
+    "weightedAverageShsOutDil" : 1434779000,
+    "link" : "https://www.sedar.com/ModifyCompanyDocumentSearchForm.do?lang=EN&company_search=Royal Bank of Canada&document_selection=0&industry_group=A&FromDate=13&FromMonth=05&FromYear=2000&ToDate=13&ToMonth=11&ToYear=2020&Variable=Issuer",
+
+
+    "finalLink" : "https://www.sedar.com/ModifyCompanyDocumentSearchForm.do?lang=EN&company_search=Royal Bank of Canada&document_selection=0&industry_group=A&FromDate=13&FromMonth=05&FromYear=2000&ToDate=13&ToMonth=11&ToYear=2020&Variable=Issuer"
+  }, ...
+]
 ```
 ----
 ## GET /v3/financial-statements/{symbol} <a name="0x5357de3fabc940fb28fc293e5ceb8b818b5a2ce0bbe4c891026893f28f682366"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+You can use this endpoint to download all financial statements of a company in one zip file. It contains XLSX files with all of the company's financial statements.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financials-zip
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -654,21 +695,18 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-datatype		// Parameter Description...
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+datatype : zip
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
 ## GET /v4/financial-reports-dates <a name="0x36c15ab2247a81e28aa6fa2c10222ae8ce840904b5857c27753e68ab4dc9b5c5"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+The endpoint returns all statements from the company that include links to the JSON and XLSX versions of the statement.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/list-dates-links
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -677,20 +715,42 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "AAPL",
+    "date" : "2020",
+    "period" : "FY",
+    "linkXlsx" : "https://financialmodelingprep.com/api/v4/financial-reports-xlsx?symbol=AAPL&year=2020&period=FY&apikey=YOUR_API_KEY",
+    "linkJson" : "https://financialmodelingprep.com/api/v4/financial-reports-json?symbol=AAPL&year=2020&period=FY&apikey=YOUR_API_KEY"
+  }, {
+    "symbol" : "AAPL",
+    "date" : "2019",
+    "period" : "FY",
+    "linkXlsx" : "https://financialmodelingprep.com/api/v4/financial-reports-xlsx?symbol=AAPL&year=2019&period=FY&apikey=YOUR_API_KEY",
+    "linkJson" : "https://financialmodelingprep.com/api/v4/financial-reports-json?symbol=AAPL&year=2019&period=FY&apikey=YOUR_API_KEY"
+  }, {
+    "symbol" : "AAPL",
+    "date" : "2018",
+    "period" : "FY",
+    "linkXlsx" : "https://financialmodelingprep.com/api/v4/financial-reports-xlsx?symbol=AAPL&year=2018&period=FY&apikey=YOUR_API_KEY",
+    "linkJson" : "https://financialmodelingprep.com/api/v4/financial-reports-json?symbol=AAPL&year=2018&period=FY&apikey=YOUR_API_KEY"
+  }, ... 
+]
 ```
 ----
 ## GET /v4/financial-reports-json <a name="0x0449d269e3c08f92abd5120dee267a777b1a0ae200abb3324ef2d5c5abc36162"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Financial Data access Quarterly Earnings Reports and Annual Reports on Form 10-K.
+The 10-K report is equivalent to the annual report that a company publish, the 10-Q is for the quartely report.
+Each company has a different fiscal year, for example AAPL end its fiscal year in september.
+This endpoint uses the calendar year. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/annual-report-form
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -699,22 +759,59 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-symbol		// Parameter Description...
-year		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+Year : Number
+Period : FY | Q1 | Q2 | Q3 | Q4 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "period" : "FY",
+  "year" : "2020",
+  "Cover Page" : [ {
+    "Cover Page - USD ($) shares in Thousands, $ in Millions" : [ "12 Months Ended" ]
+  }, {
+    "items" : [ "Sep. 26, 2020", "Oct. 16, 2020", "Mar. 27, 2020" ]
+  }, {
+    "Document Type" : [ "10-K" ]
+  }, {
+    "Document Annual Report" : [ "true" ]
+  }, {
+    "Document Period End Date" : [ "Sep. 26,2020" ]
+  }, {
+    "Document Transition Report" : [ "false" ]
+  }, {
+    "Entity File Number" : [ "001-36743" ]
+  }, {
+    "Entity Registrant Name" : [ "Apple Inc." ]
+  }, {
+    "Entity Incorporation, State or Country Code" : [ "CA" ]
+  }, {
+    "Entity Tax Identification Number" : [ "94-2404110" ]
+  }, {
+    "Entity Address, Address Line One" : [ "One Apple Park Way" ]
+  }, {
+    "Entity Address, City or Town" : [ "Cupertino" ]
+  }, {
+    "Entity Address, State or Province" : [ "CA" ]
+  }, {
+    "Entity Address, Postal Zip Code" : [ "95014" ]
+  }, {
+    "City Area Code" : [ "408" ]
+  }, {
+    "Local Phone Number" : [ "996-1010" ]
+  }, ...
+}
 ```
 ----
 ## GET /v4/shares_float <a name="0x2e8f5a7acb9c4ac1cb2e500ac09455b77917fa65770c79a83db4c71fac60642d"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+The number of shares available for trading is known as the float. The more floatable shares there are, the better. RSUs and remaining shares are used to calculate float shares.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/shares-float
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -723,20 +820,27 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "AAPL",
+  "date" : "2021-06-03",
+  "freeFloat" : 99.89818787368489,
+  "floatShares" : 1.6670609616E10,
+  "outstandingShares" : 1.6687599616E10,
+  "source" : "https://www.sec.gov/Archives/edgar/data/320193/000032019321000056/aapl-20210327.htm"
+} ]
 ```
 ----
 ## GET /v4/shares_float/all <a name="0x58baa0dcac6924c4129f64a64c1b414c5a9a3a429e9f1b828848bb75a884510f"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All latest shares float available.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/shares-float
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -751,14 +855,21 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "AAPL",
+  "date" : "2021-06-03",
+  "freeFloat" : 99.89818787368489,
+  "floatShares" : 1.6670609616E10,
+  "outstandingShares" : 1.6687599616E10,
+  "source" : "https://www.sec.gov/Archives/edgar/data/320193/000032019321000056/aapl-20210327.htm"
+} ]
 ```
 ----
 ## GET /v4/rss_feed <a name="0x4f4516e2cc48556fcba36e80eab3baed1e0a012d237c52befce6099e7cafe084"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns specified SEC filings in JSON and CSV in real time. Examine the query parameters to see what kinds of filings it returns. You can also check if a filing was processed by us and specify a filing date range.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/sec-rss-feeds-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -767,25 +878,63 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-datatype		// Parameter Description...
-from		// Parameter Description...
-isDone		// Parameter Description...
-limit		// Parameter Description...
-to		// Parameter Description...
-type		// Parameter Description...
+limit : Number
+datatype : csv
+type : 10-Q | 10-K | 13F-HR | 6-K
+from : YYYY-MM-DD
+to : YYYY-MM-DD
+isDone : true/false 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[  
+    {
+        "title" : "6-K - ONCOLYTICS BIOTECH INC (0001129928) (Filer)",
+        "date" : "2020-05-29 16:48:22",
+        "link" : "https://www.sec.gov/Archives/edgar/data/1129928/000112992820000034/0001129928-20-000034-index.htm",
+        "cik" : "0001129928",
+        "form_type" : "6-K",
+        "ticker" : "ONCY"
+    }, {
+        "title" : "10-Q - BERKSHIRE HILLS BANCORP INC (0001108134) (Filer)",
+        "date" : "2020-05-29 16:45:47",
+        "link" : "https://www.sec.gov/Archives/edgar/data/1108134/000110813420000012/0001108134-20-000012-index.htm",
+        "cik" : "0001108134",
+        "form_type" : "10-Q",
+        "ticker" : "BHLB"
+    }, {
+        "title" : "10-Q - URBAN ONE, INC. (0001041657) (Filer)",
+        "date" : "2020-05-29 16:45:24",
+        "link" : "https://www.sec.gov/Archives/edgar/data/1041657/000110465920067812/0001104659-20-067812-index.htm",
+        "cik" : "0001041657",
+        "form_type" : "10-Q",
+        "ticker" : "UONEK"
+    }, {
+        "title" : "10-K - REMARK HOLDINGS, INC. (0001368365) (Filer)",
+        "date" : "2020-05-29 16:42:40",
+        "link" : "https://www.sec.gov/Archives/edgar/data/1368365/000136836520000028/0001368365-20-000028-index.htm",
+        "cik" : "0001368365",
+        "form_type" : "10-K",
+        "ticker" : "MARK"
+    }, {
+        "title" : "10-K - SONO TEK CORP (0000806172) (Filer)",
+        "date" : "2020-05-29 16:41:11",
+        "link" : "https://www.sec.gov/Archives/edgar/data/806172/000117152020000252/0001171520-20-000252-index.htm",
+        "cik" : "0000806172",
+        "form_type" : "10-K",
+        "ticker" : "SOTK"
+  }
+]
 ```
 ----
 ## GET /v3/earning_call_transcript/{symbol} <a name="0x338180d1ef637856e0c66e35fb6540272b4f6870f2a55eec7ac93915eb5644ee"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+One important report is the Earning Call Transcript.
+You can find a real example on how to do NLP (Natural language processing) to analyze earning call transcripts and consequent ticker quarter growth to predict performance as compared to respective index. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/earning-call-transcript
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -794,22 +943,43 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-quarter		// Parameter Description...
-year		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+Quarter : 1 | 2 | 3 | 4
+Year : Number (ex: 2020) 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "AAPL",
+    "quarter" : 3,
+    "year" : 2020,
+    "date" : "2020-07-31 17:00:00",
+    "content" : "Operator: Good day, everyone. Welcome to the Apple Incorporated Third Quarter Fiscal Year 2020 Earnings Conference Call. 
+    Today's call is being recorded. At this time, for opening remarks and introductions, I would like to turn things over to Mr. Tejas Gala,
+    Senior Manager, Corporate Finance and Investor Relations. Please go ahead, sir.
+    Tejas Gala: Thank you. Good afternoon and thank you for joining us. Speaking first today is Apple's CEO, Tim Cook; and he'll be followed 
+    by CFO, Luca Maestri. After that, we'll open the call to questions from analysts. Please note that some of the information you'll hear 
+    during our discussion today will consist of forward-looking statements including without limitation those regarding revenue, gross margin, 
+    operating expenses, other income and expense, taxes, capitalallocation, and future business outlook, including the potential impact of 
+    COVID-19 on the company's business and results of operations. Actual results or trends could differ materially from our forecast. For 
+    more information, please refer to the risk factors discussed in Apple's most recently filed periodic reports Form 10-K and Form 10-Q 
+    and the Form 8-K filed with the SEC today along with the associated press release. Apple assumes no obligation to update any forward-looking 
+    statements or information, which speak as of their respective dates. I'd now like to turn the call over to Tim for introductory remarks.
+    Tim Cook: Thanks, Tejas. Good afternoon, everyone. Thanks for joining the call today. Before we begin, I joined the many millions across 
+    this country in mourning and memorialize Congressman John Lewis, who was laid to rest earlier today. We've lost a hero who walked among 
+    us, a leader in the truest sense who urged this country to aim higher and be better until the very end." ...
+  }
+]
 ```
 ----
 ## GET /v4/batch_earning_call_transcript/{symbol} <a name="0x428748e780ae4ecf326c72f3fa469dc3508f96761ebaad0badc8cc588f8caea4"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Transcripts for symbol for specific year
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/earning-call-transcript
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -818,21 +988,42 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-year		// Parameter Description...
-symbol		// Parameter Description...
+Year : Number (ex: 2020) 
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "AAPL",
+    "quarter" : 3,
+    "year" : 2020,
+    "date" : "2020-07-31 17:00:00",
+    "content" : "Operator: Good day, everyone. Welcome to the Apple Incorporated Third Quarter Fiscal Year 2020 Earnings Conference Call. 
+    Today's call is being recorded. At this time, for opening remarks and introductions, I would like to turn things over to Mr. Tejas Gala,
+    Senior Manager, Corporate Finance and Investor Relations. Please go ahead, sir.
+    Tejas Gala: Thank you. Good afternoon and thank you for joining us. Speaking first today is Apple's CEO, Tim Cook; and he'll be followed 
+    by CFO, Luca Maestri. After that, we'll open the call to questions from analysts. Please note that some of the information you'll hear 
+    during our discussion today will consist of forward-looking statements including without limitation those regarding revenue, gross margin, 
+    operating expenses, other income and expense, taxes, capitalallocation, and future business outlook, including the potential impact of 
+    COVID-19 on the company's business and results of operations. Actual results or trends could differ materially from our forecast. For 
+    more information, please refer to the risk factors discussed in Apple's most recently filed periodic reports Form 10-K and Form 10-Q 
+    and the Form 8-K filed with the SEC today along with the associated press release. Apple assumes no obligation to update any forward-looking 
+    statements or information, which speak as of their respective dates. I'd now like to turn the call over to Tim for introductory remarks.
+    Tim Cook: Thanks, Tejas. Good afternoon, everyone. Thanks for joining the call today. Before we begin, I joined the many millions across 
+    this country in mourning and memorialize Congressman John Lewis, who was laid to rest earlier today. We've lost a hero who walked among 
+    us, a leader in the truest sense who urged this country to aim higher and be better until the very end" ...
+  }
+]
 ```
 ----
 ## GET /v3/sec_filings/{symbol} <a name="0x784f5e8f14ac4e7131d0be44d8d6f948151764dd882b3600c6ad09ff02827722"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+It returns all SEC filings for a specific company. 10-K, 8-K, and all other types of filings are covered. Filings are a good way to keep track of what's going on inside a company, because every significant event has its own form type in the SEC. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/sec-filings
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -841,22 +1032,48 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
-type		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+limit : Number
+type : 10-Q | 10-K | 13F-HR | ... 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "AAPL",
+    "fillingDate" : "2020-10-05 00:00:00",
+    "acceptedDate" : "2020-10-05 18:33:56",
+    "cik" : "0000320193",
+    "type" : "4",
+    "link" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000084/0000320193-20-000084-index.htm",
+    "finalLink" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000084/xslF345X03/wf-form4_160193720275669.xml"
+  }, {
+    "symbol" : "AAPL",
+    "fillingDate" : "2020-10-05 00:00:00",
+    "acceptedDate" : "2020-10-05 18:32:48",
+    "cik" : "0000320193",
+    "type" : "4",
+    "link" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000083/0000320193-20-000083-index.htm",
+    "finalLink" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000083/xslF345X03/wf-form4_160193715587800.xml"
+  }, {
+    "symbol" : "AAPL",
+    "fillingDate" : "2020-10-05 00:00:00",
+    "acceptedDate" : "2020-10-05 18:30:48",
+    "cik" : "0000320193",
+    "type" : "4",
+    "link" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000082/0000320193-20-000082-index.htm",
+    "finalLink" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000082/xslF345X03/wf-form4_160193701297920.xml"
+  }, ...
+]
 ```
 ----
 ## GET /v4/rss_feed_8k <a name="0x7b60cd4f871c5219dc44e895b643bff03f7828a11f7bf3d063a858261fbcb5af"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+If a publicly traded company experiences a significant event, it is usually required to file Form 8-K to notify the public and the Securities and Exchange Commission. There are a variety of situations that can necessitate the filing of an 8-K, and they frequently affect the stock price of the company.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/rss-feed-8k
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -865,16 +1082,43 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-from		// Parameter Description...
-hasFinancial		// Parameter Description...
-limit		// Parameter Description...
-to		// Parameter Description...
+limit : Number
+from : YYYY-MM-DD
+to : YYYY-MM-DD
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+      "title" : "8-K - Fusion Acquisition Corp. (0001807846) (Filer)",
+      "date" : "2021-09-28 17:27:56",
+      "symbol" : "FUSE-UN",
+      "cik" : "0001807846",
+      "link" : "https://www.sec.gov/Archives/edgar/data/1807846/000121390021050379/0001213900-21-050379-index.htm",
+      "finalLink" : "",
+      "process" : "False",
+      "hasFinancials" : "False"
+    }, {
+      "title" : "8-K - Fusion Acquisition Corp. (0001807846) (Filer)",
+      "date" : "2021-09-28 17:27:56",
+      "symbol" : "FUSE",
+      "cik" : "0001807846",
+      "link" : "https://www.sec.gov/Archives/edgar/data/1807846/000121390021050379/0001213900-21-050379-index.htm",
+      "finalLink" : "",
+      "process" : "False",
+      "hasFinancials" : "False"
+    }, {
+      "title" : "8-K - Fusion Acquisition Corp. (0001807846) (Filer)",
+      "date" : "2021-09-28 17:27:56",
+      "symbol" : "ML",
+      "cik" : "0001807846",
+      "link" : "https://www.sec.gov/Archives/edgar/data/1807846/000121390021050379/0001213900-21-050379-index.htm",
+      "finalLink" : "",
+      "process" : "False",
+      "hasFinancials" : "False"
+    }, ...
+  ]
 ```
 ----
 ## GET /v3/ratios/{symbol} <a name="0x3b6ef560e4820b136eae432f33ca3247a0120927a1c7649fdc86b83f1dfeafa6"></a>
