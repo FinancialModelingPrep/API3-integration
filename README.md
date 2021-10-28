@@ -452,7 +452,7 @@ datatype : csv
 ----
 ## GET /v3/balance-sheet-statement-as-reported/{symbol} <a name="0x8b36e15b108f18695210870aa5ef1ee0b6db8efd98637b04655afd02a08b2f50"></a>
 
-This endpoint returns reported financial values from company statements. 
+This endpoint returns reported financial values from company statements.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statement-as-reported#Balance-Sheet-Statement-as-reported
 
@@ -739,7 +739,7 @@ symbol : Company Symbol, ex. AAPL
     "period" : "FY",
     "linkXlsx" : "https://financialmodelingprep.com/api/v4/financial-reports-xlsx?symbol=AAPL&year=2018&period=FY&apikey=YOUR_API_KEY",
     "linkJson" : "https://financialmodelingprep.com/api/v4/financial-reports-json?symbol=AAPL&year=2018&period=FY&apikey=YOUR_API_KEY"
-  }, ... 
+  }, ...
 ]
 ```
 ----
@@ -748,7 +748,7 @@ symbol : Company Symbol, ex. AAPL
 Financial Data access Quarterly Earnings Reports and Annual Reports on Form 10-K.
 The 10-K report is equivalent to the annual report that a company publish, the 10-Q is for the quartely report.
 Each company has a different fiscal year, for example AAPL end its fiscal year in september.
-This endpoint uses the calendar year. 
+This endpoint uses the calendar year.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/annual-report-form
 
@@ -761,7 +761,7 @@ You'll need the **Endpoint ID** to call this endpoint.
 ```solidity
 Symbol : Company Symbol, ex. AAPL
 Year : Number
-Period : FY | Q1 | Q2 | Q3 | Q4 
+Period : FY | Q1 | Q2 | Q3 | Q4
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
@@ -883,13 +883,13 @@ datatype : csv
 type : 10-Q | 10-K | 13F-HR | 6-K
 from : YYYY-MM-DD
 to : YYYY-MM-DD
-isDone : true/false 
+isDone : true/false
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[  
+[
     {
         "title" : "6-K - ONCOLYTICS BIOTECH INC (0001129928) (Filer)",
         "date" : "2020-05-29 16:48:22",
@@ -932,7 +932,7 @@ isDone : true/false
 ## GET /v3/earning_call_transcript/{symbol} <a name="0x338180d1ef637856e0c66e35fb6540272b4f6870f2a55eec7ac93915eb5644ee"></a>
 
 One important report is the Earning Call Transcript.
-You can find a real example on how to do NLP (Natural language processing) to analyze earning call transcripts and consequent ticker quarter growth to predict performance as compared to respective index. 
+You can find a real example on how to do NLP (Natural language processing) to analyze earning call transcripts and consequent ticker quarter growth to predict performance as compared to respective index.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/earning-call-transcript
 
@@ -945,19 +945,19 @@ You'll need the **Endpoint ID** to call this endpoint.
 ```solidity
 Symbol : Company Symbol, ex. AAPL
 Quarter : 1 | 2 | 3 | 4
-Year : Number (ex: 2020) 
+Year : Number (ex: 2020)
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "AAPL",
     "quarter" : 3,
     "year" : 2020,
     "date" : "2020-07-31 17:00:00",
-    "content" : "Operator - Good day, everyone."
+    "content" : "Operator - Good day, everyone. Welcome to the Apple Incorporated Third Quarter Fiscal Year 2020 Earnings Conference Call. Today's call is being recorded. At this time, for opening remarks and introductions, I would like to turn things over to Mr. Tejas Gala, Senior Manager, Corporate Finance and Investor Relations. Please go ahead, sir. Tejas Gala: Thank you. Good afternoon and thank you for joining us. Speaking first today is Apple's CEO, Tim Cook; and he'll be followed  by CFO, Luca Maestri. After that, we'll open the call to questions from analysts. Please note that some of the information you'll hear during our discussion today will consist of forward-looking statements including without limitation those regarding revenue, gross margin, operating expenses, other income and expense, taxes, capitalallocation, and future business outlook, including the potential impact of COVID-19 on the company's business and results of operations. Actual results or trends could differ materially from our forecast. For more information, please refer to the risk factors discussed in Apple's most recently filed periodic reports Form 10-K and Form 10-Q and the Form 8-K filed with the SEC today along with the associated press release. Apple assumes no obligation to update any forward-looking statements or information, which speak as of their respective dates. I'd now like to turn the call over to Tim for introductory remarks.Tim Cook: Thanks, Tejas. Good afternoon, everyone. Thanks for joining the call today. Before we begin, I joined the many millions across this country in mourning and memorialize Congressman John Lewis, who was laid to rest earlier today. We've lost a hero who walked among us, a leader in the truest sense who urged this country to aim higher and be better until the very end."
   }
 ]
 ```
@@ -975,27 +975,27 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-Year : Number (ex: 2020) 
+Year : Number (ex: 2020)
 Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "AAPL",
     "quarter" : 3,
     "year" : 2020,
     "date" : "2020-07-31 17:00:00",
-    "content" : "Operator - Good day, everyone. Welcome to the Apple Incorporated Third Quarter Fiscal Year 2020 Earnings Conference Call. Today's call is being recorded. At this time, for opening remarks and introductions, I would like to turn things over to Mr. Tejas Gala, Senior Manager, Corporate Finance and Investor Relations. Please go ahead, sir. Tejas Gala: Thank you. Good afternoon and thank you for joining us. Speaking first today is Apple's CEO, Tim Cook; and he'll be followed  by CFO, Luca Maestri. After that, we'll open the call to questions from analysts. Please note that some of the information you'll hear during our discussion today will consist of forward-looking statements including without limitation those regarding revenue, gross margin, operating expenses, other income and expense, taxes, capitalallocation, and future business outlook, including the potential impact of COVID-19 on the company's business and results of operations. Actual results or trends could differ materially from our forecast. For more information, please refer to the risk factors discussed in Apple's most recently filed periodic reports Form 10-K and Form 10-Q and the Form 8-K filed with the SEC today along with the associated press release. Apple assumes no obligation to update any forward-looking statements or information, which speak as of their respective dates. I'd now like to turn the call over to Tim for introductory remarks.Tim Cook: Thanks, Tejas. Good afternoon, everyone. Thanks for joining the call today. Before we begin, I joined the many millions across this country in mourning and memorialize Congressman John Lewis, who was laid to rest earlier today. We've lost a hero who walked among us, a leader in the truest sense who urged this country to aim higher and be better until the very end"
+    "content" : "Operator - Good day, everyone. Welcome to the Apple Incorporated Third Quarter Fiscal Year 2020 Earnings Conference Call. Today's call is being recorded. At this time, for opening remarks and introductions, I would like to turn things over to Mr. Tejas Gala, Senior Manager, Corporate Finance and Investor Relations. Please go ahead, sir. Tejas Gala: Thank you. Good afternoon and thank you for joining us. Speaking first today is Apple's CEO, Tim Cook; and he'll be followed  by CFO, Luca Maestri. After that, we'll open the call to questions from analysts. Please note that some of the information you'll hear during our discussion today will consist of forward-looking statements including without limitation those regarding revenue, gross margin, operating expenses, other income and expense, taxes, capitalallocation, and future business outlook, including the potential impact of COVID-19 on the company's business and results of operations. Actual results or trends could differ materially from our forecast. For more information, please refer to the risk factors discussed in Apple's most recently filed periodic reports Form 10-K and Form 10-Q and the Form 8-K filed with the SEC today along with the associated press release. Apple assumes no obligation to update any forward-looking statements or information, which speak as of their respective dates. I'd now like to turn the call over to Tim for introductory remarks.Tim Cook: Thanks, Tejas. Good afternoon, everyone. Thanks for joining the call today. Before we begin, I joined the many millions across this country in mourning and memorialize Congressman John Lewis, who was laid to rest earlier today. We've lost a hero who walked among us, a leader in the truest sense who urged this country to aim higher and be better until the very end."
   }
 ]
 ```
 ----
 ## GET /v3/sec_filings/{symbol} <a name="0x784f5e8f14ac4e7131d0be44d8d6f948151764dd882b3600c6ad09ff02827722"></a>
 
-It returns all SEC filings for a specific company. 10-K, 8-K, and all other types of filings are covered. Filings are a good way to keep track of what's going on inside a company, because every significant event has its own form type in the SEC. 
+It returns all SEC filings for a specific company. 10-K, 8-K, and all other types of filings are covered. Filings are a good way to keep track of what's going on inside a company, because every significant event has its own form type in the SEC.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/sec-filings
 
@@ -1008,13 +1008,13 @@ You'll need the **Endpoint ID** to call this endpoint.
 ```solidity
 Symbol : Company Symbol, ex. AAPL
 limit : Number
-type : 10-Q | 10-K | 13F-HR | ... 
+type : 10-Q | 10-K | 13F-HR | ...
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "AAPL",
     "fillingDate" : "2020-10-05 00:00:00",
@@ -1097,9 +1097,9 @@ to : YYYY-MM-DD
 ----
 ## GET /v3/ratios/{symbol} <a name="0x3b6ef560e4820b136eae432f33ca3247a0120927a1c7649fdc86b83f1dfeafa6"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns financial ratios for companies to help in company analysis. This endpoint computes ratios for each financial statement presented by the company.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-ratio-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1108,22 +1108,84 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-period		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[
+  {
+    "symbol" : "AAPL",
+    "date" : "2020-09-26",
+    "period" : "FY",
+    "currentRatio" : 1.3636044481554577,
+    "quickRatio" : 1.2181949294064065,
+    "cashRatio" : 0.36071049035979963,
+    "daysOfSalesOutstanding" : 49.78753437881355,
+    "daysOfInventoryOutstanding" : 8.741883356235881,
+    "operatingCycle" : 58.52941773504943,
+    "daysOfPayablesOutstanding" : 91.04818971567418,
+    "cashConversionCycle" : -32.518771980624756,
+    "grossProfitMargin" : 0.38233247727810865,
+    "operatingProfitMargin" : 0.24147314354406862,
+    "pretaxProfitMargin" : 0.24439830246070343,
+    "netProfitMargin" : 0.20913611278072236,
+    "effectiveTaxRate" : 0.14428164731484103,
+    "returnOnAssets" : 0.1772557180259843,
+    "returnOnEquity" : 0.8786635853012749,
+    "returnOnCapitalEmployed" : 0.3033831282952548,
+    "netIncomePerEBT" : 0.855718352685159,
+    "ebtPerEbit" : 1.0121138064204682,
+    "ebitPerRevenue" : 0.24147314354406862,
+    "debtRatio" : 0.7982666847799239,
+    "debtEquityRatio" : 3.957039440456695,
+    "longTermDebtToCapitalization" : 0.6016060388034584,
+    "totalDebtToCapitalization" : 0.6324623822247223,
+    "interestCoverage" : 23.07274625826662,
+    "cashFlowToDebtRatio" : 0.7175104059198122,
+    "companyEquityMultiplier" : 4.957039440456695,
+    "receivablesTurnover" : 7.331152356789959,
+    "payablesTurnover" : 4.008866086627577,
+    "inventoryTurnover" : 41.75301649839941,
+    "fixedAssetTurnover" : 7.466545177609748,
+    "assetTurnover" : 0.8475615027416885,
+    "operatingCashFlowPerShare" : 4.649230448454163,
+    "freeCashFlowPerShare" : 4.2280138811865,
+    "cashPerShare" : 5.241031369137106,
+    "payoutRatio" : 0.24526658654264863,
+    "operatingCashFlowSalesRatio" : 0.2938782944465694,
+    "freeCashFlowOperatingCashFlowRatio" : 0.909400798274537,
+    "cashFlowCoverageRatios" : 0.7175104059198122,
+    "shortTermCoverageRatios" : 5.8591037838623,
+    "capitalExpenditureCoverageRatio" : -11.037624846080176,
+    "dividendPaidAndCapexCoverageRatio" : 11.912876550502068,
+    "dividendPayoutRatio" : 0.2452665865426486,
+    "priceBookValueRatio" : 30.553901085207258,
+    "priceToBookRatio" : 30.553901085207258,
+    "priceToSalesRatio" : 7.272321523437178,
+    "priceEarningsRatio" : 34.773150493918536,
+    "priceToFreeCashFlowsRatio" : 27.211358863304806,
+    "priceToOperatingCashFlowsRatio" : 24.74603147242429,
+    "priceCashFlowRatio" : 24.74603147242429,
+    "priceEarningsToGrowthRatio" : 3.2774378851354733,
+    "priceSalesRatio" : 7.272321523437178,
+    "dividendYield" : 0.007053332328502797,
+    "enterpriseValueMultiple" : 26.773652035146323,
+    "priceFairValue" : 30.553901085207258
+  }, ...
+]
 ```
 ----
 ## GET /v3/enterprise-values/{symbol} <a name="0xcc40af84f4216d7f4802d01cf4edac5fdfd9c685d9ddb1c63812aba2e70a61bf"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Get a company enterprise value based on its financial statement, it is calculated from Market Value.
+The enterprise Value is a proportion of an organization's absolute worth, frequently utilized as a more thorough option in contrast to value market capitalization.
+Its estimation the market capitalization of an organization yet in addition present moment and long obligation just as any money on the organization's asset report.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/company-enterprise-value-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1132,22 +1194,65 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-period		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "enterpriseValues" : [ {
+    "date" : "2018-09-29",
+    "Stock Price" : "224.6375",
+    "Number of Shares" : "4955377000.0",
+    "Market Capitalization" : 1.1131635008375E12,
+    "- Cash & Cash Equivalents" : 2.5913E10,
+    "+ Total Debt" : 1.14483E11,
+    "Enterprise Value" : 1.2017335008375E12
+  }, {
+    "date" : "2017-09-30",
+    "Stock Price" : "149.7705",
+    "Number of Shares" : "5217242000.0",
+    "Market Capitalization" : 7.81388942961E11,
+    "- Cash & Cash Equivalents" : 2.0289E10,
+    "+ Total Debt" : 1.1568E11,
+    "Enterprise Value" : 8.76779942961E11
+  }, {
+    "date" : "2016-09-24",
+    "Stock Price" : "108.0101",
+    "Number of Shares" : "5470820000.0",
+    "Market Capitalization" : 5.90903815282E11,
+    "- Cash & Cash Equivalents" : 2.0484E10,
+    "+ Total Debt" : 8.7032E10,
+    "Enterprise Value" : 6.57451815282E11
+  }, {
+    "date" : "2015-09-26",
+    "Stock Price" : "105.3369",
+    "Number of Shares" : "5753421000.0",
+    "Market Capitalization" : 6.060475325349E11,
+    "- Cash & Cash Equivalents" : 2.112E10,
+    "+ Total Debt" : 6.4328E10,
+    "Enterprise Value" : 6.492555325349E11
+  }, {
+    "date" : "2014-09-27",
+    "Stock Price" : "92.2095",
+    "Number of Shares" : "6085572000.0",
+    "Market Capitalization" : 5.61147551334E11,
+    "- Cash & Cash Equivalents" : 1.3844E10,
+    "+ Total Debt" : 3.5295E10,
+    "Enterprise Value" : 5.82598551334E1
+  } ]
+}
 ```
 ----
 ## GET /v3/income-statement-growth/{symbol} <a name="0xcc9a4ba1acb4056107ff03d05f42716f213c0b39af2137ab96242697a8b75a0f"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint allows you to examine how the company has grown since its initial public offering. It provides details such as revenue growth and net income growth.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statements-growth
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1156,21 +1261,54 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "date" : "2019-09-28",
+    "symbol" : "AAPL",
+    "period" : "FY",
+    "growthRevenue" : -0.0204107758052674178,
+    "growthCostOfRevenue" : -0.0120545201397200714,
+    "growthGrossProfit" : -0.0338475436718742306,
+    "growthGrossProfitRatio" : -0.0137154213078027384,
+    "growthResearchAndDevelopmentExpenses" : 0.139154256813711713,
+    "growthGeneralAndAdministrativeExpenses" : 0.0921879676743490029,
+    "growthSellingAndMarketingExpenses" : 0,
+    "growthOtherExpenses" : 0,
+    "growthOperatingExpenses" : 0.113797226980382013,
+    "growthCostAndExpenses" : 0.00794567969717047476,
+    "growthInterestExpense" : 0.103703703703703701,
+    "growthDepreciationAndAmortization" : 0.150784187838209655,
+    "growthEBITDA" : -0.0430879293011946773,
+    "growthEBITDARatio" : -0.0231486655986487197,
+    "growthOperatingIncome" : -0.0982820389855849214,
+    "growthOperatingIncomeRatio" : -0.0794935191428786103,
+    "growthTotalOtherIncomeExpensesNet" : -1.95691609977324266,
+    "growthIncomeBeforeTax" : -0.0982949947190101952,
+    "growthIncomeBeforeTaxRatio" : -0.0795040967033286694,
+    "growthIncomeTaxExpense" : -0.117166442048517519,
+    "growthNetIncome" : -0.0718113251919168111,
+    "growthNetIncomeRatio" : -0.0524712012920381735,
+    "growthEPS" : -0.0262266179034436608,
+    "growthEPSDiluted" : -0.0262266179034436608,
+    "growthWeightedAverageShsOut" : -0.0702376688188197512,
+    "growthWeightedAverageShsOutDil" : -0.0702376688188197512
+  }, ...
+]
 ```
 ----
 ## GET /v3/balance-sheet-statement-growth/{symbol} <a name="0x084237603893e0c1d750eeda13260670f1ed2086024a8992c4622f73a412a8ef"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Annual balance sheet growth.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statements-growth
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1179,21 +1317,53 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "date" : "2019-09-28",
+    "symbol" : "AAPL",
+    "period" : "FY",
+    "growthRevenue" : -0.0204107758052674178,
+    "growthCostOfRevenue" : -0.0120545201397200714,
+    "growthGrossProfit" : -0.0338475436718742306,
+    "growthGrossProfitRatio" : -0.0137154213078027384,
+    "growthResearchAndDevelopmentExpenses" : 0.139154256813711713,
+    "growthGeneralAndAdministrativeExpenses" : 0.0921879676743490029,
+    "growthSellingAndMarketingExpenses" : 0,
+    "growthOtherExpenses" : 0,
+    "growthOperatingExpenses" : 0.113797226980382013,
+    "growthCostAndExpenses" : 0.00794567969717047476,
+    "growthInterestExpense" : 0.103703703703703701,
+    "growthDepreciationAndAmortization" : 0.150784187838209655,
+    "growthEBITDA" : -0.0430879293011946773,
+    "growthEBITDARatio" : -0.0231486655986487197,
+    "growthOperatingIncome" : -0.0982820389855849214,
+    "growthOperatingIncomeRatio" : -0.0794935191428786103,
+    "growthTotalOtherIncomeExpensesNet" : -1.95691609977324266,
+    "growthIncomeBeforeTax" : -0.0982949947190101952,
+    "growthIncomeBeforeTaxRatio" : -0.0795040967033286694,
+    "growthIncomeTaxExpense" : -0.117166442048517519,
+    "growthNetIncome" : -0.0718113251919168111,
+    "growthNetIncomeRatio" : -0.0524712012920381735,
+    "growthEPS" : -0.0262266179034436608,
+    "growthEPSDiluted" : -0.0262266179034436608,
+    "growthWeightedAverageShsOut" : -0.0702376688188197512,
+    "growthWeightedAverageShsOutDil" : -0.0702376688188197512
+  }, ...
+]
 ```
 ----
 ## GET /v3/cash-flow-statement-growth/{symbol} <a name="0x294354ba847915b9be24ca5cf40aaa58cf1134adfa403d6129ce3f557e48a4a2"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Annual cash flow statements growth.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statements-growth
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1202,21 +1372,53 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "date" : "2019-09-28",
+    "symbol" : "AAPL",
+    "period" : "FY",
+    "growthRevenue" : -0.0204107758052674178,
+    "growthCostOfRevenue" : -0.0120545201397200714,
+    "growthGrossProfit" : -0.0338475436718742306,
+    "growthGrossProfitRatio" : -0.0137154213078027384,
+    "growthResearchAndDevelopmentExpenses" : 0.139154256813711713,
+    "growthGeneralAndAdministrativeExpenses" : 0.0921879676743490029,
+    "growthSellingAndMarketingExpenses" : 0,
+    "growthOtherExpenses" : 0,
+    "growthOperatingExpenses" : 0.113797226980382013,
+    "growthCostAndExpenses" : 0.00794567969717047476,
+    "growthInterestExpense" : 0.103703703703703701,
+    "growthDepreciationAndAmortization" : 0.150784187838209655,
+    "growthEBITDA" : -0.0430879293011946773,
+    "growthEBITDARatio" : -0.0231486655986487197,
+    "growthOperatingIncome" : -0.0982820389855849214,
+    "growthOperatingIncomeRatio" : -0.0794935191428786103,
+    "growthTotalOtherIncomeExpensesNet" : -1.95691609977324266,
+    "growthIncomeBeforeTax" : -0.0982949947190101952,
+    "growthIncomeBeforeTaxRatio" : -0.0795040967033286694,
+    "growthIncomeTaxExpense" : -0.117166442048517519,
+    "growthNetIncome" : -0.0718113251919168111,
+    "growthNetIncomeRatio" : -0.0524712012920381735,
+    "growthEPS" : -0.0262266179034436608,
+    "growthEPSDiluted" : -0.0262266179034436608,
+    "growthWeightedAverageShsOut" : -0.0702376688188197512,
+    "growthWeightedAverageShsOutDil" : -0.0702376688188197512
+  }, ...
+]
 ```
 ----
 ## GET /v3/key-metrics-ttm/{symbol} <a name="0x78afea8f5f354b024be361d2dde7ed208ae59f77f4c929e01254a1d4a32de2db"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Get Company Key Metrics such as Market capitalization, PE ratio, Price to Sales Ratio, POCF ratio, Graham Net-Net 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/company-key-metrics-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1225,21 +1427,58 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+period : quarter | annual
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "metrics" : [ {
+    "date" : "2019-09-28",
+    "Revenue per Share" : "56.3411",
+    "Net Income per Share" : "11.9658",
+    "Operating Cash Flow per Share" : "15.0267",
+    "Free Cash Flow per Share" : "12.94",
+    "Cash per Share" : "10.5773",
+    "Book Value per Share" : "19.595",
+    "Tangible Book Value per Share" : "73.306",
+    "Shareholders Equity per Share" : "19.5953",
+    "Interest Debt per Share" : "23.3978",
+    "Market Cap" : "1012160744600.0",
+    "Enterprise Value" : "1019650744600.0",
+    "PE ratio" : "18.7109",
+    "Price to Sales Ratio" : "3.8903",
+    "POCF ratio" : "14.5863",
+    "PFCF ratio" : "17.5607",
+    "PB ratio" : "11.1154",
+    "PTB ratio" : "11.1154",
+    "EV to Sales" : "3.9191",
+    "Enterprise Value over EBITDA" : "13.025",
+    "EV to Operating cash flow" : "14.6943",
+    "EV to Free cash flow" : "17.3127",
+    "Earnings Yield" : "0.0534",
+    "Free Cash Flow Yield" : "0.0582",
+    "Debt to Equity" : "1.194",
+    "Debt to Assets" : "0.3192",
+    "Net Debt to EBITDA" : "0.0957",
+    "Current ratio" : "1.54",
+    "Interest Coverage" : "0.0",
+    .....
+    },
+    {...}
+    ]
+}
 ```
 ----
 ## GET /v3/key-metrics/{symbol} <a name="0xf5cee6b7e8a2d3035ef040942dcb9b16de0b6e356929eac760fec061c9c05ddf"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Get Company Key Metrics such as Market capitalization, PE ratio, Price to Sales Ratio, POCF ratio, Graham Net-Net
+The key metrics are calculated quarter by quarter, year by year. The change in company metrics is essential for valuating a company. You can also acces the metrcis TTM.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/company-key-metrics-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1248,22 +1487,59 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-period		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+period : quarter | annual
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "metrics" : [ {
+    "date" : "2019-09-28",
+    "Revenue per Share" : "56.3411",
+    "Net Income per Share" : "11.9658",
+    "Operating Cash Flow per Share" : "15.0267",
+    "Free Cash Flow per Share" : "12.94",
+    "Cash per Share" : "10.5773",
+    "Book Value per Share" : "19.595",
+    "Tangible Book Value per Share" : "73.306",
+    "Shareholders Equity per Share" : "19.5953",
+    "Interest Debt per Share" : "23.3978",
+    "Market Cap" : "1012160744600.0",
+    "Enterprise Value" : "1019650744600.0",
+    "PE ratio" : "18.7109",
+    "Price to Sales Ratio" : "3.8903",
+    "POCF ratio" : "14.5863",
+    "PFCF ratio" : "17.5607",
+    "PB ratio" : "11.1154",
+    "PTB ratio" : "11.1154",
+    "EV to Sales" : "3.9191",
+    "Enterprise Value over EBITDA" : "13.025",
+    "EV to Operating cash flow" : "14.6943",
+    "EV to Free cash flow" : "17.3127",
+    "Earnings Yield" : "0.0534",
+    "Free Cash Flow Yield" : "0.0582",
+    "Debt to Equity" : "1.194",
+    "Debt to Assets" : "0.3192",
+    "Net Debt to EBITDA" : "0.0957",
+    "Current ratio" : "1.54",
+    "Interest Coverage" : "0.0",
+    .....
+    },
+    {...}
+    ]
+}
 ```
 ----
 ## GET /v3/financial-growth/{symbol} <a name="0xe608cdc0dbe1ee349249994d0b399ee0c250cf6e6c1a7a2ed9ab1a8ee0466277"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Get the Financial Statement Growth of a company based on its financial statement, it compares previous financial statement to get growth of all its statement.
+The growth is calculated quarter by quarter, year by year. The change in company metrics is essential for valuating a company. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/company-financial-statement-growth-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1272,22 +1548,62 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-period		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+period : quarter | annual
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "growth" : [ {
+    "date" : "2019-09-28",
+    "Gross Profit Growth" : "-0.0338",
+    "EBIT Growth" : "-0.0983",
+    "Operating Income Growth" : "-0.0983",
+    "Net Income Growth" : "-0.0718",
+    "EPS Growth" : "-0.0033",
+    "EPS Diluted Growth" : "-0.0017",
+    "Weighted Average Shares Growth" : "-0.0681",
+    "Weighted Average Shares Diluted Growth" : "-0.0702",
+    "Dividends per Share Growth" : "0.1029",
+    "Operating Cash Flow growth" : "-0.1039",
+    "Free Cash Flow growth" : "-0.0815",
+    "10Y Revenue Growth (per Share)" : "0.2343",
+    "5Y Revenue Growth (per Share)" : "0.1341",
+    "3Y Revenue Growth (per Share)" : "0.1265",
+    "10Y Operating CF Growth (per Share)" : "0.2491",
+    "5Y Operating CF Growth (per Share)" : "0.089",
+    "3Y Operating CF Growth (per Share)" : "0.0747",
+    "10Y Net Income Growth (per Share)" : "0.2469",
+    "5Y Net Income Growth (per Share)" : "0.1301",
+    "3Y Net Income Growth (per Share)" : "0.1274",
+    "10Y Shareholders Equity Growth (per Share)" : "0.145",
+    "5Y Shareholders Equity Growth (per Share)" : "0.0134",
+    "3Y Shareholders Equity Growth (per Share)" : "-0.058",
+    "10Y Dividend per Share Growth (per Share)" : "0.0",
+    "5Y Dividend per Share Growth (per Share)" : "0.1062",
+    "3Y Dividend per Share Growth (per Share)" : "0.1123",
+    "Receivables growth" : "-0.0651",
+    "Inventory Growth" : "0.0379",
+    "Asset Growth" : "-0.0744",
+    "Book Value per Share Growth" : "-0.0937",
+    "Debt Growth" : "-0.0562",
+    "R&D Expense Growth" : "0.1392",
+    "SG&A Expenses Growth" : "0.0922"
+    },
+    {...}
+    ]
+}
 ```
 ----
 ## GET /v3/rating/{symbol} <a name="0x45ee30f97f68b834762fb16b9f10f59e211bbe70b314800f7330015b564a3db6"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Get the rating of a company based on its financial statement, Discounted cash flow analysis, financial rations and its intrinsic value.
+Our ratings are based on comapnies being able to cover their debts and the strength of their ratios. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/companies-rating-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1296,20 +1612,53 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "rating" : {
+    "score" : 5,
+    "rating" : "S-",
+    "recommendation" : "Strong Buy"
+  },
+  "ratingDetails" : {
+    "P/B" : {
+      "score" : 5,
+      "recommendation" : "Strong Buy"
+    },
+    "ROA" : {
+      "score" : 5,
+      "recommendation" : "Neutral"
+    },
+    "DCF" : {
+      "score" : 3,
+      "recommendation" : "Neutral"
+    },
+    "P/E" : {
+      "score" : 5,
+      "recommendation" : "Strong Buy"
+    },
+    "ROE" : {
+      "score" : 5,
+      "recommendation" : "Strong Buy"
+    },
+    "D/E" : {
+      "score" : 3,
+      "recommendation" : "Strong Buy"
+    }
+  }
+}
 ```
 ----
 ## GET /v3/historical-rating/{symbol} <a name="0xdfdb5312feb8f42f3651623b2af176f393ec7fb14b137f35b78d44ddb80c1973"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Historical companies rating.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/companies-rating-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1318,21 +1667,40 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "AAPL",
+  "date" : "2021-10-27",
+  "rating" : "S",
+  "ratingScore" : 5,
+  "ratingRecommendation" : "Strong Buy",
+  "ratingDetailsDCFScore" : 5,
+  "ratingDetailsDCFRecommendation" : "Strong Buy",
+  "ratingDetailsROEScore" : 5,
+  "ratingDetailsROERecommendation" : "Strong Buy",
+  "ratingDetailsROAScore" : 3,
+  "ratingDetailsROARecommendation" : "Neutral",
+  "ratingDetailsDEScore" : 5,
+  "ratingDetailsDERecommendation" : "Strong Buy",
+  "ratingDetailsPEScore" : 5,
+  "ratingDetailsPERecommendation" : "Strong Buy",
+  "ratingDetailsPBScore" : 5,
+  "ratingDetailsPBRecommendation" : "Strong Buy"
+}, ...
+]
 ```
 ----
 ## GET /v3/discounted-cash-flow/{symbol} <a name="0x60a393d432d929e97bd7636109af2a75d858fd1ef5473eb8b8d37cfd3140f224"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Access a stock discounted cash flow value. This value represents a stock intrinsic value calculated from its free cash flow analysis. If this value is over the current stock price the stock is considered undervalued and vice versa.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/companies-dcf-reports-free-api#DCF
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1341,20 +1709,25 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "date" : "2020-01-19",
+  "dcf" : 332.10579358634374,
+  "Stock Price" : 310.33
+}
 ```
 ----
 ## GET /v3/historical-discounted-cash-flow-statement/{symbol} <a name="0x79a8fd3caa539331b18e87fffc4f5d05d16085910c1fa79d785d36d27374838c"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Companies Historical Discounted cash flow value.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/companies-dcf-reports-free-api#Historical-DCF
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1363,21 +1736,28 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+period : annual | quater
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[
+  {
+    "symbol" : "AAPL",
+    "date" : "2020-01-19",
+    "dcf" : 332.10579358634374,
+    "Stock Price" : 310.33
+  }, ...
+]
 ```
 ----
 ## GET /v3/historical-daily-discounted-cash-flow/{symbol} <a name="0xaca8caf67075f059cb66f19d44c2efa598086cfb8a081159cbb07806324ff241"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Companies Daily Discounted cash flow value.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/companies-dcf-reports-free-api#Historical-DCF
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1386,14 +1766,21 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[
+  {
+    "symbol" : "AAPL",
+    "date" : "2020-01-19",
+    "dcf" : 332.10579358634374,
+    "Stock Price" : 310.33
+  }, ...
+]
 ```
 ----
 ## GET /v3/earning_calendar <a name="0x26d554accbfcbae6987dfa5b9f02b7bd3cbe887b23190bcc06bb022f1e494f0f"></a>
