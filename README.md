@@ -2,9 +2,12 @@
 
 > [Airnode](https://api3.org/airnode) API Documentation
 
-<h3>Free <a href="https://financialmodelingprep.com/developer/docs">financial statement API</a>. <br> Real-time and historical data of stock prices.</h3>
 
-Supports over **25000 stocks** across multiple exchanges. Whole U.S. market, XETRA, EURONEX, TSX, SEDAR, SEHK and more. Use our data that goes up to 30 years back in history. Earnings calendar, financial statements, multiple exchanges and more. We provide one of the most accurate data available on the market. <br />
+
+Financial Modeling Prep is a  financial statements API, a free stock API and a historical quotes API. Find all companies financial reports, company stock prices in Real-time.<br />
+
+We have real time stock price, we cover the fundamental data part of the stocks via providing income statement, balance sheet statement and cashflow statement quarterly and annually. <br />
+
 
 **Home Page:** https://financialmodelingprep.com/developer <br />
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs
@@ -15,7 +18,7 @@ Read the [Airnode developer documentation](https://docs.api3.org/d/call-an-airno
 
 **Provider ID:** 0x182e9c2acbdf34d3b87cadc8b6423ab82f04d8d6d422897696274d31fe615cf5
 
-**Provider XPub:** xpub661MyMwAqRbcGqJMAKgC35TYaAEScfLiHXRTyTk6amLXWgtyZsXBorxbQscwSUfVgLiu98FRUJbkeG8icfhLJQdSymfh5pzQ36hFwuPm85P 
+**Provider XPub:** xpub661MyMwAqRbcGqJMAKgC35TYaAEScfLiHXRTyTk6amLXWgtyZsXBorxbQscwSUfVgLiu98FRUJbkeG8icfhLJQdSymfh5pzQ36hFwuPm85P
 
 [Reserved Parameters](https://docs.api3.org/r/reserved-parameters) are used to control Airnode behavior and are available for all endpoints.
 
@@ -175,9 +178,9 @@ Read the [Airnode developer documentation](https://docs.api3.org/d/call-an-airno
 ---
 ## GET /v3/financial-statement-symbol-lists <a name="0x7a92e04086a7612f85e55d8d791e1323dc4469f5c510176ac3e7b997d87cf8bd"></a>
 
-List of symbols that have financial statements.
+This endpoint allows you to get a list of all companies for which the API has financial statements.
 
-**Web2 Docs:** https://financialmodelingprep.com/developer/docs#Financial-Statements-List
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statements-list
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -192,27 +195,27 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
-  "02M.DE", "0A00.L", "0A02.L", "0A05.L", "0A0C.L", "0A0D.L", "0A0E.L", "0A0F.L", "0A0H.L", "0A0I.L", "0A0J.L", 
-  "0A0K.L", "0A0L.L", "0A0M.L", "0A0S.L", "0A0V.L", "0A0W.L", "0A0X.L", "0A10.L", "0A14.L", "0A15.L", "0A18.L", "0A1C.L", 
+[
+  "02M.DE", "0A00.L", "0A02.L", "0A05.L", "0A0C.L", "0A0D.L", "0A0E.L", "0A0F.L", "0A0H.L", "0A0I.L", "0A0J.L",
+  "0A0K.L", "0A0L.L", "0A0M.L", "0A0S.L", "0A0V.L", "0A0W.L", "0A0X.L", "0A10.L", "0A14.L", "0A15.L", "0A18.L", "0A1C.L",
   "0A1J.L", "0A1K.L", "0A1L.L", "0A1M.L", "0A1N.L", "0A1O.L", "0A1R.L", "0A1S.L", "0A1U.L", "0A1V.L", "0A1W.L", "0A1X.L",
-  "0A20.L", "0A21.L", "0A23.L", "0A26.L", "0A27.L", "0A28.L", "0A29.L", "0A2A.L", "0A2G.L", "0A2H.L", "0A2I.L", "0A2O.L", 
+  "0A20.L", "0A21.L", "0A23.L", "0A26.L", "0A27.L", "0A28.L", "0A29.L", "0A2A.L", "0A2G.L", "0A2H.L", "0A2I.L", "0A2O.L",
   "0A2P.L", "0A2S.L", "0A2T.L", "0A2X.L", "0A2Z.L", "0A33.L", "0A34.L", "0A36.L", "0A37.L", "0A39.L", "0ACT.L", "0AH3.L",
-  "0AH7.L", "0AHI.L", "0AHJ.L", "0AI4.L", "0AJ1.L", "0AR9.L", "0B67.L", "0BDR.L", "0BFA.L", "0BJP.L", "0BNT.L", "0C6Y.L", 
-  "0CDX.L", "0CHZ.L", "0CIJ.L", "0CUM.L", "0CUN.L", "0CXC.L", "0D00.L", "0D1X.L", "0DDP.L", "0DH7.L", "0DHC.L", "0DHJ.L", 
-  "0DI7.L", "0DJI.L", "0DJV.L", "0DK7.L","0DK9.L", "0DKX.L", "0DLI.L", "0DMQ.L", "0DNH.L", "0DNW.L", "0DO7.L", "0DOL.L", 
-  "0DOS.L", "0DP0.L", "0DP4.L", "0DPB.L", "0DPM.L", "0DPU.L", "0DQ7.L", "0DQK.L", "0DQZ.L", "0DRH.L", "0DRV.L", "0DSJ.L", 
-  "0DTF.L", "0DTI.L", "0DTK.L", "0DU3.L", "0DUI.L", "0DUK.L", "0DVE.L", "0DVR.L", "0DWL.L", "0DWV.L", "0DXG.L", "0DXU.L", 
-  "0DYD.L", "0DYQ.L", "0DZ0.L", "0DZC.L", "0DZJ.L", "0E1L.L", "0E1Y.L", "0E3C.L", "0E4K.L", "0E4Q.L", "0E5M.L", "0E6Y.L", 
+  "0AH7.L", "0AHI.L", "0AHJ.L", "0AI4.L", "0AJ1.L", "0AR9.L", "0B67.L", "0BDR.L", "0BFA.L", "0BJP.L", "0BNT.L", "0C6Y.L",
+  "0CDX.L", "0CHZ.L", "0CIJ.L", "0CUM.L", "0CUN.L", "0CXC.L", "0D00.L", "0D1X.L", "0DDP.L", "0DH7.L", "0DHC.L", "0DHJ.L",
+  "0DI7.L", "0DJI.L", "0DJV.L", "0DK7.L","0DK9.L", "0DKX.L", "0DLI.L", "0DMQ.L", "0DNH.L", "0DNW.L", "0DO7.L", "0DOL.L",
+  "0DOS.L", "0DP0.L", "0DP4.L", "0DPB.L", "0DPM.L", "0DPU.L", "0DQ7.L", "0DQK.L", "0DQZ.L", "0DRH.L", "0DRV.L", "0DSJ.L",
+  "0DTF.L", "0DTI.L", "0DTK.L", "0DU3.L", "0DUI.L", "0DUK.L", "0DVE.L", "0DVR.L", "0DWL.L", "0DWV.L", "0DXG.L", "0DXU.L",
+  "0DYD.L", "0DYQ.L", "0DZ0.L", "0DZC.L", "0DZJ.L", "0E1L.L", "0E1Y.L", "0E3C.L", "0E4K.L", "0E4Q.L", "0E5M.L", "0E6Y.L",
   "0E7S.L", "0E7Z.L", "0E9V.L", "0EA2.L", "0EAQ.L", "0EAW.L", "0EBQ.L", "0EDD.L", "0EDE.L", ...
 ]
 ```
 ----
 ## GET /v3/income-statement/{symbol} <a name="0x3e60ef161562c598d9beaf07a3eb49681695fb1a2598991e6dfbfe2e52f7d9db"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns company financial statements. SEC forms 10-K, 10-Q, and 8-K are used to obtain all financial statements for US companies.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statement-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -221,14 +224,53 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
+datatype : csv
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-26",
+    "symbol" : "AAPL",
+    "reportedCurrency" : "USD",
+    "fillingDate" : "2020-10-30",
+    "acceptedDate" : "2020-10-29 18:06:25",
+    "period" : "FY",
+    "revenue" : 274515000000,
+    "costOfRevenue" : 169559000000,
+    "grossProfit" : 104956000000,
+    "grossProfitRatio" : 0.38233247727810865,
+    "researchAndDevelopmentExpenses" : 18752000000,
+    "generalAndAdministrativeExpenses" : 19916000000,
+    "sellingAndMarketingExpenses" : 0.0,
+    "sellingGeneralAndAdministrativeExpenses" : 19916000000,
+    "otherExpenses" : 0.0,
+    "operatingExpenses" : 38668000000,
+    "costAndExpenses" : 208227000000,
+    "interestExpense" : 2873000000,
+    "depreciationAndAmortization" : 11056000000,
+    "ebitda" : 81020000000,
+    "ebitdaratio" : 0.2951386991603373,
+    "operatingIncome" : 66288000000,
+    "operatingIncomeRatio" : 0.24147314354406862,
+    "totalOtherIncomeExpensesNet" : -803000000,
+    "incomeBeforeTax" : 67091000000,
+    "incomeBeforeTaxRatio" : 0.24439830246070343,
+    "incomeTaxExpense" : 9680000000,
+    "netIncome" : 57411000000,
+    "netIncomeRatio" : 0.20913611278072236,
+    "eps" : 3.31,
+    "epsdiluted" : 3.28,
+    "weightedAverageShsOut" : 17352119000,
+    "weightedAverageShsOutDil" : 17528214000,
+    "link" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/0000320193-20-000096-index.htm",
+    "finalLink" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/aapl-20200926.htm"
+  }, ...
+]
 ```
 ----
 ## GET /v3/balance-sheet-statement/{symbol} <a name="0x593e38bae8a4e3e7a1b80a8c4b2e7363bdcdfc8434fa46a76fc49aeed6894950"></a>
