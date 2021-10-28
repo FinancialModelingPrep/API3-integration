@@ -1014,7 +1014,7 @@ Symbol : Company Symbol, ex. AAPL
     statements or information, which speak as of their respective dates. I'd now like to turn the call over to Tim for introductory remarks.
     Tim Cook: Thanks, Tejas. Good afternoon, everyone. Thanks for joining the call today. Before we begin, I joined the many millions across 
     this country in mourning and memorialize Congressman John Lewis, who was laid to rest earlier today. We've lost a hero who walked among 
-    us, a leader in the truest sense who urged this country to aim higher and be better until the very end" ...
+    us, a leader in the truest sense who urged this country to aim higher and be better until the very end", ...
   }
 ]
 ```
