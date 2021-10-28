@@ -2083,76 +2083,76 @@ You'll need the **Endpoint ID** to call this endpoint.
 ```solidity
 Limit : Number
 Query : String
-Exchange : ETF | MUTUAL_FUND | COMMODITY | INDEX | CRYPTO | FOREX | TSX | AMEX | NASDAQ | NYSE | EURONEXT 
+Exchange : ETF | MUTUAL_FUND | COMMODITY | INDEX | CRYPTO | FOREX | TSX | AMEX | NASDAQ | NYSE | EURONEXT
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
     {
         "symbol" : "PRAA",
         "name" : "PRA Group, Inc.",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "PAAS",
         "name" : "Pan American Silver Corp.",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "PAAC",
         "name" : "Proficient Alpha Acquisition Corp.",
         "currency" : "USD",
         "stockExchange" : "NasdaqCM",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "RYAAY",
         "name" : "Ryanair Holdings plc",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "MPAA",
         "name" : "Motorcar Parts of America, Inc.",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "STAA",
         "name" : "STAAR Surgical Company",
         "currency" : "USD",
         "stockExchange" : "NasdaqGM",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "RBCAA",
         "name" : "Republic Bancorp, Inc.",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "AABA",
         "name" : "Altaba Inc.",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
-        "exchangeShortName" : "NASDAQ"    
-    }, 
+        "exchangeShortName" : "NASDAQ"
+    },
     {
         "symbol" : "AAXJ",
         "name" : "iShares MSCI All Country Asia ex Japan ETF",
         "currency" : "USD",
         "stockExchange" : "NasdaqGM",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "ZNWAA",
         "name" : "Zion Oil & Gas, Inc.",
@@ -2178,76 +2178,76 @@ You'll need the **Endpoint ID** to call this endpoint.
 ```solidity
 Limit : Number
 Query : String
-Exchange : ETF | MUTUAL_FUND | COMMODITY | INDEX | CRYPTO | FOREX | TSX | AMEX | NASDAQ | NYSE | EURONEXT 
+Exchange : ETF | MUTUAL_FUND | COMMODITY | INDEX | CRYPTO | FOREX | TSX | AMEX | NASDAQ | NYSE | EURONEXT
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
     {
         "symbol" : "PRAA",
         "name" : "PRA Group, Inc.",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "PAAS",
         "name" : "Pan American Silver Corp.",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "PAAC",
         "name" : "Proficient Alpha Acquisition Corp.",
         "currency" : "USD",
         "stockExchange" : "NasdaqCM",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "RYAAY",
         "name" : "Ryanair Holdings plc",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "MPAA",
         "name" : "Motorcar Parts of America, Inc.",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "STAA",
         "name" : "STAAR Surgical Company",
         "currency" : "USD",
         "stockExchange" : "NasdaqGM",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "RBCAA",
         "name" : "Republic Bancorp, Inc.",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "AABA",
         "name" : "Altaba Inc.",
         "currency" : "USD",
         "stockExchange" : "NasdaqGS",
-        "exchangeShortName" : "NASDAQ"    
-    }, 
+        "exchangeShortName" : "NASDAQ"
+    },
     {
         "symbol" : "AAXJ",
         "name" : "iShares MSCI All Country Asia ex Japan ETF",
         "currency" : "USD",
         "stockExchange" : "NasdaqGM",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "ZNWAA",
         "name" : "Zion Oil & Gas, Inc.",
@@ -2282,13 +2282,13 @@ sector : Consumer Cyclical | Energy | Technology | Industrials | Financial Servi
 Industry : Autos | Banks | Banks Diversified | Software | Banks Regional | Beverages Alcoholic | Beverages Brewers | Beverages Non-Alcoholic
 Country : US | UK | MX | BR | RU | HK | CA | ...
 exchange : nyse | nasdaq | amex | euronext | tsx | etf | mutual_fund
-limit : Number 
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
     {
     "symbol" : "MSFT",
     "companyName" : "Microsoft Corporation",
@@ -2312,7 +2312,7 @@ limit : Number
         "volume" : 51500795,
         "exchange" : "Nasdaq Global Select",
         "exchangeShortName" : "NASDAQ"
-    }, 
+    },
     {
         "symbol" : "AMZN",
         "companyName" : "Amazon.com Inc.",
@@ -2352,9 +2352,10 @@ None
 ----
 ## GET /v3/profile/{symbol} <a name="0xc77379b6803bfb6a3bc8c17652916281c6c687fc9e7d50a6f4c9e6ba56715dca"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Access data for a company such as 52 week high, 52 week low, market capitalization, and key stats to understand a company finance.
+Access companies profile (Price, Beta, Volume Average, Market Capitalisation, Last Dividend, 52 week range, stock price change, stock price change in percentage, Company Name, Exchange, Description, Industry, Sector, CEO,Website and image).
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/companies-key-stats-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2363,20 +2364,57 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "AAPL",
+  "price" : 145.85,
+  "beta" : 1.201965,
+  "volAvg" : 79766736,
+  "mktCap" : 2410929717248,
+  "lastDiv" : 0.85,
+  "range" : "105.0-157.26",
+  "changes" : 2.4200134,
+  "companyName" : "Apple Inc.",
+  "currency" : "USD",
+  "cik" : "0000320193",
+  "isin" : "US0378331005",
+  "cusip" : "037833100",
+  "exchange" : "Nasdaq Global Select",
+  "exchangeShortName" : "NASDAQ",
+  "industry" : "Consumer Electronics",
+  "website" : "http://www.apple.com",
+  "description" : "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. It also sells various related services. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories comprising AirPods, Apple TV, Apple Watch, Beats products, HomePod, iPod touch, and other Apple-branded and third-party accessories. It also provides AppleCare support services; cloud services store services; and operates various platforms, including the App Store, that allow customers to discover and download applications and digital content, such as books, music, video, games, and podcasts. In addition, the company offers various services, such as Apple Arcade, a game subscription service; Apple Music, which offers users a curated listening experience with on-demand radio stations; Apple News+, a subscription news and magazine service; Apple TV+, which offers exclusive original content; Apple Card, a co-branded credit card; and Apple Pay, a cashless payment service, as well as licenses its intellectual property. The company serves consumers, and small and mid-sized businesses; and the education, enterprise, and government markets. It sells and delivers third-party applications for its products through the App Store. The company also sells its products through its retail and online stores, and direct sales force; and third-party cellular network carriers, wholesalers, retailers, and resellers. Apple Inc. was founded in 1977 and is headquartered in Cupertino, California.",
+  "ceo" : "Mr. Timothy Cook",
+  "sector" : "Technology",
+  "country" : "US",
+  "fullTimeEmployees" : "147000",
+  "phone" : "14089961010",
+  "address" : "1 Apple Park Way",
+  "city" : "Cupertino",
+  "state" : "CALIFORNIA",
+  "zip" : "95014",
+  "dcfDiff" : 89.92,
+  "dcf" : 148.019,
+  "image" : "https://financialmodelingprep.com/image-stock/AAPL.png",
+  "ipoDate" : "1980-12-12",
+  "defaultImage" : false,
+  "isEtf" : false,
+  "isActivelyTrading" : true,
+  "isAdr" : false,
+  "isFund" : false
+} ]
 ```
 ----
 ## GET /v3/key-executives/{symbol} <a name="0x9d02f28e45306d8729c95a8e38222ee2f6621e6a383475bb5845e4237bf942df"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Key executives are the people at the top of a company who make critical decisions that affect the company. We keep track of who they are, what their titles are, and how much money they make. We support the majority of companies because not everyone discloses all of their information.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/key-executives
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2385,20 +2423,38 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "yearBorn" : 1950,
+  "pay" : 557922,
+  "currencyPay" : "USD",
+  "name" : "Dr. Arthur Levinson",
+  "title" : "Independent Chairman of the Board",
+  "gender" : "male",
+  "titleSince" : "2011"
+}, {
+  "symbol" : "AAPL",
+  "yearBorn" : 1960,
+  "pay" : 11555466,
+  "currencyPay" : "USD",
+  "name" : "Mr. Timothy Cook",
+  "title" : "Chief Executive Officer, Director",
+  "gender" : "male",
+  "titleSince" : "2011"
+}, ...
 ```
 ----
 ## GET /v3/market-capitalization/{symbol} <a name="0x6f2a3e7e2d263d737fc8765fd1fefba6e0b011b1430be1a57c424c5b953c6dc5"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+The value of a company is measured by its market capitalization. It's calculated by multiplying the price by the number of outstanding shares, both of which can be found on our quote endpoint. It's crucial in determining whether a company is undervalued, fairly valued or overvalued.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/market-capitalization
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2407,20 +2463,24 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "AAPL",
+    "date" : "2020-07-24",
+    "marketCap" : 1641007358213.16797
+} ]
 ```
 ----
 ## GET /v3/historical-market-capitalization/{symbol} <a name="0xeeb404e11f70d5fd43f2ae5c8f04ba20ed33e58f55617c35e1035d5064288d98"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+The value of a company is measured by its market capitalization. It's calculated by multiplying the price by the number of outstanding shares, both of which can be found on our quote endpoint. It's crucial in determining whether a company is undervalued, fairly valued or overvalued.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/market-capitalization
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2429,21 +2489,26 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "date" : "2020-07-27",
+  "marketCap" : 1679899663223.52002
+}
 ```
 ----
 ## GET /v4/company-outlook <a name="0x042989ba15709efe8105bfc178cc304e2e57b976cd3bcef0ac7cc60aa82f55b8"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Get the overview of any company. You will access its profile information, most insider trading transactions, financial statements in one API call.
+Accessing all of this information in one API call is very usefull to get companies insight.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/company-outlook
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2452,20 +2517,408 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "profile" : {
+    "symbol" : "AAPL",
+    "price" : 124.76,
+    "beta" : 1.33758,
+    "volAvg" : 111774589,
+    "mktCap" : 2094483370000,
+    "lastDiv" : 0.82,
+    "range" : "53.1525-145.09",
+    "changes" : -0.81,
+    "companyName" : "Apple Inc",
+    "currency" : "USD",
+    "cik" : "0000320193",
+    "isin" : "US0378331005",
+    "cusip" : "037833100",
+    "exchange" : "Nasdaq Global Select",
+    "exchangeShortName" : "NASDAQ",
+    "industry" : "Consumer Electronics",
+    "website" : "https://www.apple.com/",
+    "description" : "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. It also sells various related services. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories comprising AirPods, Apple TV, Apple Watch, Beats products, HomePod, iPod touch, and other Apple-branded and third-party accessories. It also provides AppleCare support services; cloud services store services; and operates various platforms, including the App Store, that allow customers to discover and download applications and digital content, such as books, music, video, games, and podcasts. In addition, the company offers various services, such as Apple Arcade, a game subscription service; Apple Music, which offers users a curated listening experience with on-demand radio stations; Apple News+, a subscription news and magazine service; Apple TV+, which offers exclusive original content; Apple Card, a co-branded credit card; and Apple Pay, a cashless payment service, as well as licenses its intellectual property. The company serves consumers, and small and mid-sized businesses; and the education, enterprise, and government markets. It sells and delivers third-party applications for its products through the App Store. The company also sells its products through its retail and online stores, and direct sales force; and third-party cellular network carriers, wholesalers, retailers, and resellers. Apple Inc. was founded in 1977 and is headquartered in Cupertino, California.",
+    "ceo" : "Mr. Timothy Cook",
+    "sector" : "Technology",
+    "country" : "US",
+    "fullTimeEmployees" : "147000",
+    "phone" : "14089961010",
+    "address" : "1 Apple Park Way",
+    "city" : "Cupertino",
+    "state" : "CALIFORNIA",
+    "zip" : "95014",
+    "dcfDiff" : 89.92,
+    "dcf" : 127.377,
+    "image" : "https://financialmodelingprep.com/image-stock/AAPL.png",
+    "ipoDate" : "1980-12-12",
+    "defaultImage" : false,
+    "isEtf" : false,
+    "isActivelyTrading" : true
+  },
+  "insideTrades" : [ {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-23",
+    "reportingCik" : "0001051401",
+    "transactionType" : "A-Award",
+    "securitiesOwned" : 1986.0,
+    "companyCik" : "0000320193",
+    "reportingName" : "JUNG ANDREA",
+    "typeOfOwner" : "director",
+    "acquistionOrDisposition" : "A",
+    "formType" : "4",
+    "securitiesTransacted" : 1986.0,
+    "price" : 0.0,
+    "securityName" : "Restricted Stock Unit",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000036/0000320193-21-000036-index.htm"
+  }, {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-23",
+    "reportingCik" : "0001224944",
+    "transactionType" : "A-Award",
+    "securitiesOwned" : 1986.0,
+    "companyCik" : "0000320193",
+    "reportingName" : "GORE ALBERT JR",
+    "typeOfOwner" : "director",
+    "acquistionOrDisposition" : "A",
+    "formType" : "4",
+    "securitiesTransacted" : 1986.0,
+    "price" : 0.0,
+    "securityName" : "Restricted Stock Unit",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000035/0000320193-21-000035-index.htm"
+  }, {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-23",
+    "reportingCik" : "0001182047",
+    "transactionType" : "A-Award",
+    "securitiesOwned" : 1986.0,
+    "companyCik" : "0000320193",
+    "reportingName" : "BELL JAMES A",
+    "typeOfOwner" : "director",
+    "acquistionOrDisposition" : "A",
+    "formType" : "4",
+    "securitiesTransacted" : 1986.0,
+    "price" : 0.0,
+    "securityName" : "Restricted Stock Unit",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000034/0000320193-21-000034-index.htm"
+  }, {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-23",
+    "reportingCik" : "0001216519",
+    "transactionType" : "A-Award",
+    "securitiesOwned" : 1986.0,
+    "companyCik" : "0000320193",
+    "reportingName" : "SUGAR RONALD D",
+    "typeOfOwner" : "director",
+    "acquistionOrDisposition" : "A",
+    "formType" : "4",
+    "securitiesTransacted" : 1986.0,
+    "price" : 0.0,
+    "securityName" : "Restricted Stock Unit",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000039/0000320193-21-000039-index.htm"
+  }, {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-23",
+    "reportingCik" : "0001179864",
+    "transactionType" : "A-Award",
+    "securitiesOwned" : 1986.0,
+    "companyCik" : "0000320193",
+    "reportingName" : "LOZANO MONICA C",
+    "typeOfOwner" : "director",
+    "acquistionOrDisposition" : "A",
+    "formType" : "4",
+    "securitiesTransacted" : 1986.0,
+    "price" : 0.0,
+    "securityName" : "Restricted Stock Unit",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000038/0000320193-21-000038-index.htm"
+  } ],
+  "keyExecutives" : [ {
+    "title" : "Chief Executive Officer & Director",
+    "name" : "Mr. Timothy D. Cook",
+    "gender" : "male",
+    "pay" : 14770000,
+    "currencyPay" : "USD"
+  }, {
+    "title" : "Chief Financial Officer & Senior Vice President",
+    "name" : "Mr. Luca  Maestri",
+    "gender" : "male",
+    "pay" : 4600000,
+    "currencyPay" : "USD"
+  }, {
+    "title" : "Chief Operating Officer",
+    "name" : "Mr. Jeffrey E. Williams",
+    "gender" : "male",
+    "pay" : 4590000,
+    "currencyPay" : "USD"
+  }, {
+    "title" : "Senior Vice President, Gen. Counsel & Sec.",
+    "name" : "Ms. Katherine L. Adams",
+    "gender" : "female",
+    "pay" : 4590000,
+    "currencyPay" : "USD"
+  }, {
+    "title" : "Senior Vice President of People & Retail",
+    "name" : "Ms. Deirdre  O'Brien",
+    "gender" : "female",
+    "pay" : 4610000,
+    "currencyPay" : "USD"
+  }, {
+    "title" : "Senior Director of Corporation Accounting",
+    "name" : "Mr. Chris  Kondo",
+    "gender" : "male",
+    "pay" : 288170,
+    "currencyPay" : "USD"
+  }, {
+    "title" : "Chief Technology Officer",
+    "name" : "Mr. James  Wilson",
+    "gender" : "male",
+    "pay" : 249840,
+    "currencyPay" : "USD"
+  }, {
+    "title" : "Chief Information Officer",
+    "name" : "Ms. Mary  Demby",
+    "gender" : "female",
+    "pay" : 500960,
+    "currencyPay" : "USD"
+  }, {
+    "title" : "Senior Director of Investor Relations & Treasury",
+    "name" : "Ms. Nancy  Paxton",
+    "gender" : "female",
+    "pay" : 311610,
+    "currencyPay" : "USD"
+  }, {
+    "title" : "Senior Vice President of Worldwide Marketing",
+    "name" : "Mr. Greg  Joswiak",
+    "gender" : "male",
+    "pay" : null,
+    "currencyPay" : "USD"
+  } ],
+  "splitHistory" : [ {
+    "date" : "2020-08-31",
+    "label" : "August 31, 20",
+    "numerator" : 4.00,
+    "denominator" : 1.00
+  }, {
+    "date" : "2014-06-09",
+    "label" : "June 09, 14",
+    "numerator" : 7.00,
+    "denominator" : 1.00
+  }, {
+    "date" : "2005-02-28",
+    "label" : "February 28, 05",
+    "numerator" : 2.00,
+    "denominator" : 1.00
+  }, {
+    "date" : "2000-06-21",
+    "label" : "June 21, 00",
+    "numerator" : 2.00,
+    "denominator" : 1.00
+  }, {
+    "date" : "1987-06-16",
+    "label" : "June 16, 87",
+    "numerator" : 2.00,
+    "denominator" : 1.00
+  } ],
+  "stockDividend" : [ {
+    "date" : "2021-02-05",
+    "label" : "February 05, 21",
+    "adjDividend" : 0.2050000000,
+    "dividend" : 0.205,
+    "recordDate" : "2021-02-08",
+    "paymentDate" : "2021-02-11",
+    "declarationDate" : "2021-01-27"
+  }, {
+    "date" : "2020-11-06",
+    "label" : "November 06, 20",
+    "adjDividend" : 0.2050000000,
+    "dividend" : 0.205,
+    "recordDate" : "2020-11-9",
+    "paymentDate" : "2020-11-12",
+    "declarationDate" : "2020-10-29"
+  }, {
+    "date" : "2020-08-07",
+    "label" : "August 07, 20",
+    "adjDividend" : 0.2050000000,
+    "dividend" : 0.82,
+    "recordDate" : "2020-08-10",
+    "paymentDate" : "2020-08-13",
+    "declarationDate" : "2020-07-30"
+  }, {
+    "date" : "2020-05-08",
+    "label" : "May 08, 20",
+    "adjDividend" : 0.2050000000,
+    "dividend" : 0.82,
+    "recordDate" : "2020-05-11",
+    "paymentDate" : "2020-05-14",
+    "declarationDate" : "2020-04-30"
+  }, {
+    "date" : "2020-02-07",
+    "label" : "February 07, 20",
+    "adjDividend" : 0.1925000000,
+    "dividend" : 0.77,
+    "recordDate" : "2020-02-10",
+    "paymentDate" : "2020-02-13",
+    "declarationDate" : "2020-01-28"
+  } ],
+  "stockNews" : [ {
+    "symbol" : "AAPL",
+    "publishedDate" : "2021-03-18 07:42:00",
+    "title" : "Apple may launch newer, faster iPad models by April: report",
+    "image" : "https://cdn.snapi.dev/images/v1/i/d/im-313314width620size15005861664712778-729137.jpg",
+    "site" : "Market Watch",
+    "text" : "Tech giant Apple may be gearing up to roll out new iPads for consumers, in what could be its first product event of 2021, Bloomberg reports.",
+    "url" : "https://www.marketwatch.com/story/apple-may-launch-newer-faster-ipad-models-by-april-report-11616067771"
+  }, {
+    "symbol" : "AAPL",
+    "publishedDate" : "2021-03-18 07:05:00",
+    "title" : "Here's Why Apple Is a Good Stock to Buy Now",
+    "image" : "https://cdn.snapi.dev/images/v1/2/l/ap82-729066.jpg",
+    "site" : "The Motley Fool",
+    "text" : "Down 15% from its all-time high, the tech-giant's shares look like a good long-term bet.",
+    "url" : "https://www.fool.com/investing/2021/03/18/heres-why-apple-is-a-good-stock-to-buy-now/"
+  }, {
+    "symbol" : "AAPL",
+    "publishedDate" : "2021-03-18 05:32:57",
+    "title" : "Apple: The Buyback Will Go On",
+    "image" : "https://cdn.snapi.dev/images/v1/t/j/105439160-1536344620107airpower0530x298-728944.jpg",
+    "site" : "Seeking Alpha",
+    "text" : "Current repurchase plan could be finished in the next few months. Next earnings update should feature a major authorization increase.",
+    "url" : "https://seekingalpha.com/article/4414704-apple-buyback-will-go-on"
+  }, {
+    "symbol" : "AAPL",
+    "publishedDate" : "2021-03-18 05:30:00",
+    "title" : "Should You Invest Your Stimulus Check in Penny Stocks?",
+    "image" : "https://cdn.snapi.dev/images/v1/e/a/urlhttps3a2f2fgfoolcdncom2feditorial2fimages2f6182672fpenny-sitting-on-assorted-billsjpgw700opresize-728946.jpg",
+    "site" : "The Motley Fool",
+    "text" : "Are penny stocks the right investment for you?",
+    "url" : "https://www.fool.com/investing/2021/03/18/should-you-invest-your-stimulus-check-in-penny-sto/"
+  }, {
+    "symbol" : "AAPL",
+    "publishedDate" : "2021-03-18 04:42:51",
+    "title" : "Apple's 'I Am a Mac' Guy Now Wants You To Buy A PC Instead",
+    "image" : "https://cdn.snapi.dev/images/v1/2/5/250alsbntf-1-728916.jpg",
+    "site" : "Benzinga",
+    "text" : "Intel Corporation (NASDAQ: INTC) is borrowing a few leaves out of Apple Inc's (NASDAQ: AAPL) advertising playbook in a recent spate of advertisements aimed at the iPhone maker. What Happened: The silicon giant has roped in Justin Long of the “I'm a Mac and I'm a PC” era fame to take a few digs at the Tim Cook-led company.",
+    "url" : "https://www.benzinga.com/news/21/03/20228121/apples-i-am-a-mac-guy-now-wants-you-to-buy-a-pc-instead"
+  } ],
+  "financialsAnnual" : {
+    "income" : [ {
+      "date" : "2020-09-26",
+      "symbol" : "AAPL",
+      "reportedCurrency" : "USD",
+      "fillingDate" : "2020-10-30",
+      "acceptedDate" : "2020-10-29 18:06:25",
+      "period" : "FY",
+      "revenue" : 274515000000,
+      "costOfRevenue" : 169559000000,
+      "grossProfit" : 104956000000,
+      "grossProfitRatio" : 0.38233247727810865,
+      "researchAndDevelopmentExpenses" : 18752000000,
+      "generalAndAdministrativeExpenses" : 19916000000,
+      "sellingAndMarketingExpenses" : 0.0,
+      "otherExpenses" : -87000000,
+      "operatingExpenses" : 38668000000,
+      "costAndExpenses" : 208227000000,
+      "interestExpense" : 2873000000,
+      "depreciationAndAmortization" : 11056000000,
+      "ebitda" : 81020000000,
+      "ebitdaratio" : 0.2951386991603373,
+      "operatingIncome" : 66288000000,
+      "operatingIncomeRatio" : 0.24439830246070343,
+      "totalOtherIncomeExpensesNet" : -87000000,
+      "incomeBeforeTax" : 67091000000,
+      "incomeBeforeTaxRatio" : 0.24439830246070343,
+      "incomeTaxExpense" : 9680000000,
+      "netIncome" : 57411000000,
+      "netIncomeRatio" : 0.20913611278072236,
+      "eps" : 3.31,
+      "epsdiluted" : 3.28,
+      "weightedAverageShsOut" : 17352119000,
+      "weightedAverageShsOutDil" : 17528214000,
+      "link" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/0000320193-20-000096-index.htm",
+      "finalLink" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/aapl-20200926.htm"
+    }, {
+      "date" : "2019-09-28",
+      "symbol" : "AAPL",
+      "reportedCurrency" : "USD",
+      "fillingDate" : "2019-10-31 00:00:00",
+      "acceptedDate" : "2019-10-30 18:12:36",
+      "period" : "FY",
+      "revenue" : 260174000000,
+      "costOfRevenue" : 161782000000,
+      "grossProfit" : 98392000000,
+      "grossProfitRatio" : 0.3781776810903472,
+      "researchAndDevelopmentExpenses" : 16217000000,
+      "generalAndAdministrativeExpenses" : 18245000000,
+      "sellingAndMarketingExpenses" : 0.0,
+      "otherExpenses" : 422000000,
+      "operatingExpenses" : 34462000000,
+      "costAndExpenses" : 196244000000,
+      "interestExpense" : 3576000000,
+      "depreciationAndAmortization" : 12547000000,
+      "ebitda" : 81860000000,
+      "ebitdaratio" : 0.3146355900282119,
+      "operatingIncome" : 63930000000,
+      "operatingIncomeRatio" : 0.2526655238417367,
+      "totalOtherIncomeExpensesNet" : 422000000,
+      "incomeBeforeTax" : 65737000000,
+      "incomeBeforeTaxRatio" : 0.2526655238417367,
+      "incomeTaxExpense" : 10481000000,
+      "netIncome" : 55256000000,
+      "netIncomeRatio" : 0.21238094505984456,
+      "eps" : 2.9925,
+      "epsdiluted" : 2.9725,
+      "weightedAverageShsOut" : 18471336000,
+      "weightedAverageShsOutDil" : 18595652000,
+      "link" : "https://www.sec.gov/Archives/edgar/data/320193/000032019319000119/0000320193-19-000119-index.html",
+      "finalLink" : "https://www.sec.gov/Archives/edgar/data/320193/000032019319000119/a10-k20199282019.htm"
+    }, {
+      "date" : "2018-09-29",
+      "symbol" : "AAPL",
+      "reportedCurrency" : "USD",
+      "fillingDate" : "2018-11-05 00:00:00",
+      "acceptedDate" : "2018-11-05 08:01:40",
+      "period" : "FY",
+      "revenue" : 265595000000,
+      "costOfRevenue" : 163756000000,
+      "grossProfit" : 101839000000,
+      "grossProfitRatio" : 0.38343718820007905,
+      "researchAndDevelopmentExpenses" : 14236000000,
+      "generalAndAdministrativeExpenses" : 16705000000,
+      "sellingAndMarketingExpenses" : 0.0,
+      "otherExpenses" : -441000000,
+      "operatingExpenses" : 30941000000,
+      "costAndExpenses" : 194697000000,
+      "interestExpense" : 3240000000,
+      "depreciationAndAmortization" : 10903000000,
+      "ebitda" : 87046000000,
+      "ebitdaratio" : 0.327739603531693,
+      "operatingIncome" : 70898000000,
+      "operatingIncomeRatio" : 0.27448935409175623,
+      "totalOtherIncomeExpensesNet" : -441000000,
+      "incomeBeforeTax" : 72903000000,
+      "incomeBeforeTaxRatio" : 0.27448935409175623,
+      "incomeTaxExpense" : 13372000000,
+      "netIncome" : 59531000000,
+      "netIncomeRatio" : 0.22414202074587247,
+      "eps" : 3.0025,
+      "epsdiluted" : 2.9775,
+      "weightedAverageShsOut" : 19821508000,
+      "weightedAverageShsOutDil" : 20000436000,
+      "link" : "https://www.sec.gov/Archives/edgar/data/320193/000032019318000145/0000320193-18-000145-index.html",
+      "finalLink" : "https://www.sec.gov/Archives/edgar/data/320193/000032019318000145/a10-k20189292018.htm"
+    }, { ... }
 ```
 ----
 ## GET /v4/stock_peers <a name="0x94e8db923ed3a09bb3532dc1a6de3e904e90eb4b933757a1e2c427e07fea61bf"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Stock peers are a group of companies that trade on the same exchange, are in the same industry (values can be found on our profile endpoint), and have a similar market capitalizations (which can be found on our market cap endpoint). All of our peers are based on stocks available through our API. This endpoint can be used to look up the competitors of a company you're interested in.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-peers
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2474,20 +2927,23 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "AAPL",
+  "peersList" : [ "MSFT", "NVDA", "ASML", "ADBE", "INTC", "CSCO", "AVGO", "TXN", "QCOM", "AMAT" ]
+} ]
 ```
 ----
 ## GET /v3/is-the-market-open <a name="0x0687de301cca188f078be3bbdb4be2f13373800316ae71cd9dace80858931b23"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+We support many markets, and this endpoint tells you which ones are open and which ones are closed. It returns the current state of the US market and EURONEXT. It also returns days when the stock market is closed, such as New Year's Day or Christmas.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/is-the-market-open
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2502,14 +2958,56 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "stockExchangeName" : "New York Stock Exchange",
+  "stockMarketHours" : {
+    "openingHour" : "09:30 a.m. ET",
+    "closingHour" : "04:00 p.m. ET"
+  },
+  "stockMarketHolidays" : [ {
+    "year" : 2019,
+    "New Years Day" : "2019-01-01",
+    "Martin Luther King, Jr. Day" : "2019-01-21",
+    "Washington's Birthday" : "2019-02-18",
+    "Good Friday" : "2019-04-19",
+    "Memorial Day" : "2019-05-27",
+    "Independence Day" : "2019-07-04",
+    "Labor Day" : "2019-09-02",
+    "Thanksgiving Day" : "2019-11-28",
+    "Christmas" : "2019-12-25"
+  }, {
+    "year" : 2020,
+    "New Years Day" : "2020-01-02",
+    "Martin Luther King, Jr. Day" : "2020-01-21",
+    "Washington's Birthday" : "2020-02-18",
+    "Good Friday" : "2020-04-12",
+    "Memorial Day" : "2020-05-27",
+    "Independence Day" : "2020-07-05",
+    "Labor Day" : "2020-09-09",
+    "Thanksgiving Day" : "2020-11-28",
+    "Christmas" : "2020-12-27"
+  }, {
+    "year" : 2021,
+    "New Years Day" : "2021-01-04",
+    "Martin Luther King, Jr. Day" : "2021-01-21",
+    "Washington's Birthday" : "2021-02-18",
+    "Good Friday" : "2021-04-05",
+    "Memorial Day" : "2021-06-03",
+    "Independence Day" : "2021-07-08",
+    "Labor Day" : "2021-09-09",
+    "Thanksgiving Day" : "2021-11-28",
+    "Christmas" : "2021-12-27"
+  } ],
+  "isTheStockMarketOpen" : false
+}
 ```
 ----
 ## GET /v3/delisted-companies <a name="0x59ae66e39460b5e996adc11a1f1073a9dbffdf1eeb5341ca0a0af2e550d1cfea"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Access a list of delisted companies from the US exchanges.
+Stock delisting is the removal of a recorded stock from a stock trade exchange, and accordingly it would presently don't be exchanged on the bourse. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/delisted-companies
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2518,13 +3016,39 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+ {
+  "symbol" : "AA-W",
+  "companyName" : "Alcoa Corporation When Issued",
+  "exchange" : "NYSE",
+  "ipoDate" : "2016-10-18",
+  "delistedDate" : "2016-11-08"
+}, {
+  "symbol" : "AAAP",
+  "companyName" : "Advanced Accelerator Applications SA",
+  "exchange" : "NASDAQ",
+  "ipoDate" : "2015-11-11",
+  "delistedDate" : "2018-02-20"
+}, {
+  "symbol" : "AABA",
+  "companyName" : "Altaba Inc",
+  "exchange" : "NASDAQ",
+  "ipoDate" : "1996-04-12",
+  "delistedDate" : "2019-11-06"
+}, {
+  "symbol" : "AAC",
+  "companyName" : "American Addiction Centers",
+  "exchange" : "NYSE",
+  "ipoDate" : "2014-10-02",
+  "delistedDate" : "2019-11-04"
+}, { ... }
+]
 ```
 ----
 ## GET /v4/articles <a name="0x92499117c90f908d061895ff836caecb00e58ee0f471e40a38032f2f68a053bd"></a>
