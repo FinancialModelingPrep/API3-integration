@@ -3005,7 +3005,7 @@ None
 ## GET /v3/delisted-companies <a name="0x59ae66e39460b5e996adc11a1f1073a9dbffdf1eeb5341ca0a0af2e550d1cfea"></a>
 
 Access a list of delisted companies from the US exchanges.
-Stock delisting is the removal of a recorded stock from a stock trade exchange, and accordingly it would presently don't be exchanged on the bourse. 
+Stock delisting is the removal of a recorded stock from a stock trade exchange, and accordingly it would presently don't be exchanged on the bourse.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/delisted-companies
 
@@ -3022,7 +3022,7 @@ limit : Number
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
  {
   "symbol" : "AA-W",
   "companyName" : "Alcoa Corporation When Issued",
@@ -3065,14 +3065,14 @@ You'll need the **Endpoint ID** to call this endpoint.
 
 ```solidity
 page : Number
-size : Number 
+size : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
 {
-  "content" : [ 
+  "content" : [
     {
       "title" : "Soros Fund Management Has Also Invested in Bitcoin",
       "date" : "2021-10-08 14:07:00",
@@ -3141,13 +3141,13 @@ You'll need the **Endpoint ID** to call this endpoint.
 
 ```solidity
 tickers : String
-limit : Number 
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "AAPL",
     "publishedDate" : "2020-09-08 09:25:00",
@@ -3197,7 +3197,7 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit : Number 
+limit : Number
 Symbol : Company Symbol, ex. AAPL
 ```
 
@@ -3225,9 +3225,9 @@ Symbol : Company Symbol, ex. AAPL
 ----
 ## GET /v4/sector_price_earning_ratio <a name="0xea1299fa30035cf94bb01f94d040926e7966747934d394a4f91a3ae207e27813"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Our API calculates sector PE ratios from companies in a specific sector on a daily basis. You can use this to compare other companies to the average pe for their industry.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/sectors-pe-ratio
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3236,21 +3236,76 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-date		// Parameter Description...
-exchange		// Parameter Description...
+date : YYYY-MM-DD
+exchange : String
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "date" : "2021-05-07",
+  "sector" : "Basic Materials",
+  "exchange" : "NYSE",
+  "pe" : "52.5766227276190392"
+}, {
+  "date" : "2021-05-07",
+  "sector" : "Communication Services",
+  "exchange" : "NYSE",
+  "pe" : "26.2022392285714183"
+}, {
+  "date" : "2021-05-07",
+  "sector" : "Consumer Cyclical",
+  "exchange" : "NYSE",
+  "pe" : "62.1420462666666751"
+}, {
+  "date" : "2021-05-07",
+  "sector" : "Consumer Defensive",
+  "exchange" : "NYSE",
+  "pe" : "76.1478811079999645"
+}, {
+  "date" : "2021-05-07",
+  "sector" : "Energy",
+  "exchange" : "NYSE",
+  "pe" : "152.087980826190488"
+}, {
+  "date" : "2021-05-07",
+  "sector" : "Financial Services",
+  "exchange" : "NYSE",
+  "pe" : "33.2373039483871153"
+}, {
+  "date" : "2021-05-07",
+  "sector" : "Healthcare",
+  "exchange" : "NYSE",
+  "pe" : "40.6311915389610405"
+}, {
+  "date" : "2021-05-07",
+  "sector" : "Industrials",
+  "exchange" : "NYSE",
+  "pe" : "55.3028414118181928"
+}, {
+  "date" : "2021-05-07",
+  "sector" : "Real Estate",
+  "exchange" : "NYSE",
+  "pe" : "65.8221667666666548"
+}, {
+  "date" : "2021-05-07",
+  "sector" : "Technology",
+  "exchange" : "NYSE",
+  "pe" : "63.0115322481481428"
+}, {
+  "date" : "2021-05-07",
+  "sector" : "Utilities",
+  "exchange" : "NYSE",
+  "pe" : "29.8290601925675745"
+} ]
 ```
 ----
 ## GET /v4/industry_price_earning_ratio <a name="0x2717b835e234a48fc40947bad9278af346f58e30661175d63b53a0d6803bd8ce"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Industries The PE average is calculated using companies that are grouped by industry. This endpoint is updated on a daily basis, allowing you to look back at historical data. Divide the price by the earnings per share, or EPS, to get the price-to-earnings ratio, or PE.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/industries-pe-ratio
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3259,21 +3314,76 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-date		// Parameter Description...
-exchange		// Parameter Description...
+date : YYYY-MM-DD
+exchange : String
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "date" : "2021-05-07",
+  "industry" : "Auto Manufacturers",
+  "exchange" : "NYSE",
+  "pe" : "62.1420462666666751"
+}, {
+  "date" : "2021-05-07",
+  "industry" : "Banks Diversified",
+  "exchange" : "NYSE",
+  "pe" : "33.2373039483871153"
+}, {
+  "date" : "2021-05-07",
+  "industry" : "Computer Hardware",
+  "exchange" : "NYSE",
+  "pe" : "63.0115322481481428"
+}, {
+  "date" : "2021-05-07",
+  "industry" : "Drug Manufacturers General",
+  "exchange" : "NYSE",
+  "pe" : "40.6311915389610405"
+}, {
+  "date" : "2021-05-07",
+  "industry" : "Household & Personal Products",
+  "exchange" : "NYSE",
+  "pe" : "76.1478811079999645"
+}, {
+  "date" : "2021-05-07",
+  "industry" : "Metals & Mining",
+  "exchange" : "NYSE",
+  "pe" : "52.5766227276190392"
+}, {
+  "date" : "2021-05-07",
+  "industry" : "Oil & Gas Midstream",
+  "exchange" : "NYSE",
+  "pe" : "152.087980826190488"
+}, {
+  "date" : "2021-05-07",
+  "industry" : "REIT Diversified",
+  "exchange" : "NYSE",
+  "pe" : "65.8221667666666548"
+}, {
+  "date" : "2021-05-07",
+  "industry" : "Telecom Services",
+  "exchange" : "NYSE",
+  "pe" : "26.2022392285714183"
+}, {
+  "date" : "2021-05-07",
+  "industry" : "Trucking",
+  "exchange" : "NYSE",
+  "pe" : "55.3028414118181928"
+}, {
+  "date" : "2021-05-07",
+  "industry" : "Utilities Diversified",
+  "exchange" : "NYSE",
+  "pe" : "29.8290601925675745"
+} ]
 ```
 ----
 ## GET /v3/sectors-performance <a name="0x1dac39aab45ce2908ef9f8885c7f368c52cce25633f41c42cceb6ae122a6c408"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Check out performance by sector to see which one performs the best. You can find companies in each of the sectors using our stock screener. It's based on the percent change in each sector's companies.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-market-sector-performance-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3288,14 +3398,61 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "sectorPerformance" : [ {
+    "sector" : "Basic Materials",
+    "changesPercentage" : "0.0546%"
+  }, {
+    "sector" : "Communication Services",
+    "changesPercentage" : "-0.1645%"
+  }, {
+    "sector" : "Conglomerates",
+    "changesPercentage" : "0.0000%"
+  }, {
+    "sector" : "Consumer Cyclical",
+    "changesPercentage" : "-0.0018%"
+  }, {
+    "sector" : "Consumer Defensive",
+    "changesPercentage" : "-0.1199%"
+  }, {
+    "sector" : "Energy",
+    "changesPercentage" : "-0.6984%"
+  }, {
+    "sector" : "Financial",
+    "changesPercentage" : "0.1233%"
+  }, {
+    "sector" : "Financial Services",
+    "changesPercentage" : "-0.0211%"
+  }, {
+    "sector" : "Healthcare",
+    "changesPercentage" : "-0.1698%"
+  }, {
+    "sector" : "Industrial Goods",
+    "changesPercentage" : "2.2278%"
+  }, {
+    "sector" : "Industrials",
+    "changesPercentage" : "-0.1186%"
+  }, {
+    "sector" : "Real Estate",
+    "changesPercentage" : "0.1093%"
+  }, {
+    "sector" : "Services",
+    "changesPercentage" : "0.0000%"
+  }, {
+    "sector" : "Technology",
+    "changesPercentage" : "0.1022%"
+  }, {
+    "sector" : "Utilities",
+    "changesPercentage" : "0.4557%"
+  } ]
+}
 ```
 ----
 ## GET /v3/historical-sectors-performance <a name="0xda2e2fbf813778cd01bcf722b2b5871720793e8e0954043185ef620395e14d0d"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Check out performance by sector to see which one performs the best. You can find companies in each of the sectors using our stock screener. It's based on the percent change in each sector's companies.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-market-sector-performance-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3304,20 +3461,67 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "sectorPerformance" : [ {
+    "sector" : "Basic Materials",
+    "changesPercentage" : "0.0546%"
+  }, {
+    "sector" : "Communication Services",
+    "changesPercentage" : "-0.1645%"
+  }, {
+    "sector" : "Conglomerates",
+    "changesPercentage" : "0.0000%"
+  }, {
+    "sector" : "Consumer Cyclical",
+    "changesPercentage" : "-0.0018%"
+  }, {
+    "sector" : "Consumer Defensive",
+    "changesPercentage" : "-0.1199%"
+  }, {
+    "sector" : "Energy",
+    "changesPercentage" : "-0.6984%"
+  }, {
+    "sector" : "Financial",
+    "changesPercentage" : "0.1233%"
+  }, {
+    "sector" : "Financial Services",
+    "changesPercentage" : "-0.0211%"
+  }, {
+    "sector" : "Healthcare",
+    "changesPercentage" : "-0.1698%"
+  }, {
+    "sector" : "Industrial Goods",
+    "changesPercentage" : "2.2278%"
+  }, {
+    "sector" : "Industrials",
+    "changesPercentage" : "-0.1186%"
+  }, {
+    "sector" : "Real Estate",
+    "changesPercentage" : "0.1093%"
+  }, {
+    "sector" : "Services",
+    "changesPercentage" : "0.0000%"
+  }, {
+    "sector" : "Technology",
+    "changesPercentage" : "0.1022%"
+  }, {
+    "sector" : "Utilities",
+    "changesPercentage" : "0.4557%"
+  } ]
+}
 ```
 ----
 ## GET /v3/gainers <a name="0x0eb26c96bd29e0a63458f325fcf1c61cbd8fe4cca4efa29581dd32f8e8687983"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+The biggest percentage change in supported stocks returns the most gainers. As fields, it returns the ticker, name, change, and percentage change. There's a reason those stocks are rising, and you'll probably find it on our news endpoint.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/most-gainers-stock-market-data-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3332,14 +3536,60 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "mostGainerStock" : [
+    {
+      "ticker" : "NVR",
+      "changes" : 15.03,
+      "price" : "3782.25",
+      "changesPercentage" : "(+0.40%)",
+      "companyName" : "NVR Inc."
+    }, {
+      "ticker" : "WTM",
+      "changes" : 8.31,
+      "price" : "1113.9",
+      "changesPercentage" : "(+0.75%)",
+      "companyName" : "White Mountains Insurance Group Ltd."
+    }, {
+      "ticker" : "TPL",
+      "changes" : 8.06,
+      "price" : "806.95",
+      "changesPercentage" : "(+1.01%)",
+      "companyName" : "Texas Pacific Land Trust"
+    }, {
+      "ticker" : "RUSL",
+      "changes" : 5.75,
+      "price" : "77.99",
+      "changesPercentage" : "(+7.95%)",
+      "companyName" : "Direxion Daily Russia Bull 3x Shares"
+    }, {
+      "ticker" : "CSGP",
+      "changes" : 3.54,
+      "price" : "645.7",
+      "changesPercentage" : "(+0.55%)",
+      "companyName" : "CoStar Group Inc."
+    }, {
+      "ticker" : "FLRU",
+      "changes" : 3.15,
+      "price" : "30.8",
+      "changesPercentage" : "(+11.37%)",
+      "companyName" : "Franklin FTSE Russia"
+    }, {
+      "ticker" : "TSLA",
+      "changes" : 1.59,
+      "price" : "478.48",
+      "changesPercentage" : "(+0.33%)",
+      "companyName" : "Tesla Inc."
+    }
+  ]
+}
 ```
 ----
 ## GET /v3/losers <a name="0x392ec92746669d2a0d28730830d9bf1e624d6ab5d5738b80214c80fea4dbbb65"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+The most negative percent change of all supported stocks is returned by this endpoint. It returns ticker, name, change, and percentage change as fields. Normal stocks, mutual funds, etfs, and other securities can be among the tickers returned. As a result, 3X Bull/Bear ETFs may occasionally appear on the list.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/most-losers-stock-market-data-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3354,14 +3604,54 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "mostLoserStock" : [ 
+    {
+      "ticker" : "SEB",
+      "changes" : -23.16,
+      "price" : "4165",
+      "changesPercentage" : "(-0.55%)",
+      "companyName" : "Seaboard Corporation"
+    }, {
+      "ticker" : "GHC",
+      "changes" : -3.76,
+      "price" : "615.62",
+      "changesPercentage" : "(-0.61%)",
+      "companyName" : "Graham Holdings Company"
+    }, {
+      "ticker" : "NWLI",
+      "changes" : -2.98,
+      "price" : "283.04",
+      "changesPercentage" : "(-1.04%)",
+      "companyName" : "National Western Life Group Inc."
+    }, {
+      "ticker" : "AZO",
+      "changes" : -2.89,
+      "price" : "1131.86",
+      "changesPercentage" : "(-0.25%)",
+      "companyName" : "AutoZone Inc."
+    }, {
+      "ticker" : "MKTX",
+      "changes" : -2.49,
+      "price" : "362.66",
+      "changesPercentage" : "(-0.68%)",
+      "companyName" : "MarketAxess Holdings Inc."
+    }, {
+      "ticker" : "NEU",
+      "changes" : -2.38,
+      "price" : "458.79",
+      "changesPercentage" : "(-0.52%)",
+      "companyName" : "NewMarket Corp"
+    },
+  ]
+}
 ```
 ----
 ## GET /v3/actives <a name="0xebf4654d7c1a9224bd1b1ae7a27e0ea9b70f5e16b115d6ecc7803ed46e96b8ab"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+The most actively traded stocks are those with the highest volume of trades per day. This endpoint could be used to find hedge funds/mutual funds that are loading up on certain stocks or to find stocks that are trending today.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/most-actives-stock-market-data-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3376,7 +3666,47 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "mostActiveStock" : [ 
+    {
+      "ticker" : "SEB",
+      "changes" : -23.16,
+      "price" : "4165",
+      "changesPercentage" : "(-0.55%)",
+      "companyName" : "Seaboard Corporation"
+    }, {
+      "ticker" : "NVR",
+      "changes" : 15.03,
+      "price" : "3782.25",
+      "changesPercentage" : "(+0.40%)",
+      "companyName" : "NVR Inc."
+    }, {
+      "ticker" : "WTM",
+      "changes" : 8.31,
+      "price" : "1113.9",
+      "changesPercentage" : "(+0.75%)",
+      "companyName" : "White Mountains Insurance Group Ltd."
+    }, {
+      "ticker" : "TPL",
+      "changes" : 8.06,
+      "price" : "806.95",
+      "changesPercentage" : "(+1.01%)",
+      "companyName" : "Texas Pacific Land Trust"
+    }, {
+      "ticker" : "RUSL",
+      "changes" : 5.75,
+      "price" : "77.99",
+      "changesPercentage" : "(+7.95%)",
+      "companyName" : "Direxion Daily Russia Bull 3x Shares"
+    }, {
+      "ticker" : "GHC",
+      "changes" : -3.76,
+      "price" : "615.62",
+      "changesPercentage" : "(-0.61%)",
+      "companyName" : "Graham Holdings Company"
+    }, ...
+  ]
+}
 ```
 ----
 ## GET /v4/standard_industrial_classification <a name="0xc34c5cca5d18714d71f6a77b6f35b0a1dd3d018bf9df9aaadada6d84bb5b380a"></a>
