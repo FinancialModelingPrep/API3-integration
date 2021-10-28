@@ -4964,9 +4964,9 @@ symbol : Company Symbol, ex. AAPL
 ----
 ## GET /v3/historical-chart/5min/{symbol} <a name="0xdef0f6d6d8416a408fed0a3ca76432403f17d33bfbd6f80634aefd7bb003ad4c"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Stock five minutes historical stock prices.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-data-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4975,20 +4975,53 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "historical" : [ {
+      "date" : "2021-10-08",
+      "open" : 144.03,
+      "high" : 144.17,
+      "low" : 142.56,
+      "close" : 142.9,
+      "adjClose" : 142.9,
+      "volume" : 5.545036E7,
+      "unadjustedVolume" : 5.545036E7,
+      "change" : -1.13,
+      "changePercent" : -0.785,
+      "vwap" : 143.21,
+      "label" : "October 08, 21",
+      "changeOverTime" : -0.00785
+    }, {
+      "date" : "2021-10-07",
+      "open" : 143.06,
+      "high" : 144.215,
+      "low" : 142.73,
+      "close" : 143.29,
+      "adjClose" : 143.29,
+      "volume" : 6.1863761E7,
+      "unadjustedVolume" : 6.1863761E7,
+      "change" : 0.23,
+      "changePercent" : 0.161,
+      "vwap" : 143.41167,
+      "label" : "October 07, 21",
+      "changeOverTime" : 0.00161
+    }, {...} 
+  ]
+}
+
 ```
 ----
 ## GET /v3/historical-chart/15min/{symbol} <a name="0x0bffe32171a75d9244c3146dadb0ccbc313766740a2e674342e1d0173b97b2d4"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Stock fifteen minutes historical stock prices. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-data-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4997,20 +5030,53 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "historical" : [ {
+      "date" : "2021-10-08",
+      "open" : 144.03,
+      "high" : 144.17,
+      "low" : 142.56,
+      "close" : 142.9,
+      "adjClose" : 142.9,
+      "volume" : 5.545036E7,
+      "unadjustedVolume" : 5.545036E7,
+      "change" : -1.13,
+      "changePercent" : -0.785,
+      "vwap" : 143.21,
+      "label" : "October 08, 21",
+      "changeOverTime" : -0.00785
+    }, {
+      "date" : "2021-10-07",
+      "open" : 143.06,
+      "high" : 144.215,
+      "low" : 142.73,
+      "close" : 143.29,
+      "adjClose" : 143.29,
+      "volume" : 6.1863761E7,
+      "unadjustedVolume" : 6.1863761E7,
+      "change" : 0.23,
+      "changePercent" : 0.161,
+      "vwap" : 143.41167,
+      "label" : "October 07, 21",
+      "changeOverTime" : 0.00161
+    }, {...} 
+  ]
+}
+
 ```
 ----
 ## GET /v3/historical-chart/30min/{symbol} <a name="0x87411cfc1413922e1ed9872ae91441c311c465131de8f7bb968ff3e07ca2c461"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Stock thirty minutes historical stock prices.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-data-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5019,20 +5085,52 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "historical" : [ {
+      "date" : "2021-10-08",
+      "open" : 144.03,
+      "high" : 144.17,
+      "low" : 142.56,
+      "close" : 142.9,
+      "adjClose" : 142.9,
+      "volume" : 5.545036E7,
+      "unadjustedVolume" : 5.545036E7,
+      "change" : -1.13,
+      "changePercent" : -0.785,
+      "vwap" : 143.21,
+      "label" : "October 08, 21",
+      "changeOverTime" : -0.00785
+    }, {
+      "date" : "2021-10-07",
+      "open" : 143.06,
+      "high" : 144.215,
+      "low" : 142.73,
+      "close" : 143.29,
+      "adjClose" : 143.29,
+      "volume" : 6.1863761E7,
+      "unadjustedVolume" : 6.1863761E7,
+      "change" : 0.23,
+      "changePercent" : 0.161,
+      "vwap" : 143.41167,
+      "label" : "October 07, 21",
+      "changeOverTime" : 0.00161
+    }, {...} 
+  ]
+}
 ```
 ----
 ## GET /v3/historical-chart/1hour/{symbol} <a name="0x9c7120fe43466e8c74a08a577410e7f0450b1b1b7ecaf6b5ffebd58160ef28d6"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Stock hour historical stock prices.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-data-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5041,20 +5139,52 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "historical" : [ {
+      "date" : "2021-10-08",
+      "open" : 144.03,
+      "high" : 144.17,
+      "low" : 142.56,
+      "close" : 142.9,
+      "adjClose" : 142.9,
+      "volume" : 5.545036E7,
+      "unadjustedVolume" : 5.545036E7,
+      "change" : -1.13,
+      "changePercent" : -0.785,
+      "vwap" : 143.21,
+      "label" : "October 08, 21",
+      "changeOverTime" : -0.00785
+    }, {
+      "date" : "2021-10-07",
+      "open" : 143.06,
+      "high" : 144.215,
+      "low" : 142.73,
+      "close" : 143.29,
+      "adjClose" : 143.29,
+      "volume" : 6.1863761E7,
+      "unadjustedVolume" : 6.1863761E7,
+      "change" : 0.23,
+      "changePercent" : 0.161,
+      "vwap" : 143.41167,
+      "label" : "October 07, 21",
+      "changeOverTime" : 0.00161
+    }, {...} 
+  ]
+}
 ```
 ----
 ## GET /v3/historical-chart/4hour/{symbol} <a name="0xfa27ed50687decece1b374fc0048a43aeb2f40f000e648294a7ebbba63e49f5e"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Stock four hours historical stock prices.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-data-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5063,20 +5193,52 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "historical" : [ {
+      "date" : "2021-10-08",
+      "open" : 144.03,
+      "high" : 144.17,
+      "low" : 142.56,
+      "close" : 142.9,
+      "adjClose" : 142.9,
+      "volume" : 5.545036E7,
+      "unadjustedVolume" : 5.545036E7,
+      "change" : -1.13,
+      "changePercent" : -0.785,
+      "vwap" : 143.21,
+      "label" : "October 08, 21",
+      "changeOverTime" : -0.00785
+    }, {
+      "date" : "2021-10-07",
+      "open" : 143.06,
+      "high" : 144.215,
+      "low" : 142.73,
+      "close" : 143.29,
+      "adjClose" : 143.29,
+      "volume" : 6.1863761E7,
+      "unadjustedVolume" : 6.1863761E7,
+      "change" : 0.23,
+      "changePercent" : 0.161,
+      "vwap" : 143.41167,
+      "label" : "October 07, 21",
+      "changeOverTime" : 0.00161
+    }, {...} 
+  ]
+}
 ```
 ----
 ## GET /v3/historical-price-full/{symbol} <a name="0x3506b1d2fec15e1b4fa743bdf2e87bb592a74d6131b0726f1ecd82d670862c7e"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Stock historical prices.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-data-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5085,23 +5247,55 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-from		// Parameter Description...
-symbol		// Parameter Description...
-timeseries		// Parameter Description...
-to		// Parameter Description...
+to : YYYY-MM-DD
+from : YYYY-MM-DD
+timeseries : Number (return last x days)
+serietype : line | bar 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "historical" : [ {
+      "date" : "2021-10-08",
+      "open" : 144.03,
+      "high" : 144.17,
+      "low" : 142.56,
+      "close" : 142.9,
+      "adjClose" : 142.9,
+      "volume" : 5.545036E7,
+      "unadjustedVolume" : 5.545036E7,
+      "change" : -1.13,
+      "changePercent" : -0.785,
+      "vwap" : 143.21,
+      "label" : "October 08, 21",
+      "changeOverTime" : -0.00785
+    }, {
+      "date" : "2021-10-07",
+      "open" : 143.06,
+      "high" : 144.215,
+      "low" : 142.73,
+      "close" : 143.29,
+      "adjClose" : 143.29,
+      "volume" : 6.1863761E7,
+      "unadjustedVolume" : 6.1863761E7,
+      "change" : 0.23,
+      "changePercent" : 0.161,
+      "vwap" : 143.41167,
+      "label" : "October 07, 21",
+      "changeOverTime" : 0.00161
+    }, {...} 
+  ]
+}
 ```
 ----
 ## GET /v3/historical-price-full/stock_dividend/{symbol} <a name="0xc4a0e1e7933d8e11d6ff2026ec9ddacb28d73f82ed7e39b9dc3d0946831236b4"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+You can get dividend history for any stock, ETF, mutual fund, and more using this endpoint. Dividends are usually paid out every quarter, but they can also be paid out every month.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-dividends
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5110,20 +5304,46 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "historical" : [ {
+    "date" : "2021-05-07",
+    "label" : "May 07, 21",
+    "adjDividend" : 0.2200000000,
+    "dividend" : 0.22,
+    "recordDate" : "2021-05-10",
+    "paymentDate" : "2021-05-13",
+    "declarationDate" : "2021-04-28"
+  }, {
+    "date" : "2021-02-05",
+    "label" : "February 05, 21",
+    "adjDividend" : 0.2050000000,
+    "dividend" : 0.205,
+    "recordDate" : "2021-02-08",
+    "paymentDate" : "2021-02-11",
+    "declarationDate" : "2021-01-27"
+  }, {
+    "date" : "2020-11-06",
+    "label" : "November 06, 20",
+    "adjDividend" : 0.2050000000,
+    "dividend" : 0.205,
+    "recordDate" : "2020-11-9",
+    "paymentDate" : "2020-11-12",
+    "declarationDate" : "2020-10-29"
+  }, { ... }
 ```
 ----
 ## GET /v3/historical-price-full/stock_split/{symbol} <a name="0x17c4b82751150c3042b2d2787df65e32bca5ea28a3e24116f698a935946254a0"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint provides all historical stock splits for stocks with numerator and denominator fields. Stock splits affect both the price and the number of shares issued. If the company issues more shares, the price will become lower, but the overall value of the company will remain the same.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-splits
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5132,20 +5352,48 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "historical" : [ {
+    "date" : "2020-08-31",
+    "label" : "August 31, 20",
+    "numerator" : 4.00,
+    "denominator" : 1.00
+    }, {
+      "date" : "2014-06-09",
+      "label" : "June 09, 14",
+      "numerator" : 7.00,
+      "denominator" : 1.00
+    }, {
+      "date" : "2005-02-28",
+      "label" : "February 28, 05",
+      "numerator" : 2.00,
+      "denominator" : 1.00
+    }, {
+      "date" : "2000-06-21",
+      "label" : "June 21, 00",
+      "numerator" : 2.00,
+      "denominator" : 1.00
+    }, {
+      "date" : "1987-06-16",
+      "label" : "June 16, 87",
+      "numerator" : 2.00,
+      "denominator" : 1.00
+  } ]
+}
 ```
 ----
 ## GET /v4/historical-price-full/{symbol}/{date} <a name="0x07af2019d0b192e95dabd980d17a1aadb91395d42702d132f59895c04101764e"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint provides all historical stock splits for stocks with numerator and denominator fields. Stock splits affect both the price and the number of shares issued. If the company issues more shares, the price will become lower, but the overall value of the company will remain the same.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-splits
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5154,21 +5402,29 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
-date		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+date : YYYY-MM-DD
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "ABI",
+  "open" : 21.01,
+  "high" : 21.27,
+  "low" : 20.77,
+  "close" : 21.01,
+  "volume" : 879200,
+  "from" : "2005-01-03"
+}
 ```
 ----
 ## GET /v3/technical_indicator/daily/{symbol} <a name="0x9fdc095046edee80824481c6527aa2d1248509801840c21c4028f418a8ea8ed9"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Daily technical indicators such as the SMA, EMA, and RSI are available, all options are displayed below. Use them to make advanced charts that will assist you in analyzing price changes or trading.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/technicals-daily
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5177,22 +5433,47 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-type		// Parameter Description...
-symbol		// Parameter Description...
+Period : Number
+Type : SMA | EMA | WMA | DEMA | TEMA | williams | RSI | ADX | standardDeviation
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-18",
+    "open" : 110.400002,
+    "high" : 110.879997,
+    "low" : 106.089996,
+    "close" : 106.839996,
+    "volume" : 2.866936E8,
+    "ema" : 113.85965628298615
+  }, {
+    "date" : "2020-09-17",
+    "open" : 109.720001,
+    "high" : 112.199997,
+    "low" : 108.709999,
+    "close" : 110.339996,
+    "volume" : 1.78011E8,
+    "ema" : 115.41958079031642
+  }, {
+    "date" : "2020-09-16",
+    "open" : 115.230003,
+    "high" : 116.0,
+    "low" : 112.040001,
+    "close" : 112.129997,
+    "volume" : 1.54679E8,
+    "ema" : 116.54837741038672
+  }, ...
+]
 ```
 ----
 ## GET /v3/technical_indicator/1min/{symbol} <a name="0xc35d0c0574bb39dc1f7b30a91d4e4045c96c42b9efc2ea962bd9a161d8f0471d"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Technical indicator every minute
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/technicals-daily
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5201,22 +5482,48 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-type		// Parameter Description...
-symbol		// Parameter Description...
+Period : Number
+Type : SMA | EMA | WMA | DEMA | TEMA | williams | RSI | ADX | standardDeviation
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-18",
+    "open" : 110.400002,
+    "high" : 110.879997,
+    "low" : 106.089996,
+    "close" : 106.839996,
+    "volume" : 2.866936E8,
+    "ema" : 113.85965628298615
+  }, {
+    "date" : "2020-09-17",
+    "open" : 109.720001,
+    "high" : 112.199997,
+    "low" : 108.709999,
+    "close" : 110.339996,
+    "volume" : 1.78011E8,
+    "ema" : 115.41958079031642
+  }, {
+    "date" : "2020-09-16",
+    "open" : 115.230003,
+    "high" : 116.0,
+    "low" : 112.040001,
+    "close" : 112.129997,
+    "volume" : 1.54679E8,
+    "ema" : 116.54837741038672
+  }, ...
+]
 ```
 ----
+
 ## GET /v3/technical_indicator/5min/{symbol} <a name="0x551b14085dc94aa8f926691ffebeb7252a71f76287825a8845a28a80ba01f1fe"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Technical indicator every 5 minutes.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/technicals-daily
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5225,22 +5532,47 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-type		// Parameter Description...
-symbol		// Parameter Description...
+Period : Number
+Type : SMA | EMA | WMA | DEMA | TEMA | williams | RSI | ADX | standardDeviation
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-18",
+    "open" : 110.400002,
+    "high" : 110.879997,
+    "low" : 106.089996,
+    "close" : 106.839996,
+    "volume" : 2.866936E8,
+    "ema" : 113.85965628298615
+  }, {
+    "date" : "2020-09-17",
+    "open" : 109.720001,
+    "high" : 112.199997,
+    "low" : 108.709999,
+    "close" : 110.339996,
+    "volume" : 1.78011E8,
+    "ema" : 115.41958079031642
+  }, {
+    "date" : "2020-09-16",
+    "open" : 115.230003,
+    "high" : 116.0,
+    "low" : 112.040001,
+    "close" : 112.129997,
+    "volume" : 1.54679E8,
+    "ema" : 116.54837741038672
+  }, ...
+]
 ```
 ----
 ## GET /v3/technical_indicator/15min/{symbol} <a name="0xbac1560f9593f92ee56971bb5fa1f052d60e81d516696c4fa9a62c5189b4e140"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Technical indicator every 15 minutes
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/technicals-daily
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5249,22 +5581,47 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-type		// Parameter Description...
-symbol		// Parameter Description...
+Period : Number
+Type : SMA | EMA | WMA | DEMA | TEMA | williams | RSI | ADX | standardDeviation
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-18",
+    "open" : 110.400002,
+    "high" : 110.879997,
+    "low" : 106.089996,
+    "close" : 106.839996,
+    "volume" : 2.866936E8,
+    "ema" : 113.85965628298615
+  }, {
+    "date" : "2020-09-17",
+    "open" : 109.720001,
+    "high" : 112.199997,
+    "low" : 108.709999,
+    "close" : 110.339996,
+    "volume" : 1.78011E8,
+    "ema" : 115.41958079031642
+  }, {
+    "date" : "2020-09-16",
+    "open" : 115.230003,
+    "high" : 116.0,
+    "low" : 112.040001,
+    "close" : 112.129997,
+    "volume" : 1.54679E8,
+    "ema" : 116.54837741038672
+  }, ...
+]
 ```
 ----
 ## GET /v3/technical_indicator/30min/{symbol} <a name="0x7166e27d120b6f22a373dbc1f78e4f8031f97cd44075aff937daae043759c6e5"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Technical indicator every 30 minutes.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/technicals-daily
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5273,22 +5630,47 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-type		// Parameter Description...
-symbol		// Parameter Description...
+Period : Number
+Type : SMA | EMA | WMA | DEMA | TEMA | williams | RSI | ADX | standardDeviation
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-18",
+    "open" : 110.400002,
+    "high" : 110.879997,
+    "low" : 106.089996,
+    "close" : 106.839996,
+    "volume" : 2.866936E8,
+    "ema" : 113.85965628298615
+  }, {
+    "date" : "2020-09-17",
+    "open" : 109.720001,
+    "high" : 112.199997,
+    "low" : 108.709999,
+    "close" : 110.339996,
+    "volume" : 1.78011E8,
+    "ema" : 115.41958079031642
+  }, {
+    "date" : "2020-09-16",
+    "open" : 115.230003,
+    "high" : 116.0,
+    "low" : 112.040001,
+    "close" : 112.129997,
+    "volume" : 1.54679E8,
+    "ema" : 116.54837741038672
+  }, ...
+]
 ```
 ----
 ## GET /v3/technical_indicator/1hour/{symbol} <a name="0xa5ca5579842315622d8a97b76a5436f28c2f56c78e2aaf154c7e197ff4ebe0fb"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Technical indicator every 1 hour.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/technicals-daily
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5297,22 +5679,47 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-type		// Parameter Description...
-symbol		// Parameter Description...
+Period : Number
+Type : SMA | EMA | WMA | DEMA | TEMA | williams | RSI | ADX | standardDeviation
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-18",
+    "open" : 110.400002,
+    "high" : 110.879997,
+    "low" : 106.089996,
+    "close" : 106.839996,
+    "volume" : 2.866936E8,
+    "ema" : 113.85965628298615
+  }, {
+    "date" : "2020-09-17",
+    "open" : 109.720001,
+    "high" : 112.199997,
+    "low" : 108.709999,
+    "close" : 110.339996,
+    "volume" : 1.78011E8,
+    "ema" : 115.41958079031642
+  }, {
+    "date" : "2020-09-16",
+    "open" : 115.230003,
+    "high" : 116.0,
+    "low" : 112.040001,
+    "close" : 112.129997,
+    "volume" : 1.54679E8,
+    "ema" : 116.54837741038672
+  }, ...
+]
 ```
 ----
 ## GET /v3/technical_indicator/4hour/{symbol} <a name="0xcb3d37386174679d30df9495f9b8943179d0099ccec406a8f7b2112f81c291ee"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Technical indicator every 4 hours.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/technicals-daily
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5321,15 +5728,40 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-type		// Parameter Description...
-symbol		// Parameter Description...
+Period : Number
+Type : SMA | EMA | WMA | DEMA | TEMA | williams | RSI | ADX | standardDeviation
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-18",
+    "open" : 110.400002,
+    "high" : 110.879997,
+    "low" : 106.089996,
+    "close" : 106.839996,
+    "volume" : 2.866936E8,
+    "ema" : 113.85965628298615
+  }, {
+    "date" : "2020-09-17",
+    "open" : 109.720001,
+    "high" : 112.199997,
+    "low" : 108.709999,
+    "close" : 110.339996,
+    "volume" : 1.78011E8,
+    "ema" : 115.41958079031642
+  }, {
+    "date" : "2020-09-16",
+    "open" : 115.230003,
+    "high" : 116.0,
+    "low" : 112.040001,
+    "close" : 112.129997,
+    "volume" : 1.54679E8,
+    "ema" : 116.54837741038672
+  }, ...
+]
 ```
 ----
 ## GET /v3/etf-holder/{symbol} <a name="0x5ef2e446a611145c6f07c6e0f9c5681ce7d0d12b053eeba5d9c2d14610a2b7cf"></a>
