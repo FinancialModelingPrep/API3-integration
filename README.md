@@ -4278,9 +4278,9 @@ symbol : Company Symbol, ex. AAPL
 ----
 ## GET /v4/social-sentiment <a name="0x6d3844f911ef24504d3fd4096923dbe90043c3c8cc8ecc020dd1ba1731422531"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+With this endpoint, you can keep track of what people are saying about individual stocks on social media. Reddit, Yahoo, StockTwits, and Twitter are among the sites monitored. Absolute index field indicates how much people are talking about the stock, relative index also indicates it  but relative to previous day. Sentiment field indicates overall percentage of positive activity, while general perception indicates whether people are more positive or negative than usual. This endpoint is updated with new data every hour, but it also contains previous data.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/social-sentiment
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4289,21 +4289,56 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+Limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2021-09-09 19:35:05",
+    "symbol" : "AAPL",
+    "absoluteIndex" : 0.826211001642036202,
+    "relativeIndex" : 1.40558558491621555,
+    "generalPerception" : 0.976730914047170162,
+    "sentiment" : 0.918290043290043156,
+    "redditPostMentions" : 0,
+    "redditPostSentiment" : null,
+    "redditCommentMentions" : 2,
+    "redditCommentSentiment" : 1,
+    "tweetMentions" : 132,
+    "tweetSentiment" : 0.886363636363636354,
+    "stocktwitsPostMentions" : 75,
+    "stocktwitsPostSentiment" : 0.809523809523809534,
+    "yahooFinanceCommentMentions" : 17,
+    "yahooFinanceCommentSentiment" : 1
+  }, {
+    "date" : "2021-09-09 18:35:08",
+    "symbol" : "AAPL",
+    "absoluteIndex" : 1.00888067870826492,
+    "relativeIndex" : 1.36144467850889694,
+    "generalPerception" : 0.976181779294421625,
+    "sentiment" : 0.738720398344397178,
+    "redditPostMentions" : 1,
+    "redditPostSentiment" : 0,
+    "redditCommentMentions" : 5,
+    "redditCommentSentiment" : 0.599999999999999978,
+    "tweetMentions" : 139,
+    "tweetSentiment" : 0.776978417266187105,
+    "stocktwitsPostMentions" : 95,
+    "stocktwitsPostSentiment" : 0.773584905660377409,
+    "yahooFinanceCommentMentions" : 24,
+    "yahooFinanceCommentSentiment" : 0.91666666666666663
+  }, ...
+]
 ```
 ----
 ## GET /v3/grade/{symbol} <a name="0xc722594cd6883e15aa8929123f66ce0f4102c5869d23db8479c08b171095ce6e"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint keeps track of the grades given to companies by hedge funds, investment firms and analysts. It includes both the previous and new grade. Because companies frequently maintain their grade, both of those fields can be the same at times.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-grade
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4312,21 +4347,40 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+Limit : Number 
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "AAPL",
+    "date" : "2020-09-22",
+    "gradingCompany" : "Raymond James",
+    "previousGrade" : "Outperform",
+    "newGrade" : "Outperform"
+  }, {
+    "symbol" : "AAPL",
+    "date" : "2020-09-21",
+    "gradingCompany" : "Citigroup",
+    "previousGrade" : "Buy",
+    "newGrade" : "Buy"
+  }, {
+    "symbol" : "AAPL",
+    "date" : "2020-09-17",
+    "gradingCompany" : "Jefferies",
+    "previousGrade" : "Buy",
+    "newGrade" : "Buy"
+  }, ...
+]
 ```
 ----
 ## GET /v3/earnings-surprises/{symbol} <a name="0x5def20718185062e609800c5edc04770a490b4e41035ec69112b4b368420ef8a"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+For stocks, this endpoint returns historical EPS earnings. It includes fields such as estimated and actual EPS. You can look at our earnings calendar, which includes fields such as revenue and expected revenue.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/earnings-surprises
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4335,20 +4389,42 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-06-30",
+    "symbol" : "AAPL",
+    "actualEarningResult" : 0.645,
+    "estimatedEarning" : 0.5211078
+  }, {
+    "date" : "2020-03-31",
+    "symbol" : "AAPL",
+    "actualEarningResult" : 0.6375,
+    "estimatedEarning" : 0.5765856
+  }, {
+    "date" : "2019-12-31",
+    "symbol" : "AAPL",
+    "actualEarningResult" : 1.2475,
+    "estimatedEarning" : 1.159587
+  }, {
+    "date" : "2019-09-30",
+    "symbol" : "AAPL",
+    "actualEarningResult" : 0.7575,
+    "estimatedEarning" : 0.7240368
+  }, ...
+]
 ```
 ----
 ## GET /v3/analyst-estimates/{symbol} <a name="0x4e12bccc65fefc1c8e7c1dd36cb5b71264e89be188c28a5f1cf52c0617566e9d"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Get ratings and recommendations from FMP analysts, we use CAGR formula to predict and analyse stocks.
+You will access all the key financial figures estimated. We use compound annual growth rate to estimate revenue as we found it gives the most accurate result. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/analyst-estimates
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4357,15 +4433,61 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-period		// Parameter Description...
-symbol		// Parameter Description...
+limit : Number
+period : annual | quarterly
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "AAPL",
+  "date" : "2023-12-31",
+  "estimatedRevenueLow" : 306907763421,
+  "estimatedRevenueHigh" : 460361645134,
+  "estimatedRevenueAvg" : 383634704278,
+  "estimatedEbitdaLow" : 86145170339,
+  "estimatedEbitdaHigh" : 129217755510,
+  "estimatedEbitdaAvg" : 107681462925,
+  "estimatedEbitLow" : 77432425549,
+  "estimatedEbitHigh" : 116148638325,
+  "estimatedEbitAvg" : 96790531937,
+  "estimatedNetIncomeLow" : 100718671926,
+  "estimatedNetIncomeHigh" : 67145781283,
+  "estimatedNetIncomeAvg" : 83932226605,
+  "estimatedSgaExpenseLow" : 16860504331,
+  "estimatedSgaExpenseHigh" : 25290756496,
+  "estimatedSgaExpenseAvg" : 21075630414,
+  "estimatedEpsAvg" : 4.04,
+  "estimatedEpsHigh" : 4.85,
+  "estimatedEpsLow" : 3.23,
+  "numberAnalystEstimatedRevenue" : 12,
+  "numberAnalystsEstimatedEps" : 12
+}, {
+  "symbol" : "AAPL",
+  "date" : "2022-12-31",
+  "estimatedRevenueLow" : 279007057656,
+  "estimatedRevenueHigh" : 418510586486,
+  "estimatedRevenueAvg" : 348758822071,
+  "estimatedEbitdaLow" : 78313791218,
+  "estimatedEbitdaHigh" : 117470686828,
+  "estimatedEbitdaAvg" : 97892239023,
+  "estimatedEbitLow" : 70393114137,
+  "estimatedEbitHigh" : 105589671206,
+  "estimatedEbitAvg" : 87991392672,
+  "estimatedNetIncomeLow" : 91562429025,
+  "estimatedNetIncomeHigh" : 61041619349,
+  "estimatedNetIncomeAvg" : 76302024187,
+  "estimatedSgaExpenseLow" : 15327731211,
+  "estimatedSgaExpenseHigh" : 22991596816,
+  "estimatedSgaExpenseAvg" : 19159664014,
+  "estimatedEpsAvg" : 3.665,
+  "estimatedEpsHigh" : 4.3999999999999995,
+  "estimatedEpsLow" : 2.93,
+  "numberAnalystEstimatedRevenue" : 8,
+  "numberAnalystsEstimatedEps" : 8
+}, ...
 ```
 ----
 ## GET /v4/insider-trading <a name="0xe24dec2fddb301e74714049e94f8f2f369c407973e5a65909cc91fa8b30e16b9"></a>
