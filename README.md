@@ -3605,7 +3605,7 @@ None
 
 ```json
 {
-  "mostLoserStock" : [ 
+  "mostLoserStock" : [
     {
       "ticker" : "SEB",
       "changes" : -23.16,
@@ -3667,7 +3667,7 @@ None
 
 ```json
 {
-  "mostActiveStock" : [ 
+  "mostActiveStock" : [
     {
       "ticker" : "SEB",
       "changes" : -23.16,
@@ -3711,9 +3711,9 @@ None
 ----
 ## GET /v4/standard_industrial_classification <a name="0xc34c5cca5d18714d71f6a77b6f35b0a1dd3d018bf9df9aaadada6d84bb5b380a"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+SIC is a code given by US government to companies according to their business. Its mosly for US companies but also some other countries adopted this too. SIC is mostly used by SEC. It returns code but also the industry title.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/standard-industrial-classification
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3722,22 +3722,31 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-cik		// Parameter Description...
-sicCode		// Parameter Description...
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+cik : Number
+sic : Number
+industryTitle : String
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "AAPL",
+  "name" : "Apple Inc. ",
+  "cik" : "0000320193",
+  "sicCode" : "3571",
+  "industryTitle" : "ELECTRONIC COMPUTERS",
+  "businessAdress" : "['ONE APPLE PARK WAY', 'CUPERTINO CA 95014']",
+  "phoneNumber" : "(408) 996-1010"
+} ]
 ```
 ----
 ## GET /v4/standard_industrial_classification/all <a name="0xbac4d7a5a482602d0a6dddf13b8ec593e7fd554121d102810b930902a148e845"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Every Standard Industrial Classification available.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/standard-industrial-classification
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3752,14 +3761,22 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "AAPL",
+  "name" : "Apple Inc. ",
+  "cik" : "0000320193",
+  "sicCode" : "3571",
+  "industryTitle" : "ELECTRONIC COMPUTERS",
+  "businessAdress" : "['ONE APPLE PARK WAY', 'CUPERTINO CA 95014']",
+  "phoneNumber" : "(408) 996-1010"
+} ]
 ```
 ----
 ## GET /v4/standard_industrial_classification_list <a name="0xe03fe1ca41560488cd4a10dbbbbfa25c980f5e323895d987a3f64557f7f8ffc2"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+SIC is a code given by US government to companies according to their business. Its mosly for US companies but also some other countries adopted this too. SIC is mostly used by SEC. It returns code but also the industry title.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/standard-industrial-classification#Standard-Industrial-Classification-List
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3768,21 +3785,33 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-industryTitle		// Parameter Description...
-sicCode		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+cik : Number
+sic : Number
+industryTitle : String 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "AAPL",
+  "name" : "Apple Inc. ",
+  "cik" : "0000320193",
+  "sicCode" : "3571",
+  "industryTitle" : "ELECTRONIC COMPUTERS",
+  "businessAdress" : "['ONE APPLE PARK WAY', 'CUPERTINO CA 95014']",
+  "phoneNumber" : "(408) 996-1010"
+} ]
 ```
 ----
 ## GET /v4/commitment_of_traders_report/list <a name="0x6b60d1199f4ec6b2488b63e4d39fa211753ce6f9b5c4f8897b21ec1ea8487f6e"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Access the full COT report components
+You will be able to see all COT components individually to be able to call our the COT report API with specific symbols.
+The COT report also give insight about BITCOIN, if you need to have deeper insight about currency you can access it via our Cryptocurrency Free API to get access a list of all major crypto currencies, price are updated in realtime. Major crypto included Bitcoins, Ethereum, Ripple, EOS, Cardano, Bitcoin Cash.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/cot-symbols-list
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3797,14 +3826,35 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "trading_symbol" : "M6",
+    "short_name" : "Mexican Peso (M6)"
+  }, {
+    "trading_symbol" : "NG",
+    "short_name" : "Natural Gas (NG)"
+  }, {
+    "short_name" : "Ultra 10-Year T-Note (TN)",
+    "trading_symbol" : "TN"
+  }, {
+    "trading_symbol" : "A6",
+    "short_name" : "Australian Dollar (A6)"
+  }, {
+    "trading_symbol" : "NQ",
+    "short_name" : "Nasdaq 100 E-Mini (NQ)"
+  }, {
+    "trading_symbol" : "PA",
+    "short_name" : "Palladium (PA)"
+  }, ...
+]
 ```
 ----
 ## GET /v4/commitment_of_traders_report <a name="0xc3677a186218cf337748b18ff482711c3554882872ebab1067e04c2007c97432"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+The Commitments of Traders (COT report) is a weekly market report from the Commodity Futures Trading Commission (CFTC) enumerating the holdings of participants in various markets in the United States.
+This information is very valuable to understand the Major market players position in futures, Forex and Commodities. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/cot-reports
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3813,21 +3863,153 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-from		// Parameter Description...
-to		// Parameter Description...
+from : YYYY-MM-DD
+to : YYYY-MM-DD
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "ZW",
+    "date" : "2020-12-29 00:00:00",
+    "short_name" : "Wheat (ZW)",
+    "sector" : "GRAINS",
+    "market_and_exchange_names" : "BLACK SEA WHEAT FINANCIAL - CHICAGO BOARD OF TRADE",
+    "as_of_date_in_form_yymmdd" : "201229",
+    "cftc_contract_market_code" : "00160F",
+    "cftc_market_code" : "CBT ",
+    "cftc_region_code" : "0",
+    "cftc_commodity_code" : "1",
+    "open_interest_all" : 22428,
+    "noncomm_positions_long_all" : 10497,
+    "noncomm_positions_short_all" : 300,
+    "noncomm_postions_spread_all" : 593,
+    "comm_positions_long_all" : 10093,
+    "comm_positions_short_all" : 20487,
+    "tot_rept_positions_long_all" : 21183,
+    "tot_rept_positions_short_all" : 21380,
+    "nonrept_positions_long_all" : 1245,
+    "nonrept_positions_short_all" : 1048,
+    "open_interest_old" : 18385,
+    "noncomm_positions_long_old" : 8913,
+    "noncomm_positions_short_old" : 300,
+    "noncomm_positions_spread_old" : 0,
+    "comm_positions_long_old" : 9102,
+    "comm_positions_short_old" : 17365,
+    "tot_rept_positions_long_old" : 18015,
+    "tot_rept_positions_short_old" : 17665,
+    "nonrept_positions_long_old" : 370,
+    "nonrept_positions_short_old" : 720,
+    "open_interest_other" : 4043,
+    "noncomm_positions_long_other" : 2177,
+    "noncomm_positions_short_other" : 593,
+    "noncomm_positions_spread_other" : 0,
+    "comm_positions_long_other" : 991,
+    "comm_positions_short_other" : 3122,
+    "tot_rept_positions_long_other" : 3168,
+    "tot_rept_positions_short_other" : 3715,
+    "nonrept_positions_long_other" : 875,
+    "nonrept_positions_short_other" : 328,
+    "change_in_open_interest_all" : -557,
+    "change_in_noncomm_long_all" : -420,
+    "change_in_noncomm_short_all" : -209,
+    "change_in_noncomm_spead_all" : -332,
+    "change_in_comm_long_all" : 3,
+    "change_in_comm_short_all" : -300,
+    "change_in_tot_rept_long_all" : -749,
+    "change_in_tot_rept_short_all" : -841,
+    "change_in_nonrept_long_all" : 192,
+    "change_in_nonrept_short_all" : 284,
+    "pct_of_open_interest_all" : 100,
+    "pct_of_oi_noncomm_long_all" : 46.7999999999999972,
+    "pct_of_oi_noncomm_short_all" : 1.30000000000000004,
+    "pct_of_oi_noncomm_spread_all" : 2.60000000000000009,
+    "pct_of_oi_comm_long_all" : 45,
+    "pct_of_oi_comm_short_all" : 91.2999999999999972,
+    "pct_of_oi_tot_rept_long_all" : 94.4000000000000057,
+    "pct_of_oi_tot_rept_short_all" : 95.2999999999999972,
+    "pct_of_oi_nonrept_long_all" : 5.59999999999999964,
+    "pct_of_oi_nonrept_short_all" : 4.70000000000000018,
+    "pct_of_open_interest_ol" : 100,
+    "pct_of_oi_noncomm_long_ol" : 48.5,
+    "pct_of_oi_noncomm_short_ol" : 1.60000000000000009,
+    "pct_of_oi_noncomm_spread_ol" : 0,
+    "pct_of_oi_comm_long_ol" : 49.5,
+    "pct_of_oi_comm_short_ol" : 94.5,
+    "pct_of_oi_tot_rept_long_ol" : 98,
+    "pct_of_oi_tot_rept_short_ol" : 96.0999999999999943,
+    "pct_of_oi_nonrept_long_ol" : 2,
+    "pct_of_oi_nonrept_short_ol" : 3.89999999999999991,
+    "pct_of_open_interest_other" : 100,
+    "pct_of_oi_noncomm_long_other" : 53.7999999999999972,
+    "pct_of_oi_noncomm_short_other" : 14.6999999999999993,
+    "pct_of_oi_noncomm_spread_other" : 0,
+    "pct_of_oi_comm_long_other" : 24.5,
+    "pct_of_oi_comm_short_other" : 77.2000000000000028,
+    "pct_of_oi_tot_rept_long_other" : 78.4000000000000057,
+    "pct_of_oi_tot_rept_short_other" : 91.9000000000000057,
+    "pct_of_oi_nonrept_long_other" : 21.6000000000000014,
+    "pct_of_oi_nonrept_short_other" : 8.09999999999999964,
+    "traders_tot_all" : 25,
+    "traders_noncomm_long_all" : 4,
+    "traders_noncomm_short_all" : 1,
+    "traders_noncomm_spread_all" : 1,
+    "traders_comm_long_all" : 10,
+    "traders_comm_short_all" : 18,
+    "traders_tot_rept_long_all" : 14,
+    "traders_tot_rept_short_all" : 20,
+    "traders_tot_ol" : 24,
+    "traders_noncomm_long_ol" : 3,
+    "traders_noncomm_short_ol" : 1,
+    "traders_noncomm_spead_ol" : 0,
+    "traders_comm_long_ol" : 8,
+    "traders_comm_short_ol" : 17,
+    "traders_tot_rept_long_ol" : 11,
+    "traders_tot_rept_short_ol" : 18,
+    "traders_tot_other" : 13,
+    "traders_noncomm_long_other" : 2,
+    "traders_noncomm_short_other" : 1,
+    "traders_noncomm_spread_other" : 0,
+    "traders_comm_long_other" : 5,
+    "traders_comm_short_other" : 8,
+    "traders_tot_rept_long_other" : 7,
+    "traders_tot_rept_short_other" : 9,
+    "conc_gross_le_4_tdr_long_all" : 72.2000000000000028,
+    "conc_gross_le_4_tdr_short_all" : 35.1000000000000014,
+    "conc_gross_le_8_tdr_long_all" : 90.5,
+    "conc_gross_le_8_tdr_short_all" : 62.5,
+    "conc_net_le_4_tdr_long_all" : 62.2999999999999972,
+    "conc_net_le_4_tdr_short_all" : 34.3999999999999986,
+    "conc_net_le_8_tdr_long_all" : 72.4000000000000057,
+    "conc_net_le_8_tdr_short_all" : 54.3999999999999986,
+    "conc_gross_le_4_tdr_long_ol" : 84.2000000000000028,
+    "conc_gross_le_4_tdr_short_ol" : 40.1000000000000014,
+    "conc_gross_le_8_tdr_long_ol" : 97.0999999999999943,
+    "conc_gross_le_8_tdr_short_ol" : 67.2000000000000028,
+    "conc_net_le_4_tdr_long_ol" : 72,
+    "conc_net_le_4_tdr_short_ol" : 40.1000000000000014,
+    "conc_net_le_8_tdr_long_ol" : 79.9000000000000057,
+    "conc_net_le_8_tdr_short_ol" : 62.5,
+    "conc_gross_le_4_tdr_long_other" : 72.9000000000000057,
+    "conc_gross_le_4_tdr_short_other" : 54.5,
+    "conc_gross_le_8_tdr_long_other" : 78.4000000000000057,
+    "conc_gross_le_8_tdr_short_other" : 87.9000000000000057,
+    "conc_net_le_4_tdr_long_other" : 65.4000000000000057,
+    "conc_net_le_4_tdr_short_other" : 49.2999999999999972,
+    "conc_net_le_8_tdr_long_other" : 65.4000000000000057,
+    "conc_net_le_8_tdr_short_other" : 75,
+    "contract_units" : "50 Metric Tons"
+  }, ...
+]
 ```
 ----
 ## GET /v4/commitment_of_traders_report/{symbol} <a name="0x64864439ea51c270825cdd137ac2473f3aa1530d213af05400ca9869c8726fca"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+List of reports for specific symbol.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/cot-reports
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3836,20 +4018,153 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "ZW",
+    "date" : "2020-12-29 00:00:00",
+    "short_name" : "Wheat (ZW)",
+    "sector" : "GRAINS",
+    "market_and_exchange_names" : "BLACK SEA WHEAT FINANCIAL - CHICAGO BOARD OF TRADE",
+    "as_of_date_in_form_yymmdd" : "201229",
+    "cftc_contract_market_code" : "00160F",
+    "cftc_market_code" : "CBT ",
+    "cftc_region_code" : "0",
+    "cftc_commodity_code" : "1",
+    "open_interest_all" : 22428,
+    "noncomm_positions_long_all" : 10497,
+    "noncomm_positions_short_all" : 300,
+    "noncomm_postions_spread_all" : 593,
+    "comm_positions_long_all" : 10093,
+    "comm_positions_short_all" : 20487,
+    "tot_rept_positions_long_all" : 21183,
+    "tot_rept_positions_short_all" : 21380,
+    "nonrept_positions_long_all" : 1245,
+    "nonrept_positions_short_all" : 1048,
+    "open_interest_old" : 18385,
+    "noncomm_positions_long_old" : 8913,
+    "noncomm_positions_short_old" : 300,
+    "noncomm_positions_spread_old" : 0,
+    "comm_positions_long_old" : 9102,
+    "comm_positions_short_old" : 17365,
+    "tot_rept_positions_long_old" : 18015,
+    "tot_rept_positions_short_old" : 17665,
+    "nonrept_positions_long_old" : 370,
+    "nonrept_positions_short_old" : 720,
+    "open_interest_other" : 4043,
+    "noncomm_positions_long_other" : 2177,
+    "noncomm_positions_short_other" : 593,
+    "noncomm_positions_spread_other" : 0,
+    "comm_positions_long_other" : 991,
+    "comm_positions_short_other" : 3122,
+    "tot_rept_positions_long_other" : 3168,
+    "tot_rept_positions_short_other" : 3715,
+    "nonrept_positions_long_other" : 875,
+    "nonrept_positions_short_other" : 328,
+    "change_in_open_interest_all" : -557,
+    "change_in_noncomm_long_all" : -420,
+    "change_in_noncomm_short_all" : -209,
+    "change_in_noncomm_spead_all" : -332,
+    "change_in_comm_long_all" : 3,
+    "change_in_comm_short_all" : -300,
+    "change_in_tot_rept_long_all" : -749,
+    "change_in_tot_rept_short_all" : -841,
+    "change_in_nonrept_long_all" : 192,
+    "change_in_nonrept_short_all" : 284,
+    "pct_of_open_interest_all" : 100,
+    "pct_of_oi_noncomm_long_all" : 46.7999999999999972,
+    "pct_of_oi_noncomm_short_all" : 1.30000000000000004,
+    "pct_of_oi_noncomm_spread_all" : 2.60000000000000009,
+    "pct_of_oi_comm_long_all" : 45,
+    "pct_of_oi_comm_short_all" : 91.2999999999999972,
+    "pct_of_oi_tot_rept_long_all" : 94.4000000000000057,
+    "pct_of_oi_tot_rept_short_all" : 95.2999999999999972,
+    "pct_of_oi_nonrept_long_all" : 5.59999999999999964,
+    "pct_of_oi_nonrept_short_all" : 4.70000000000000018,
+    "pct_of_open_interest_ol" : 100,
+    "pct_of_oi_noncomm_long_ol" : 48.5,
+    "pct_of_oi_noncomm_short_ol" : 1.60000000000000009,
+    "pct_of_oi_noncomm_spread_ol" : 0,
+    "pct_of_oi_comm_long_ol" : 49.5,
+    "pct_of_oi_comm_short_ol" : 94.5,
+    "pct_of_oi_tot_rept_long_ol" : 98,
+    "pct_of_oi_tot_rept_short_ol" : 96.0999999999999943,
+    "pct_of_oi_nonrept_long_ol" : 2,
+    "pct_of_oi_nonrept_short_ol" : 3.89999999999999991,
+    "pct_of_open_interest_other" : 100,
+    "pct_of_oi_noncomm_long_other" : 53.7999999999999972,
+    "pct_of_oi_noncomm_short_other" : 14.6999999999999993,
+    "pct_of_oi_noncomm_spread_other" : 0,
+    "pct_of_oi_comm_long_other" : 24.5,
+    "pct_of_oi_comm_short_other" : 77.2000000000000028,
+    "pct_of_oi_tot_rept_long_other" : 78.4000000000000057,
+    "pct_of_oi_tot_rept_short_other" : 91.9000000000000057,
+    "pct_of_oi_nonrept_long_other" : 21.6000000000000014,
+    "pct_of_oi_nonrept_short_other" : 8.09999999999999964,
+    "traders_tot_all" : 25,
+    "traders_noncomm_long_all" : 4,
+    "traders_noncomm_short_all" : 1,
+    "traders_noncomm_spread_all" : 1,
+    "traders_comm_long_all" : 10,
+    "traders_comm_short_all" : 18,
+    "traders_tot_rept_long_all" : 14,
+    "traders_tot_rept_short_all" : 20,
+    "traders_tot_ol" : 24,
+    "traders_noncomm_long_ol" : 3,
+    "traders_noncomm_short_ol" : 1,
+    "traders_noncomm_spead_ol" : 0,
+    "traders_comm_long_ol" : 8,
+    "traders_comm_short_ol" : 17,
+    "traders_tot_rept_long_ol" : 11,
+    "traders_tot_rept_short_ol" : 18,
+    "traders_tot_other" : 13,
+    "traders_noncomm_long_other" : 2,
+    "traders_noncomm_short_other" : 1,
+    "traders_noncomm_spread_other" : 0,
+    "traders_comm_long_other" : 5,
+    "traders_comm_short_other" : 8,
+    "traders_tot_rept_long_other" : 7,
+    "traders_tot_rept_short_other" : 9,
+    "conc_gross_le_4_tdr_long_all" : 72.2000000000000028,
+    "conc_gross_le_4_tdr_short_all" : 35.1000000000000014,
+    "conc_gross_le_8_tdr_long_all" : 90.5,
+    "conc_gross_le_8_tdr_short_all" : 62.5,
+    "conc_net_le_4_tdr_long_all" : 62.2999999999999972,
+    "conc_net_le_4_tdr_short_all" : 34.3999999999999986,
+    "conc_net_le_8_tdr_long_all" : 72.4000000000000057,
+    "conc_net_le_8_tdr_short_all" : 54.3999999999999986,
+    "conc_gross_le_4_tdr_long_ol" : 84.2000000000000028,
+    "conc_gross_le_4_tdr_short_ol" : 40.1000000000000014,
+    "conc_gross_le_8_tdr_long_ol" : 97.0999999999999943,
+    "conc_gross_le_8_tdr_short_ol" : 67.2000000000000028,
+    "conc_net_le_4_tdr_long_ol" : 72,
+    "conc_net_le_4_tdr_short_ol" : 40.1000000000000014,
+    "conc_net_le_8_tdr_long_ol" : 79.9000000000000057,
+    "conc_net_le_8_tdr_short_ol" : 62.5,
+    "conc_gross_le_4_tdr_long_other" : 72.9000000000000057,
+    "conc_gross_le_4_tdr_short_other" : 54.5,
+    "conc_gross_le_8_tdr_long_other" : 78.4000000000000057,
+    "conc_gross_le_8_tdr_short_other" : 87.9000000000000057,
+    "conc_net_le_4_tdr_long_other" : 65.4000000000000057,
+    "conc_net_le_4_tdr_short_other" : 49.2999999999999972,
+    "conc_net_le_8_tdr_long_other" : 65.4000000000000057,
+    "conc_net_le_8_tdr_short_other" : 75,
+    "contract_units" : "50 Metric Tons"
+  }, ...
+]
 ```
 ----
 ## GET /v4/commitment_of_traders_report_analysis <a name="0x7253ff38494d9dd0e61427a1962dc8bf78625d68eac17d154f028481822bb81d"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+The Commitments of Traders (COT report) Analysis is a complete analysis of the COT reports.
+This analysis is done weekly as soon as the Commitments of Traders is published. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/cot-reports-analysis
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3858,21 +4173,57 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-from		// Parameter Description...
-to		// Parameter Description...
+from : YYYY-MM-DD
+to : YYYY-MM-DD
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "E6",
+    "date" : "2020-12-29 00:00:00",
+    "name" : "Euro FX (E6)",
+    "sector" : "CURRENCIES",
+    "exchange" : "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+    "currentLongMarketSituation" : 73.6400000000000006,
+    "currentShortMarketSituation" : 26.3599999999999994,
+    "marketSituation" : "Bullish",
+    "previousLongMarketSituation" : 73.9099999999999966,
+    "previousShortMarketSituation" : 26.0899999999999999,
+    "previousMarketSituation" : "Bullish",
+    "netPostion" : 143076,
+    "previousNetPosition" : 143902,
+    "changeInNetPosition" : -0.569999999999999951,
+    "marketSentiment" : "Increasing Bearish",
+    "reversalTrend" : false
+  }, {
+    "symbol" : "LS",
+    "date" : "2020-12-29 00:00:00",
+    "name" : "Lumber (LS)",
+    "sector" : "SOFTS",
+    "exchange" : "RANDOM LENGTH LUMBER - CHICAGO MERCANTILE EXCHANGE",
+    "currentLongMarketSituation" : 64.9500000000000028,
+    "currentShortMarketSituation" : 35.0499999999999972,
+    "marketSituation" : "Bullish",
+    "previousLongMarketSituation" : 64.6800000000000068,
+    "previousShortMarketSituation" : 35.3200000000000003,
+    "previousMarketSituation" : "Bullish",
+    "netPostion" : 319,
+    "previousNetPosition" : 321,
+    "changeInNetPosition" : -0.619999999999999996,
+    "marketSentiment" : "Increasing Bearish",
+    "reversalTrend" : false
+  }, ...
+]
 ```
 ----
 ## GET /v4/commitment_of_traders_report_analysis/{symbol} <a name="0xde76a38d22c137626be9db37420ed7e5e6f9fadebd2a0c83fc0434d4723331f3"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Analysis of reports for trading symbol.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/cot-reports-analysis
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3881,13 +4232,48 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "E6",
+    "date" : "2020-12-29 00:00:00",
+    "name" : "Euro FX (E6)",
+    "sector" : "CURRENCIES",
+    "exchange" : "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+    "currentLongMarketSituation" : 73.6400000000000006,
+    "currentShortMarketSituation" : 26.3599999999999994,
+    "marketSituation" : "Bullish",
+    "previousLongMarketSituation" : 73.9099999999999966,
+    "previousShortMarketSituation" : 26.0899999999999999,
+    "previousMarketSituation" : "Bullish",
+    "netPostion" : 143076,
+    "previousNetPosition" : 143902,
+    "changeInNetPosition" : -0.569999999999999951,
+    "marketSentiment" : "Increasing Bearish",
+    "reversalTrend" : false
+  }, {
+    "symbol" : "LS",
+    "date" : "2020-12-29 00:00:00",
+    "name" : "Lumber (LS)",
+    "sector" : "SOFTS",
+    "exchange" : "RANDOM LENGTH LUMBER - CHICAGO MERCANTILE EXCHANGE",
+    "currentLongMarketSituation" : 64.9500000000000028,
+    "currentShortMarketSituation" : 35.0499999999999972,
+    "marketSituation" : "Bullish",
+    "previousLongMarketSituation" : 64.6800000000000068,
+    "previousShortMarketSituation" : 35.3200000000000003,
+    "previousMarketSituation" : "Bullish",
+    "netPostion" : 319,
+    "previousNetPosition" : 321,
+    "changeInNetPosition" : -0.619999999999999996,
+    "marketSentiment" : "Increasing Bearish",
+    "reversalTrend" : false
+  }, ...
+]
 ```
 ----
 ## GET /v4/social-sentiment <a name="0x6d3844f911ef24504d3fd4096923dbe90043c3c8cc8ecc020dd1ba1731422531"></a>
