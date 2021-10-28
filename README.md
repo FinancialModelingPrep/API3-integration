@@ -1269,7 +1269,7 @@ period : annual | quarter
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "date" : "2019-09-28",
     "symbol" : "AAPL",
@@ -1324,7 +1324,7 @@ limit : Number
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "date" : "2019-09-28",
     "symbol" : "AAPL",
@@ -1379,7 +1379,7 @@ limit : Number
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "date" : "2019-09-28",
     "symbol" : "AAPL",
@@ -1416,7 +1416,7 @@ limit : Number
 ----
 ## GET /v3/key-metrics-ttm/{symbol} <a name="0x78afea8f5f354b024be361d2dde7ed208ae59f77f4c929e01254a1d4a32de2db"></a>
 
-Get Company Key Metrics such as Market capitalization, PE ratio, Price to Sales Ratio, POCF ratio, Graham Net-Net 
+Get Company Key Metrics such as Market capitalization, PE ratio, Price to Sales Ratio, POCF ratio, Graham Net-Net
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/company-key-metrics-api
 
@@ -1537,7 +1537,7 @@ limit : Number
 ## GET /v3/financial-growth/{symbol} <a name="0xe608cdc0dbe1ee349249994d0b399ee0c250cf6e6c1a7a2ed9ab1a8ee0466277"></a>
 
 Get the Financial Statement Growth of a company based on its financial statement, it compares previous financial statement to get growth of all its statement.
-The growth is calculated quarter by quarter, year by year. The change in company metrics is essential for valuating a company. 
+The growth is calculated quarter by quarter, year by year. The change in company metrics is essential for valuating a company.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/company-financial-statement-growth-api
 
@@ -1601,7 +1601,7 @@ period : quarter | annual
 ## GET /v3/rating/{symbol} <a name="0x45ee30f97f68b834762fb16b9f10f59e211bbe70b314800f7330015b564a3db6"></a>
 
 Get the rating of a company based on its financial statement, Discounted cash flow analysis, financial rations and its intrinsic value.
-Our ratings are based on comapnies being able to cover their debts and the strength of their ratios. 
+Our ratings are based on comapnies being able to cover their debts and the strength of their ratios.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/companies-rating-free-api
 
@@ -1785,9 +1785,10 @@ limit : Number
 ----
 ## GET /v3/earning_calendar <a name="0x26d554accbfcbae6987dfa5b9f02b7bd3cbe887b23190bcc06bb022f1e494f0f"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Access Earnings calendar to Access all Earnings Calendar date such as AAPL, FB , MSFT next earnings date, EPS and EPS estimated.
+You will be bale to Track companies who release earnings reports ordered by date.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/earnings-calendar-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1796,21 +1797,48 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-from		// Parameter Description...
-to		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+from : YYYY-MM-DD
+to : YYYY-MM-DD
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2021-09-14",
+    "symbol" : "CNM",
+    "eps" : null,
+    "epsEstimated" : 0.270000000000000018,
+    "time" : "bmo",
+    "revenue" : 0,
+    "revenueEstimated" : 1241620000
+  }, {
+    "date" : "2021-09-14",
+    "symbol" : "GGAL",
+    "eps" : null,
+    "epsEstimated" : 0.160000000000000003,
+    "time" : "bmo",
+    "revenue" : 0,
+    "revenueEstimated" : 337540000
+  }, {
+    "date" : "2021-09-14",
+    "symbol" : "SKIL",
+    "eps" : null,
+    "epsEstimated" : -0.0899999999999999967,
+    "time" : "amc",
+    "revenue" : 0,
+    "revenueEstimated" : 158610000
+  }, ...
+]
 ```
 ----
 ## GET /v3/historical/earning_calendar/{symbol} <a name="0x47a1d9b10a83651bc37758429bdff597fcd25c3c49f9e5591c54d1a2fdd70abc"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Access Earnings calendar to Access all Earnings Calendar date such as AAPL, FB , MSFT next earnings date, EPS and EPS estimated.
+You will be bale to Track companies who release earnings reports ordered by date.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/earnings-calendar-api#Company-Historical-Earnings-Calendar
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1819,21 +1847,38 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+Symbol : Company Symbol, ex. AAPL
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2021-07-27",
+    "symbol" : "AAPL",
+    "eps" : 1.30000000000000004,
+    "epsEstimated" : 1,
+    "time" : "amc",
+    "revenue" : 81434000000,
+    "revenueEstimated" : 84581900000
+  }, {
+    "date" : "2021-04-28",
+    "symbol" : "AAPL",
+    "eps" : 1.39999999999999991,
+    "epsEstimated" : 0.989999999999999991,
+    "time" : "amc",
+    "revenue" : 89584000000,
+    "revenueEstimated" : 76920700000
+  }, ...
+]
 ```
 ----
 ## GET /v3/ipo_calendar <a name="0x4662cd94cfb11798eef704fdc211ee489693e45bb5f2a15e5b7b2b64ac106107"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+We support a few calendars, and IPO Calendar is one of them. This calendar keeps track of all IPOs currently taking place in the market. Action shares exchange price range and other fields are among the fields returned. You can use it to keep track of what interesting stocks are going public and when they are going public. You can specify a date range, and if you don't  you will get the most recent IPOs
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/ipo-calendarы
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1842,21 +1887,50 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-from		// Parameter Description...
-to		// Parameter Description...
+from : YYYY-MM-DD
+to : YYYY-MM-DD
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[
+ {
+  "date" : "2020-08-31",
+  "company" : "Applied UV, Inc.",
+  "symbol" : "AUVI",
+  "exchange" : "NASDAQ Capital",
+  "actions" : "expected",
+  "shares" : 1000000,
+  "priceRange" : "5.00",
+  "marketCap" : 5750000
+}, {
+  "date" : "2020-08-28",
+  "company" : "Petra Acquisition Inc.",
+  "symbol" : "PAICU",
+  "exchange" : "NASDAQ Capital",
+  "actions" : "expected",
+  "shares" : 7500000,
+  "priceRange" : "10.00",
+  "marketCap" : 86250000
+}, {
+  "date" : "2020-08-28",
+  "company" : "Sun BioPharma, Inc.",
+  "symbol" : "",
+  "exchange" : "NASDAQ Capital",
+  "actions" : "expected",
+  "shares" : 2100000,
+  "priceRange" : "5.00",
+  "marketCap" : 10500000
+}, { ... }
+]
 ```
 ----
 ## GET /v3/stock_split_calendar <a name="0xe6b64232543e0f8ec44b06b794ea9bac1f30e3194446b705f69d583505b2d887"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Access a stock split calendar that includes the numerator, denominator, and exact date of the split. Stock splits are a way for publicly traded companies to improve stock liquidity, typically, companies increase the number of shares outstanding, which lowers the stock price, however, the number of shares outstanding can also be reduced, increasing the stock price. The value of a company does not change as a result of a stock split.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-split-calendar
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1865,21 +1939,43 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-from		// Parameter Description...
-to		// Parameter Description...
+from : YYYY-MM-DD
+to : YYYY-MM-DD
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[
+ {
+  "date" : "2020-08-31",
+  "label" : "August 31, 20",
+  "symbol" : "TSLA",
+  "numerator" : 5.0,
+  "denominator" : 5.0
+}, {
+  "date" : "2020-08-31",
+  "label" : "August 31, 20",
+  "symbol" : "AAPL",
+  "numerator" : 4.0,
+  "denominator" : 4.0
+}, {
+  "date" : "2020-08-28",
+  "label" : "August 28, 20",
+  "symbol" : "WEBS",
+  "numerator" : 1.0,
+  "denominator" : 1.0
+}, ...
+]
 ```
 ----
 ## GET /v3/stock_dividend_calendar <a name="0x7c82f8fd59f261f612e76210e69ae29128bbfde68acdcc910013a2bf3bb8ecc9"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Access Dividend calendar to get dividends within period of time.
+Profit stocks appropriate a part of the organization's income to financial backers consistently.
+In addition to Stock paying dividend, Stock Market Index plays an important role in the flow of money within the stock market.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/dividend-calendar
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1888,21 +1984,43 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-from		// Parameter Description...
-to		// Parameter Description...
+from : YYYY-MM-DD
+to : YYYY-MM-DD
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[
+{
+  "date" : "2020-09-02",
+  "label" : "September 02, 20",
+  "adjDividend" : 0.02,
+  "symbol" : "BOL.PA"
+}, {
+  "date" : "2020-09-01",
+  "label" : "September 01, 20",
+  "adjDividend" : 0.47,
+  "symbol" : "WKL.AS"
+}, {
+  "date" : "2020-09-01",
+  "label" : "September 01, 20",
+  "adjDividend" : 0.002809,
+  "symbol" : "ITUB"
+}, {
+  "date" : "2020-09-01",
+  "label" : "September 01, 20",
+  "adjDividend" : 0.05,
+  "symbol" : "FEI"
+}, { ... }
+]
 ```
 ----
 ## GET /v3/economic_calendar <a name="0xa8cd3d01e5a6ede542df42226fd8192a228f59c5455965de48bc1f2f8cded14d"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This is an economic calendar that returns all of the world's major economic events and numbers. It has a significant impact on currency and stock market prices. It returns fields such as the name of the event, the country, the previous and current value of the event, and more. Every 15 minutes, the calendar is updated.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/economic-calendar
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -1911,14 +2029,43 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-from		// Parameter Description...
-to		// Parameter Description...
+from : YYYY-MM-DD
+to : YYYY-MM-DD
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[
+  {
+    "event" : "United States Job Openings JOLTS Job Openings",
+    "date" : "2020-10-06 14:00:00",
+    "country" : "US",
+    "actual" : null,
+    "previous" : 6.618,
+    "change" : null,
+    "changePercentage" : null,
+    "estimate" : null
+  }, {
+    "event" : "United States Redbook Redbook MM ",
+    "date" : "2020-10-06 12:55:00",
+    "country" : "US",
+    "actual" : null,
+    "previous" : -0.3,
+    "change" : null,
+    "changePercentage" : null,
+    "estimate" : null
+  }, {
+    "event" : "United States Redbook Redbook YY ",
+    "date" : "2020-10-06 12:55:00",
+    "country" : "US",
+    "actual" : null,
+    "previous" : 2.2,
+    "change" : null,
+    "changePercentage" : null,
+    "estimate" : null
+  }, ...
+]
 ```
 ----
 ## GET /v3/search <a name="0xfd6eb01969f7e3a2904382229564636e4423a398acfe40f182c543737b27846b"></a>
