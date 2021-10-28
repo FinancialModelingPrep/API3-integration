@@ -275,9 +275,9 @@ datatype : csv
 ----
 ## GET /v3/balance-sheet-statement/{symbol} <a name="0x593e38bae8a4e3e7a1b80a8c4b2e7363bdcdfc8434fa46a76fc49aeed6894950"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns company financial statements. SEC forms 10-K, 10-Q, and 8-K are used to obtain all financial statements for US companies.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statement-free-api#Balance-Sheet-Statement
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -286,22 +286,60 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-period		// Parameter Description...
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
+datatype : csv
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-26",
+    "symbol" : "AAPL",
+    "reportedCurrency" : "USD",
+    "fillingDate" : "2020-10-30",
+    "acceptedDate" : "2020-10-29 18:06:25",
+    "period" : "FY",
+    "revenue" : 274515000000,
+    "costOfRevenue" : 169559000000,
+    "grossProfit" : 104956000000,
+    "grossProfitRatio" : 0.38233247727810865,
+    "researchAndDevelopmentExpenses" : 18752000000,
+    "generalAndAdministrativeExpenses" : 19916000000,
+    "sellingAndMarketingExpenses" : 0.0,
+    "sellingGeneralAndAdministrativeExpenses" : 19916000000,
+    "otherExpenses" : 0.0,
+    "operatingExpenses" : 38668000000,
+    "costAndExpenses" : 208227000000,
+    "interestExpense" : 2873000000,
+    "depreciationAndAmortization" : 11056000000,
+    "ebitda" : 81020000000,
+    "ebitdaratio" : 0.2951386991603373,
+    "operatingIncome" : 66288000000,
+    "operatingIncomeRatio" : 0.24147314354406862,
+    "totalOtherIncomeExpensesNet" : -803000000,
+    "incomeBeforeTax" : 67091000000,
+    "incomeBeforeTaxRatio" : 0.24439830246070343,
+    "incomeTaxExpense" : 9680000000,
+    "netIncome" : 57411000000,
+    "netIncomeRatio" : 0.20913611278072236,
+    "eps" : 3.31,
+    "epsdiluted" : 3.28,
+    "weightedAverageShsOut" : 17352119000,
+    "weightedAverageShsOutDil" : 17528214000,
+    "link" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/0000320193-20-000096-index.htm",
+    "finalLink" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/aapl-20200926.htm"
+  }, ...
+]
 ```
 ----
 ## GET /v3/cash-flow-statement/{symbol} <a name="0xc93ced08b3801d834b9e0b46314deadd015923b59c3c9572f9b1109d76bde079"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns company financial statements. SEC forms 10-K, 10-Q, and 8-K are used to obtain all financial statements for US companies.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statement-free-api#Cash-Flow-Statement
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -310,22 +348,60 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-period		// Parameter Description...
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
+datatype : csv
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-26",
+    "symbol" : "AAPL",
+    "reportedCurrency" : "USD",
+    "fillingDate" : "2020-10-30",
+    "acceptedDate" : "2020-10-29 18:06:25",
+    "period" : "FY",
+    "revenue" : 274515000000,
+    "costOfRevenue" : 169559000000,
+    "grossProfit" : 104956000000,
+    "grossProfitRatio" : 0.38233247727810865,
+    "researchAndDevelopmentExpenses" : 18752000000,
+    "generalAndAdministrativeExpenses" : 19916000000,
+    "sellingAndMarketingExpenses" : 0.0,
+    "sellingGeneralAndAdministrativeExpenses" : 19916000000,
+    "otherExpenses" : 0.0,
+    "operatingExpenses" : 38668000000,
+    "costAndExpenses" : 208227000000,
+    "interestExpense" : 2873000000,
+    "depreciationAndAmortization" : 11056000000,
+    "ebitda" : 81020000000,
+    "ebitdaratio" : 0.2951386991603373,
+    "operatingIncome" : 66288000000,
+    "operatingIncomeRatio" : 0.24147314354406862,
+    "totalOtherIncomeExpensesNet" : -803000000,
+    "incomeBeforeTax" : 67091000000,
+    "incomeBeforeTaxRatio" : 0.24439830246070343,
+    "incomeTaxExpense" : 9680000000,
+    "netIncome" : 57411000000,
+    "netIncomeRatio" : 0.20913611278072236,
+    "eps" : 3.31,
+    "epsdiluted" : 3.28,
+    "weightedAverageShsOut" : 17352119000,
+    "weightedAverageShsOutDil" : 17528214000,
+    "link" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/0000320193-20-000096-index.htm",
+    "finalLink" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/aapl-20200926.htm"
+  }, ...
+]
 ```
 ----
 ## GET /v3/income-statement-as-reported/{symbol} <a name="0xdb2edde7c0fcd0c68e6b44b7d4a94873d6320a48a7204606770b4b2ca88cb2b1"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns reported financial values from company statements.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statement-as-reported#Income-Statements-as-reported
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -334,22 +410,51 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-period		// Parameter Description...
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
+datatype : csv
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "date" : "2019-09-28",
+  "symbol" : "AAPL",
+  "period" : "FY",
+  "costofgoodsandservicessold" : "161782000000.000000",
+  "netincomeloss" : 5.5256E10,
+  "researchanddevelopmentexpense" : 1.6217E10,
+  "grossprofit" : 9.8392E10,
+  "othercomprehensiveincomelossreclassificationadjustmentfromaociforsaleofsecuritiesnetoftax" : -2.5E7,
+  "othercomprehensiveincomelossavailableforsalesecuritiesadjustmentnetoftax" : 3.827E9,
+  "othercomprehensiveincomelossderivativesqualifyingashedgesnetoftax" : -6.38E8,
+  "othercomprehensiveincomelossforeigncurrencytransactionandtranslationadjustmentnetoftax" : -4.08E8,
+  "weightedaveragenumberofdilutedsharesoutstanding" : 4.648913E9,
+  "weightedaveragenumberofsharesoutstandingbasic" : 4.617834E9,
+  "othercomprehensiveincomeunrealizedgainlossonderivativesarisingduringperiodnetoftax" : -6.61E8,
+  "operatingincomeloss" : 6.393E10,
+  "othercomprehensiveincomelossreclassificationadjustmentfromaocionderivativesnetoftax" : -2.3E7,
+  "incomelossfromcontinuingoperationsbeforeincometaxesextraordinaryitemsnoncontrollinginterest" : 6.5737E10,
+  "earningspersharebasic" : 11.97,
+  "incometaxexpensebenefit" : 1.0481E10,
+  "revenuefromcontractwithcustomerexcludingassessedtax" : "260174000000.000000",
+  "nonoperatingincomeexpense" : 1.807E9,
+  "operatingexpenses" : 3.4462E10,
+  "earningspersharediluted" : 11.89,
+  "othercomprehensiveincomeunrealizedholdinggainlossonsecuritiesarisingduringperiodnetoftax" : 3.802E9,
+  "sellinggeneralandadministrativeexpense" : 1.8245E10,
+  "othercomprehensiveincomelossnetoftaxportionattributabletoparent" : 2.781E9,
+  "comprehensiveincomenetoftax" : 5.8037E10
+}
 ```
 ----
 ## GET /v3/balance-sheet-statement-as-reported/{symbol} <a name="0x8b36e15b108f18695210870aa5ef1ee0b6db8efd98637b04655afd02a08b2f50"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns reported financial values from company statements. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statement-as-reported#Balance-Sheet-Statement-as-reported
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -358,22 +463,51 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-period		// Parameter Description...
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
+datatype : csv
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "date" : "2019-09-28",
+  "symbol" : "AAPL",
+  "period" : "FY",
+  "costofgoodsandservicessold" : "161782000000.000000",
+  "netincomeloss" : 5.5256E10,
+  "researchanddevelopmentexpense" : 1.6217E10,
+  "grossprofit" : 9.8392E10,
+  "othercomprehensiveincomelossreclassificationadjustmentfromaociforsaleofsecuritiesnetoftax" : -2.5E7,
+  "othercomprehensiveincomelossavailableforsalesecuritiesadjustmentnetoftax" : 3.827E9,
+  "othercomprehensiveincomelossderivativesqualifyingashedgesnetoftax" : -6.38E8,
+  "othercomprehensiveincomelossforeigncurrencytransactionandtranslationadjustmentnetoftax" : -4.08E8,
+  "weightedaveragenumberofdilutedsharesoutstanding" : 4.648913E9,
+  "weightedaveragenumberofsharesoutstandingbasic" : 4.617834E9,
+  "othercomprehensiveincomeunrealizedgainlossonderivativesarisingduringperiodnetoftax" : -6.61E8,
+  "operatingincomeloss" : 6.393E10,
+  "othercomprehensiveincomelossreclassificationadjustmentfromaocionderivativesnetoftax" : -2.3E7,
+  "incomelossfromcontinuingoperationsbeforeincometaxesextraordinaryitemsnoncontrollinginterest" : 6.5737E10,
+  "earningspersharebasic" : 11.97,
+  "incometaxexpensebenefit" : 1.0481E10,
+  "revenuefromcontractwithcustomerexcludingassessedtax" : "260174000000.000000",
+  "nonoperatingincomeexpense" : 1.807E9,
+  "operatingexpenses" : 3.4462E10,
+  "earningspersharediluted" : 11.89,
+  "othercomprehensiveincomeunrealizedholdinggainlossonsecuritiesarisingduringperiodnetoftax" : 3.802E9,
+  "sellinggeneralandadministrativeexpense" : 1.8245E10,
+  "othercomprehensiveincomelossnetoftaxportionattributabletoparent" : 2.781E9,
+  "comprehensiveincomenetoftax" : 5.8037E10
+}
 ```
 ----
 ## GET /v3/cash-flow-statement-as-reported/{symbol} <a name="0xa9e134dca78a7301a94624dfc64a13baec0bb58a35d1318e47d2bffcecd4fdcd"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns company financial statements. SEC forms 10-K, 10-Q, and 8-K are used to obtain all financial statements for US companies.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statement-free-api#Cash-Flow-Statement
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -382,22 +516,60 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-period		// Parameter Description...
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
+datatype : csv
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "date" : "2020-09-26",
+    "symbol" : "AAPL",
+    "reportedCurrency" : "USD",
+    "fillingDate" : "2020-10-30",
+    "acceptedDate" : "2020-10-29 18:06:25",
+    "period" : "FY",
+    "revenue" : 274515000000,
+    "costOfRevenue" : 169559000000,
+    "grossProfit" : 104956000000,
+    "grossProfitRatio" : 0.38233247727810865,
+    "researchAndDevelopmentExpenses" : 18752000000,
+    "generalAndAdministrativeExpenses" : 19916000000,
+    "sellingAndMarketingExpenses" : 0.0,
+    "sellingGeneralAndAdministrativeExpenses" : 19916000000,
+    "otherExpenses" : 0.0,
+    "operatingExpenses" : 38668000000,
+    "costAndExpenses" : 208227000000,
+    "interestExpense" : 2873000000,
+    "depreciationAndAmortization" : 11056000000,
+    "ebitda" : 81020000000,
+    "ebitdaratio" : 0.2951386991603373,
+    "operatingIncome" : 66288000000,
+    "operatingIncomeRatio" : 0.24147314354406862,
+    "totalOtherIncomeExpensesNet" : -803000000,
+    "incomeBeforeTax" : 67091000000,
+    "incomeBeforeTaxRatio" : 0.24439830246070343,
+    "incomeTaxExpense" : 9680000000,
+    "netIncome" : 57411000000,
+    "netIncomeRatio" : 0.20913611278072236,
+    "eps" : 3.31,
+    "epsdiluted" : 3.28,
+    "weightedAverageShsOut" : 17352119000,
+    "weightedAverageShsOutDil" : 17528214000,
+    "link" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/0000320193-20-000096-index.htm",
+    "finalLink" : "https://www.sec.gov/Archives/edgar/data/320193/000032019320000096/aapl-20200926.htm"
+  }, ...
+]
 ```
 ----
 ## GET /v3/financial-statement-full-as-reported/{symbol} <a name="0x1b94493ceb218bdfe5c6c1fa25c09e8366d3964939473d9a898118fffb7c015b"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns reported financial values from company statements
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/financial-statement-as-reported#Full-Financial-Statement-as-reported
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -406,14 +578,44 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+limit : Number
+period : annual | quarter
+datatype : csv
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "date" : "2019-09-28",
+  "symbol" : "AAPL",
+  "period" : "FY",
+  "costofgoodsandservicessold" : "161782000000.000000",
+  "netincomeloss" : 5.5256E10,
+  "researchanddevelopmentexpense" : 1.6217E10,
+  "grossprofit" : 9.8392E10,
+  "othercomprehensiveincomelossreclassificationadjustmentfromaociforsaleofsecuritiesnetoftax" : -2.5E7,
+  "othercomprehensiveincomelossavailableforsalesecuritiesadjustmentnetoftax" : 3.827E9,
+  "othercomprehensiveincomelossderivativesqualifyingashedgesnetoftax" : -6.38E8,
+  "othercomprehensiveincomelossforeigncurrencytransactionandtranslationadjustmentnetoftax" : -4.08E8,
+  "weightedaveragenumberofdilutedsharesoutstanding" : 4.648913E9,
+  "weightedaveragenumberofsharesoutstandingbasic" : 4.617834E9,
+  "othercomprehensiveincomeunrealizedgainlossonderivativesarisingduringperiodnetoftax" : -6.61E8,
+  "operatingincomeloss" : 6.393E10,
+  "othercomprehensiveincomelossreclassificationadjustmentfromaocionderivativesnetoftax" : -2.3E7,
+  "incomelossfromcontinuingoperationsbeforeincometaxesextraordinaryitemsnoncontrollinginterest" : 6.5737E10,
+  "earningspersharebasic" : 11.97,
+  "incometaxexpensebenefit" : 1.0481E10,
+  "revenuefromcontractwithcustomerexcludingassessedtax" : "260174000000.000000",
+  "nonoperatingincomeexpense" : 1.807E9,
+  "operatingexpenses" : 3.4462E10,
+  "earningspersharediluted" : 11.89,
+  "othercomprehensiveincomeunrealizedholdinggainlossonsecuritiesarisingduringperiodnetoftax" : 3.802E9,
+  "sellinggeneralandadministrativeexpense" : 1.8245E10,
+  "othercomprehensiveincomelossnetoftaxportionattributabletoparent" : 2.781E9,
+  "comprehensiveincomenetoftax" : 5.8037E10
+}
 ```
 ----
 ## GET /v3/income-statement/{symbol} <a name="0x3e60ef161562c598d9beaf07a3eb49681695fb1a2598991e6dfbfe2e52f7d9db"></a>
