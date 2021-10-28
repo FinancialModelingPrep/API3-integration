@@ -4492,9 +4492,9 @@ symbol : Company Symbol, ex. AAPL
 ----
 ## GET /v4/insider-trading <a name="0xe24dec2fddb301e74714049e94f8f2f369c407973e5a65909cc91fa8b30e16b9"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+We are getting insider trading informations from forms 3,4, and 5, which are filed with the SEC for each trade made by insiders. There are options, RSUs, and common stock included. Each item returned from the endpoint also has a price field, which indicates what price this transaction was filed at. The price can be 0 if the company gave them stocks or options.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-insider-trading
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4503,23 +4503,51 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-companyCik		// Parameter Description...
-limit		// Parameter Description...
-reportingCik		// Parameter Description...
-transactionType		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
+companyCik : Number
+reportingCik : Number
+limit : Number 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-02",
+    "reportingCik" : "0001214128",
+    "transactionType" : "S-Sale",
+    "securitiesOwned" : 4532724,
+    "companyCik" : "0000320193",
+    "reportingName" : "LEVINSON ARTHUR D",
+    "acquistionOrDisposition" : "D",
+    "formType" : "4",
+    "securitiesTransacted" : 3416,
+    "securityName" : "Common Stock",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000023/0000320193-21-000023-index.htm"
+  }, {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-01",
+    "reportingCik" : "0001051401",
+    "transactionType" : "M-Exempt",
+    "securitiesOwned" : 0,
+    "companyCik" : "0000320193",
+    "reportingName" : "JUNG ANDREA",
+    "acquistionOrDisposition" : "D",
+    "formType" : "4",
+    "securitiesTransacted" : 3416,
+    "securityName" : "Restricted Stock Unit",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000022/0000320193-21-000022-index.htm"
+  }, ...
+]
 ```
 ----
 ## GET /v4/insider-trading-transaction-type <a name="0x5bc8d1cfe63be647e00e0ec18684e79331503d69aa4a61c44b9154a12dc15eaa"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+List of all transaction types.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-insider-trading
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4534,14 +4562,40 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "AAPL",
+  "transactionDate" : "2021-02-02",
+  "reportingCik" : "0001214128",
+  "transactionType" : "S-Sale",
+  "securitiesOwned" : 4532724,
+  "companyCik" : "0000320193",
+  "reportingName" : "LEVINSON ARTHUR D",
+  "acquistionOrDisposition" : "D",
+  "formType" : "4",
+  "securitiesTransacted" : 3416,
+  "securityName" : "Common Stock",
+  "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000023/0000320193-21-000023-index.htm"
+}, {
+  "symbol" : "AAPL",
+  "transactionDate" : "2021-02-01",
+  "reportingCik" : "0001051401",
+  "transactionType" : "M-Exempt",
+  "securitiesOwned" : 0,
+  "companyCik" : "0000320193",
+  "reportingName" : "JUNG ANDREA",
+  "acquistionOrDisposition" : "D",
+  "formType" : "4",
+  "securitiesTransacted" : 3416,
+  "securityName" : "Restricted Stock Unit",
+  "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000022/0000320193-21-000022-index.htm"
+},
 ```
 ----
 ## GET /v4/mapper-cik-name <a name="0x38a978540e00dd030c05a16e1937f905e5354ba288cdb9db941e3be9efa4e166"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+List with names and their CIK.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-insider-trading
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4550,20 +4604,48 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-name		// Parameter Description...
+name : String
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-02",
+    "reportingCik" : "0001214128",
+    "transactionType" : "S-Sale",
+    "securitiesOwned" : 4532724,
+    "companyCik" : "0000320193",
+    "reportingName" : "LEVINSON ARTHUR D",
+    "acquistionOrDisposition" : "D",
+    "formType" : "4",
+    "securitiesTransacted" : 3416,
+    "securityName" : "Common Stock",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000023/0000320193-21-000023-index.htm"
+  }, {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-01",
+    "reportingCik" : "0001051401",
+    "transactionType" : "M-Exempt",
+    "securitiesOwned" : 0,
+    "companyCik" : "0000320193",
+    "reportingName" : "JUNG ANDREA",
+    "acquistionOrDisposition" : "D",
+    "formType" : "4",
+    "securitiesTransacted" : 3416,
+    "securityName" : "Restricted Stock Unit",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000022/0000320193-21-000022-index.htm"
+  }, ...
+]
 ```
 ----
 ## GET /v4/mapper-cik-company/{symbol} <a name="0xf911c7a034d480cd9b2a977f8b5c982344ebddc8d0fa223e289b7f97ccae2ccd"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Company CIK mapper.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-insider-trading
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4572,20 +4654,48 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-02",
+    "reportingCik" : "0001214128",
+    "transactionType" : "S-Sale",
+    "securitiesOwned" : 4532724,
+    "companyCik" : "0000320193",
+    "reportingName" : "LEVINSON ARTHUR D",
+    "acquistionOrDisposition" : "D",
+    "formType" : "4",
+    "securitiesTransacted" : 3416,
+    "securityName" : "Common Stock",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000023/0000320193-21-000023-index.htm"
+  }, {
+    "symbol" : "AAPL",
+    "transactionDate" : "2021-02-01",
+    "reportingCik" : "0001051401",
+    "transactionType" : "M-Exempt",
+    "securitiesOwned" : 0,
+    "companyCik" : "0000320193",
+    "reportingName" : "JUNG ANDREA",
+    "acquistionOrDisposition" : "D",
+    "formType" : "4",
+    "securitiesTransacted" : 3416,
+    "securityName" : "Restricted Stock Unit",
+    "link" : "https://www.sec.gov/Archives/edgar/data/0000320193/000032019321000022/0000320193-21-000022-index.htm"
+  }, ...
+]
 ```
 ----
 ## GET /v4/insider-trading-rss-feed <a name="0xc4ab4b1e6c29ef28bc775f115d5eb1662915edbd1b5e03742698ef023df6c40b"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This is an RSS feed for all market insider trading. It returns the most recent SEC Form 3, 4, and 5 filings, along with a link to the filing, the date, and other information. Go to our insider trading endpoint if you want to see all insider trading for a specific company. Every few minutes, all of the feed is processed. You can tell what type of form it is by looking at the title. For example, "4 -..." indicates that it is form 4.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/insider-trading-rss-feed/
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4594,20 +4704,43 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
+limit : Number 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "title" : "4 - GEOSPACE TECHNOLOGIES CORP (0001001115) (Issuer)",
+    "fillingDate" : "2021-02-05",
+    "symbol" : "GEOS",
+    "link" : "https://www.sec.gov/Archives/edgar/data/1001115/000120919121008025/0001209191-21-008025-index.htm",
+    "issuerCik" : "0001001115",
+    "reportingCik" : "0001049658"
+  }, {
+    "title" : "4 - M.D.C. HOLDINGS, INC. (0000773141) (Issuer)",
+    "fillingDate" : "2021-02-05",
+    "symbol" : "MDC",
+    "link" : "https://www.sec.gov/Archives/edgar/data/773141/000100987421000008/0001009874-21-000008-index.htm",
+    "issuerCik" : "0000773141",
+    "reportingCik" : "0001009874"
+  }, {
+    "title" : "4 - CytoDyn Inc. (0001175680) (Issuer)",
+    "fillingDate" : "2021-02-05",
+    "symbol" : "CYDY",
+    "link" : "https://www.sec.gov/Archives/edgar/data/1175680/000180709421000001/0001807094-21-000001-index.htm",
+    "issuerCik" : "0001175680",
+    "reportingCik" : "0001703394"
+  }, ...
+]
 ```
 ----
 ## GET /v4/fail_to_deliver <a name="0x3d07a30ef908c9a1fc5f511ac284f3b6196f167cee678971e6cf3e626dad8bfa"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint takes data from SEC page and is updated around every two weeks. Fail to deliver is when one party in trading contract doesn't deliver on their obligations. It returns days when it occured, price and quantity. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/fail-to-deliver
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4616,20 +4749,49 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "GE",
+    "date" : "2021-03-31",
+    "price" : 13.3,
+    "quantity" : 2068,
+    "cusip" : "369604103",
+    "name" : "GEN ELEC CO"
+  }, {
+    "symbol" : "GE",
+    "date" : "2021-03-30",
+    "price" : 12.95,
+    "quantity" : 1,
+    "cusip" : "369604103",
+    "name" : "GEN ELEC CO"
+  }, {
+    "symbol" : "GE",
+    "date" : "2021-03-24",
+    "price" : 12.66,
+    "quantity" : 3996,
+    "cusip" : "369604103",
+    "name" : "GEN ELEC CO"
+  }, {
+    "symbol" : "GE",
+    "date" : "2021-03-23",
+    "price" : 13.13,
+    "quantity" : 87499,
+    "cusip" : "369604103",
+    "name" : "GEN ELEC CO"
+  }, ...
+]
 ```
 ----
 ## GET /v3/quote/{symbol} <a name="0x057200614b55d7def35dd8cab6a7c86e64387942310b79d36726bc8610db0f06"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+The purpose of this endpoint is to quickly and easily obtain the most important company information. It includes fields such as the next earnings date, market cap, price, PE, EPS, and many more.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4638,20 +4800,68 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "AAPL",
+    "name" : "Apple Inc.",
+    "price" : 146.15000000,
+    "changesPercentage" : 2.60000000,
+    "change" : 3.70000000,
+    "dayLow" : 142.96000000,
+    "dayHigh" : 147.09970000,
+    "yearHigh" : 150.00000000,
+    "yearLow" : 89.14500000,
+    "marketCap" : 2438892617728.00000000,
+    "priceAvg50" : 135.25772000,
+    "priceAvg200" : 130.42052000,
+    "volume" : 96350036,
+    "avgVolume" : 84504517,
+    "exchange" : "NASDAQ",
+    "open" : 143.46000000,
+    "previousClose" : 142.45000000,
+    "eps" : 4.44900000,
+    "pe" : 32.85008000,
+    "earningsAnnouncement" : "2021-07-27T20:00:00.000+0000",
+    "sharesOutstanding" : 16687599163,
+    "timestamp" : 1626873796
+  }, {
+    "symbol" : "FB",
+    "name" : "Facebook, Inc.",
+    "price" : 341.66000000,
+    "changesPercentage" : 1.40000000,
+    "change" : 4.71000000,
+    "dayLow" : 334.50000000,
+    "dayHigh" : 343.45000000,
+    "yearHigh" : 358.79000000,
+    "yearLow" : 226.90000000,
+    "marketCap" : 968763310080.00000000,
+    "priceAvg50" : 340.76886000,
+    "priceAvg200" : 300.44614000,
+    "volume" : 10531858,
+    "avgVolume" : 16914280,
+    "exchange" : "NASDAQ",
+    "open" : 338.80000000,
+    "previousClose" : 336.95000000,
+    "eps" : 11.67100000,
+    "pe" : 29.27427100,
+    "earningsAnnouncement" : "2021-07-28T20:00:00.000+0000",
+    "sharesOutstanding" : 2835460136,
+    "timestamp" : 1626873796
+  } 
+]
 ```
 ----
 ## GET /v3/quote-short/{symbol} <a name="0xc5cc0fb33749af723052eaf3037a3c9d6e036e707c0d30c071927f93d2f575c7"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This is a quick endpoint that only returns the stock price. If you only need a price, this endpoint is preferable to the profile endpoint or quote because it is faster and lighter. The price returned is the current price at the time you made your request.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/realtime-stock-quote-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4660,13 +4870,16 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "price" : 318.68
+}
 ```
 ----
 ## GET /v3/quotes/{exchange} <a name="0xd5deebc79e31c9eea9506ac8086c96d82793d1b17509b4c9621a2b038808c3d5"></a>
@@ -4693,9 +4906,11 @@ exchange		// Parameter Description...
 ----
 ## GET /v3/historical-chart/1min/{symbol} <a name="0xd00d92abb1348429ed9b5ab9c41646ea21a8618b9ff7b38b41e3cc6b894e06f3"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint provides access to historical prices that can be used to create charts. It's updated every day and can go back 15 years in time. You can also get a more than one stock with a single request, for example: historical-price-full/AAPL,FB.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+Stock one minute historical stock prices.
+
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-data-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -4704,13 +4919,47 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "symbol" : "AAPL",
+  "historical" : [ {
+      "date" : "2021-10-08",
+      "open" : 144.03,
+      "high" : 144.17,
+      "low" : 142.56,
+      "close" : 142.9,
+      "adjClose" : 142.9,
+      "volume" : 5.545036E7,
+      "unadjustedVolume" : 5.545036E7,
+      "change" : -1.13,
+      "changePercent" : -0.785,
+      "vwap" : 143.21,
+      "label" : "October 08, 21",
+      "changeOverTime" : -0.00785
+    }, {
+      "date" : "2021-10-07",
+      "open" : 143.06,
+      "high" : 144.215,
+      "low" : 142.73,
+      "close" : 143.29,
+      "adjClose" : 143.29,
+      "volume" : 6.1863761E7,
+      "unadjustedVolume" : 6.1863761E7,
+      "change" : 0.23,
+      "changePercent" : 0.161,
+      "vwap" : 143.41167,
+      "label" : "October 07, 21",
+      "changeOverTime" : 0.00161
+    }, { ... }
+  ]
+}
+
+
 ```
 ----
 ## GET /v3/historical-chart/5min/{symbol} <a name="0xdef0f6d6d8416a408fed0a3ca76432403f17d33bfbd6f80634aefd7bb003ad4c"></a>
