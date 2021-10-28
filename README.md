@@ -3053,9 +3053,9 @@ limit : Number
 ----
 ## GET /v4/articles <a name="0x92499117c90f908d061895ff836caecb00e58ee0f471e40a38032f2f68a053bd"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Access Financial Modeling Prep own proprietary articles written by our analysts. New articles are being created everyday. This endpoint contains fields like image, tickers, content and more.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/fmp-articles
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3064,21 +3064,74 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-page		// Parameter Description...
-size		// Parameter Description...
+page : Number
+size : Number 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+  "content" : [ 
+    {
+      "title" : "Soros Fund Management Has Also Invested in Bitcoin",
+      "date" : "2021-10-08 14:07:00",
+      "content" : "<p>Bitcoin continues to trade around $54,000 today following its solid upsurge since the start of the month.</p>
+<p>Dawn Fitzpatrick, the CEO and CIO of Soros Fund Management, founded by billionaire investor George Soros, said that they have also invested in Bitcoin and other digital currencies, as cryptos has gone mainstream and are not only viewed as an inflation hedge.</p>
+<p>In March, Fitzpatrick commented on CBDCs, viewing them as a potential threat to Bitcoin, however noting that the threat will be temporary as she believes CBDCs won’t be successful in permanently destabilizing bitcoin.</p>
+",
+      "tickers" : "BTCUSD",
+      "image" : "https://cdn.financialmodelingprep.com/images/fmp-1633716457854.jpg",
+      "link" : "https://financialmodelingprep.com/market-news/fmp-soros-fund-management-has-also-invested-in-bitcoin",
+      "author" : "Davit Kirakosyan",
+      "site" : "Financial Modeling Prep"
+    }, {
+      "title" : "Allogene Therapeutics Shares Plunged 45% Following FDA’s Hold on AlloCAR T",
+      "date" : "2021-10-08 13:06:00",
+      "content" : "<p><a href='https://financialmodelingprep.com/financial-summary/ALLO'>Allogene Therapeutics, Inc. (NASDAQ:ALLO) </a>shares dropped more than 45% on Friday following the U.S. Food and Drug Administration’s (FDA) halt on the company’s AlloCAR T clinical trials after the detection of AlloCAR cells with chromosomal abnormality in a single patient treated with ALLO-501A. </p>
+<p>Rafael Amado, Executive Vice President of Research and Development and Chief Medical Officer of Allogene, said that they will work closely with the FDA to determine the next steps for advancing ALLO-501A. As the company investigates the issue, the analysts at Oppenheimer think that there will be delayed development timelines for key programs including ALLO-501A and ALLO-715, estimating the holds to range from 3 to 6 months.</p>
+<p>Following this announcement, the analysts lowered their price target on the company’s shares to $40 from $44, while maintaining their outperform rating.</p>
+",
+      "tickers" : "NASDAQ:ALLO",
+      "image" : "https://cdn.financialmodelingprep.com/images/fmp-1633712793569.jpg",
+      "link" : "https://financialmodelingprep.com/market-news/fmp-allogene-therapeutics-shares-plunged-45-following-fda’s-hold-on-allocar-t",
+      "author" : "Davit Kirakosyan",
+      "site" : "Financial Modeling Prep"
+    }, ...
+  ],
+  "pageable" : {
+    "sort" : {
+      "sorted" : true,
+      "unsorted" : false,
+      "empty" : false
+    },
+    "pageSize" : 5,
+    "pageNumber" : 0,
+    "offset" : 0,
+    "paged" : true,
+    "unpaged" : false
+  },
+  "totalPages" : 30,
+  "totalElements" : 150,
+  "last" : false,
+  "number" : 0,
+  "size" : 5,
+  "numberOfElements" : 5,
+  "sort" : {
+    "sorted" : true,
+    "unsorted" : false,
+    "empty" : false
+  },
+  "first" : true,
+  "empty" : false
+}
 ```
 ----
 ## GET /v3/stock_news <a name="0x3cc9821b6a5f6b8bdd6ca8c5e6be9465706f94a8c881dcf4100f360626309a9e"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+It returns the most recent news with parameters like image or url of the original article. If you only want news about specific stocks, you can use the tickers parameter. Since 2017, we've kept track of everything that's happened.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-news
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3087,21 +3140,55 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-tickers		// Parameter Description...
+tickers : String
+limit : Number 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "symbol" : "AAPL",
+    "publishedDate" : "2020-09-08 09:25:00",
+    "title" : "This Is Not 1999",
+    "image" : "https://static.seekingalpha.com/uploads/2020/9/4/33552555-1599243045230633_origin.png",
+    "site" : "seekingalpha.com",
+    "text" : "Investors compare 2020 to 1999 because it's the easy answer. Humans like easy answers - patterns - because it helps them assert control and make sense of the world.",
+    "url" : "https://seekingalpha.com/article/4372707-this-is-not-1999"
+  }, {
+    "symbol" : "FB",
+    "publishedDate" : "2020-09-08 09:00:00",
+    "title" : "Facebook: 25% Upside As It Climbs To The Trillion Mark",
+    "image" : "https://static3.seekingalpha.com/uploads/2020/9/5/12629971-15993371256494496.png",
+    "site" : "seekingalpha.com",
+    "text" : "FB is still a buy as 1/3rd of the global population uses its platforms, there is zero long-term debt on the balance sheet and FB continuously delivers significant growth.",
+    "url" : "https://seekingalpha.com/article/4372906-facebook-25-upside-climbs-to-trillion-mark"
+  }, {
+    "symbol" : "AAPL",
+    "publishedDate" : "2020-09-08 08:30:00",
+    "title" : "Where Fundamentals Meet Technicals",
+    "image" : "https://static1.seekingalpha.com/uploads/2020/9/5/saupload_full-7eadbf4ba925753fe35d3e2ab4b8c1ba798e4255.png",
+    "site" : "seekingalpha.com",
+    "text" : "Despite the recent dip, the S&P 500 doesn't have a great intermediate-term risk/reward profile, based on valuations or technicals.",
+    "url" : "https://seekingalpha.com/article/4372997-where-fundamentals-meet-technicals"
+  }, {
+    "symbol" : "AMZN",
+    "publishedDate" : "2020-09-08 07:50:05",
+    "title" : "Amazon's Profits, AWS, And Advertising",
+    "image" : "https://static2.seekingalpha.com/uploads/2020/9/8/saupload_Misc_slides.001.png",
+    "site" : "seekingalpha.com",
+    "text" : "The company’s sales keep going up, and it takes a larger and larger share of US retail every year (7-8% in 2019), but it never seems to make any money.",
+    "url" : "https://seekingalpha.com/article/4372990-amazons-profits-aws-and-advertising"
+  }, ...
+]
 ```
 ----
 ## GET /v3/press-releases/{symbol} <a name="0xc34888ff56805321a7c2b650065753485a355c1ffc7e155d493dbe9f8278b30d"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Companies usually communicate important information to the public through press releases. It could be a new product or financial results, for example. When they do this, we keep track of it and return the information from this endpoint.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/press-releases
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -3110,14 +3197,30 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit		// Parameter Description...
-symbol		// Parameter Description...
+limit : Number 
+Symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "AAPL",
+    "date" : "2020-09-15 16:30:00",
+    "title" : "Apple Inc Says New iPad Air Will Be Priced Starting At $599",
+    "text" : "APPLE INC ANNOUNCES IPAD 8TH GENERATION STARTING WITH A12 BIONIC.APPLE INC SAYS PRICES OF NEW IPADS START AT $299 FOR EDUCATION CUSTOMERS.APPLE INC SAYS NEW IPAD AIR WILL BE PRICED AT BEGINNING $599.APPLE SAYS WILL RELEASE MAJOR IOS UPDATES ON WEDNESDAY."
+  }, {
+    "symbol" : "AAPL",
+    "date" : "2020-09-08 17:30:00",
+    "title" : "Apple Inc Files Counterclaims Against Epic, Seeks Damages",
+    "text" : "APPLE INC FILES COUNTERCLAIMS AGAINST EPIC, AND IS SEEKING DAMAGES AND DISGORGEMENT OF EARNINGS, PROFIT COMPENSATION.APPLE INC COUNTERCOMPLAINT SEEKS A PERMANENT INJUNCTION AGAINST CONTINUED OPERATION OF EPIC'S UNAUTHORIZED PAYMENT MECHANISM."
+  }, {
+    "symbol" : "AAPL",
+    "date" : "2020-09-04 01:30:00",
+    "title" : "Apple Commits To Freedom Of Speech After Criticism Of China Censorship - FT",
+    "text" : "APPLE COMMITS TO FREEDOM OF SPEECH AFTER CRITICISM OF CHINA CENSORSHIP - FT.APPLE IS “COMMITTED TO RESPECTING THE HUMAN RIGHTS OF EVERYONE WHOSE LIVES WE TOUCH  INCLUDING OUR EMPLOYEES, SUPPLIERS, CONTRACTORS AND CUSTOMERS” - FT, CITING DOCUMENT."
+  }, ...
+]
 ```
 ----
 ## GET /v4/sector_price_earning_ratio <a name="0xea1299fa30035cf94bb01f94d040926e7966747934d394a4f91a3ae207e27813"></a>
