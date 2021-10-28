@@ -2070,9 +2070,9 @@ to : YYYY-MM-DD
 ----
 ## GET /v3/search <a name="0xfd6eb01969f7e3a2904382229564636e4423a398acfe40f182c543737b27846b"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Search stocks that are in our API by company name or ticker. You can also use the exchange filter to narrow down your results. Company name, currency, and exchange are some of the fields that are returned by API.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-ticker-symbol-lookup-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2081,22 +2081,93 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-exchange		// Parameter Description...
-limit		// Parameter Description...
-query		// Parameter Description...
+Limit : Number
+Query : String
+Exchange : ETF | MUTUAL_FUND | COMMODITY | INDEX | CRYPTO | FOREX | TSX | AMEX | NASDAQ | NYSE | EURONEXT 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+    {
+        "symbol" : "PRAA",
+        "name" : "PRA Group, Inc.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "PAAS",
+        "name" : "Pan American Silver Corp.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "PAAC",
+        "name" : "Proficient Alpha Acquisition Corp.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqCM",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "RYAAY",
+        "name" : "Ryanair Holdings plc",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "MPAA",
+        "name" : "Motorcar Parts of America, Inc.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "STAA",
+        "name" : "STAAR Surgical Company",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGM",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "RBCAA",
+        "name" : "Republic Bancorp, Inc.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "AABA",
+        "name" : "Altaba Inc.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"    
+    }, 
+    {
+        "symbol" : "AAXJ",
+        "name" : "iShares MSCI All Country Asia ex Japan ETF",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGM",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "ZNWAA",
+        "name" : "Zion Oil & Gas, Inc.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGM",
+        "exchangeShortName" : "NASDAQ"
+    }
+]
 ```
 ----
 ## GET /v3/search-ticker <a name="0x4c3bc218efd10bfa620732e05c94616d8ea50413781960d3a917af71c4e79eab"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Search stocks that are in our API by company name or ticker. You can also use the exchange filter to narrow down your results. Company name, currency, and exchange are some of the fields that are returned by API.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-ticker-symbol-lookup-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2105,22 +2176,94 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-exchange		// Parameter Description...
-limit		// Parameter Description...
-query		// Parameter Description...
+Limit : Number
+Query : String
+Exchange : ETF | MUTUAL_FUND | COMMODITY | INDEX | CRYPTO | FOREX | TSX | AMEX | NASDAQ | NYSE | EURONEXT 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+    {
+        "symbol" : "PRAA",
+        "name" : "PRA Group, Inc.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "PAAS",
+        "name" : "Pan American Silver Corp.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "PAAC",
+        "name" : "Proficient Alpha Acquisition Corp.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqCM",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "RYAAY",
+        "name" : "Ryanair Holdings plc",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "MPAA",
+        "name" : "Motorcar Parts of America, Inc.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "STAA",
+        "name" : "STAAR Surgical Company",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGM",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "RBCAA",
+        "name" : "Republic Bancorp, Inc.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "AABA",
+        "name" : "Altaba Inc.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGS",
+        "exchangeShortName" : "NASDAQ"    
+    }, 
+    {
+        "symbol" : "AAXJ",
+        "name" : "iShares MSCI All Country Asia ex Japan ETF",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGM",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "ZNWAA",
+        "name" : "Zion Oil & Gas, Inc.",
+        "currency" : "USD",
+        "stockExchange" : "NasdaqGM",
+        "exchangeShortName" : "NASDAQ"
+    }
+]
 ```
 ----
 ## GET /v3/stock-screener <a name="0x2b39fd9c23518233cd8285813b3ee47cd3f58765ef7d6e39573575825e6f4d35"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Stock screener is a more advanced way to search for stocks. Unlike our search endpoint, there is no query parameter, but there are numerous parameters such as market cap, price, volume, beta, sector, country, and so on. For example, you can use this endpoint to find NASDAQ-listed software companies that pay dividends and have good liquidity.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-screener-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2129,23 +2272,60 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-betaMoreThan		// Parameter Description...
-country		// Parameter Description...
-dividendMoreThan		// Parameter Description...
-exchange		// Parameter Description...
-industry		// Parameter Description...
-limit		// Parameter Description...
-marketCapLowerThan		// Parameter Description...
-marketCapMoreThan		// Parameter Description...
-priceMoreThan		// Parameter Description...
-sector		// Parameter Description...
-volumeMoreThan		// Parameter Description...
+marketCapMoreThan & marketCapLowerThan : Number
+priceMoreThan & priceLowerThan : Number
+betaMoreThan & betaLowerThan : Number
+volumeMoreThan & volumeLowerThan : Number
+dividendMoreThan & dividendLowerThan : Number
+isEtf & isActivelyTrading : true/false
+sector : Consumer Cyclical | Energy | Technology | Industrials | Financial Services | Basic Materials | Communication Services | Consumer Defensive | Healthcare | Real Estate | Utilities | Industrial Goods | Financial | Services | Conglomerates
+Industry : Autos | Banks | Banks Diversified | Software | Banks Regional | Beverages Alcoholic | Beverages Brewers | Beverages Non-Alcoholic
+Country : US | UK | MX | BR | RU | HK | CA | ...
+exchange : nyse | nasdaq | amex | euronext | tsx | etf | mutual_fund
+limit : Number 
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+    {
+    "symbol" : "MSFT",
+    "companyName" : "Microsoft Corporation",
+    "marketCap" : 1391637040000,
+    "sector" : "Technology",
+    "beta" : 1.2310280000000000111270992420031689107418060302734375,
+    "price" : 183.509999999999990905052982270717620849609375,
+    "lastAnnualDividend" : 1.939999999999999946709294817992486059665679931640625,
+    "volume" : 54536583,
+    "exchange" : "Nasdaq Global Select",
+    "exchangeShortName" : "NASDAQ"
+    },
+    {
+        "symbol" : "AAPL",
+        "companyName" : "Apple Inc.",
+        "marketCap" : 1382174560000,
+        "sector" : "Technology",
+        "beta" : 1.2284990000000000076596506914938800036907196044921875,
+        "price" : 318.8899999999999863575794734060764312744140625,
+        "lastAnnualDividend" : 3.0800000000000000710542735760100185871124267578125,
+        "volume" : 51500795,
+        "exchange" : "Nasdaq Global Select",
+        "exchangeShortName" : "NASDAQ"
+    }, 
+    {
+        "symbol" : "AMZN",
+        "companyName" : "Amazon.com Inc.",
+        "marketCap" : 1215457260000,
+        "sector" : "Technology",
+        "beta" : 1.5168630000000000723758830645238049328327178955078125,
+        "price" : 2436.8800000000001091393642127513885498046875,
+        "lastAnnualDividend" : 0,
+        "volume" : 6105985,
+        "exchange" : "Nasdaq Global Select",
+        "exchangeShortName" : "NASDAQ"
+    }
+]
 ```
 ----
 ## GET /v3/get-all-countries <a name="0x55de15995bf3086d8eb2e95be132c8e8fc683e7360f8f0d464aecc46a7ff38e0"></a>
