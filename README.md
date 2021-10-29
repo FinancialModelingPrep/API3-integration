@@ -5766,9 +5766,9 @@ Symbol : Company Symbol, ex. AAPL
 ----
 ## GET /v3/etf-holder/{symbol} <a name="0x5ef2e446a611145c6f07c6e0f9c5681ce7d0d12b053eeba5d9c2d14610a2b7cf"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns all stocks held by a specific ETF. Assets, share number, and weight are among the fields returned. For example you can get components of SPY, VOO and more. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/etf-holders
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5777,20 +5777,48 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "asset" : "A",
+    "name" : "Agilent Technologies Inc.",
+    "isin" : "US00846U1016",
+    "cusip" : "00846U101",
+    "sharesNumber" : 3193635,
+    "weightPercentage" : 0.12,
+    "marketValue" : 489488436.450000048,
+    "updated" : "2021-10-14"
+  }, {
+    "asset" : "AAL",
+    "name" : "American Airlines Group Inc.",
+    "isin" : "US02376R1023",
+    "cusip" : "02376R102",
+    "sharesNumber" : 6805444,
+    "weightPercentage" : 0.03,
+    "marketValue" : 135972771.120000005,
+    "updated" : "2021-10-14"
+  }, {
+    "asset" : "AAP",
+    "name" : "Advance Auto Parts Inc.",
+    "isin" : "US00751Y1064",
+    "cusip" : "00751Y106",
+    "sharesNumber" : 694131,
+    "weightPercentage" : 0.04,
+    "marketValue" : 149536641.330000013,
+    "updated" : "2021-10-14"
+  }, ...
+]
 ```
 ----
 ## GET /v3/institutional-holder/{symbol} <a name="0x5e81f9f5e7394932806d4b8a927ea8ddc59bc37bbb749709e9054b5a9fc25ce1"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+It provides information on institutional ownership of a specific stock. Fields like holder, shares, reported date, and change since previous report are all supported. The 13-F form, which requires institutions to report all of their assets, is primarily used to collect data. This endpoint can be used to keep track of how much a specific stock was bought or sold by institutions during a quarter.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/institutional-holders
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5799,20 +5827,51 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "holder" : "The Vanguard Group, Inc.",
+    "shares" : 336729000,
+    "dateReported" : "2020-03-31",
+    "change" : 7405180
+  }, {
+    "holder" : "Berkshire Hathaway Inc.",
+    "shares" : 245156000,
+    "dateReported" : "2020-03-31",
+    "change" : 0
+  }, {
+    "holder" : "BlackRock Institutional Trust Company, N.A.",
+    "shares" : 187355000,
+    "dateReported" : "2020-03-31",
+    "change" : -2500560
+  }, {
+    "holder" : "State Street Global Advisors (US)",
+    "shares" : 180559000,
+    "dateReported" : "2020-03-31",
+    "change" : -2295830
+  }, {
+    "holder" : "Fidelity Management & Research Company",
+    "shares" : 89764900,
+    "dateReported" : "2020-03-31",
+    "change" : -2990180
+  }, {
+    "holder" : "Geode Capital Management, L.L.C.",
+    "shares" : 64178600,
+    "dateReported" : "2020-03-31",
+    "change" : 1696500
+  }, ...
+]
 ```
 ----
 ## GET /v3/mutual-fund-holder/{symbol} <a name="0x8446caecb8e10224de7690d8226e54609a737f10114501a5209bc84a1739afc5"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns a list of all mutual fund holders for a given stock. 13-F forms from our SEC filings RSS endpoint are one of the sources of this. The endpoint returns fields such as shares and change weight percentage. This endpoint can be used to keep track of mutual funds activity.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/mutual-fund-holders
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5821,20 +5880,51 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "holder" : "Vanguard Total Stock Market Index Fund",
+    "shares" : 115914000,
+    "dateReported" : "2020-04-30",
+    "change" : -1331370,
+    "weightPercent" : 4.65
+  }, {
+    "holder" : "Vanguard 500 Index Fund",
+    "shares" : 85467200,
+    "dateReported" : "2020-04-30",
+    "change" : -487891,
+    "weightPercent" : 5.09
+  }, {
+    "holder" : "Statens Pensjonsfond Utland",
+    "shares" : 45329200,
+    "dateReported" : "2019-12-31",
+    "change" : -603878,
+    "weightPercent" : 0
+  }, {
+    "holder" : "SPDR S&P 500 ETF",
+    "shares" : 44553400,
+    "dateReported" : "2020-05-31",
+    "change" : -391609,
+    "weightPercent" : 5.24
+  }, {
+    "holder" : "Invesco QQQ Trust",
+    "shares" : 38712400,
+    "dateReported" : "2020-05-31",
+    "change" : 1171600,
+    "weightPercent" : 11.23
+  }, ...
+]
 ```
 ----
 ## GET /v3/etf-sector-weightings/{symbol} <a name="0x3630cc47ae7370cc7044ff3edd1596921cf15b41985b14294dc307c29d6e3b17"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+For each ETF we support, this endpoint returns the sector weight. At our ETF holders endpoint, you can see all of the ETF's components. We also have endpoint that keep track of all sectors and returns their change in %.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/etf-sector-weightings
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5843,20 +5933,33 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "sector" : "Healthcare",
+    "weightPercentage" : "14.79%"
+  }, {
+    "sector" : "Telecommunications Services",
+    "weightPercentage" : "1.98%"
+  }, {
+    "sector" : "Energy",
+    "weightPercentage" : "2.96%"
+  }, {
+    "sector" : "Basic Materials",
+    "weightPercentage" : "2.43%"
+  }, ...
+]
 ```
 ----
 ## GET /v3/etf-country-weightings/{symbol} <a name="0x33dd26a76035242ee98ff311ed3af98aa40c5acf2ae68fbfcaeeb9ed2f1368f0"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns the ETF's country weight. This information is based on stocks held by ETF, which can be found at the ETF Holders endpoint. The majority of ETFs will have only one country, but we also support international ETFs with a diverse range of countries.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs#ETF-Holders
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5865,20 +5968,23 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-symbol		// Parameter Description...
+symbol : Company Symbol, ex. AAPL
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "country" : "United States",
+  "weightPercentage" : "100.00%"
+} ]
 ```
 ----
 ## GET /v3/cik_list <a name="0x37110d60e2a6eacffe7d79b8f1d3cffc201efd3f61aa01b3271fed1a0332f291"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint collects data from all Form 13Fs that are submitted to the SEC. All large hedge funds, mutual funds, and other financial institutions must file Form 13F to disclose their assets. Every quarter, Berkshire Hathaway, for example, reports their 13F. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/form-13f-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5893,14 +5999,43 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "cik" : "0001694461",
+    "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
+  }, 
+  {
+    "cik" : "0001583751",
+    "name" : "TCI Wealth Advisors, Inc. "
+  }, 
+  {
+    "cik" : "0001356202",
+    "name" : "Beech Hill Advisors, Inc. "
+  },
+  {
+    "cik" : "0001799859",
+    "name" : "Birch Capital Management, LLC "
+  }, 
+  {
+    "cik" : "0001767045",
+    "name" : "Lindbrook Capital, LLC "
+  }, 
+  {
+    "cik" : "0000913760",
+    "name" : "INTL FCSTONE INC. "
+  }, 
+  {
+    "cik" : "0001424322",
+    "name" : "Cubic Asset Management, LLC "
+  }, ...
+]
 ```
 ----
 ## GET /v3/cik-search/{name} <a name="0x619de61a08a5cc62a8497acb70e72faf4f7bdef9e26329c0ca57828cb8a80ba4"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+FORM 13F cik search by name.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/form-13f-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5909,20 +6044,49 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-name		// Parameter Description...
+name : String
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "cik" : "0001694461",
+    "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
+  }, 
+  {
+    "cik" : "0001583751",
+    "name" : "TCI Wealth Advisors, Inc. "
+  }, 
+  {
+    "cik" : "0001356202",
+    "name" : "Beech Hill Advisors, Inc. "
+  },
+  {
+    "cik" : "0001799859",
+    "name" : "Birch Capital Management, LLC "
+  }, 
+  {
+    "cik" : "0001767045",
+    "name" : "Lindbrook Capital, LLC "
+  }, 
+  {
+    "cik" : "0000913760",
+    "name" : "INTL FCSTONE INC. "
+  }, 
+  {
+    "cik" : "0001424322",
+    "name" : "Cubic Asset Management, LLC "
+  }, ...
+]
 ```
 ----
 ## GET /v3/cik/{cik} <a name="0xe3b3de879e009f37c8528e2cbd7e8d4397953d226c7cfd123ded3225850f27a7"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+FORM 13F get company name by cik.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/form-13f-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5931,20 +6095,49 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-cik		// Parameter Description...
+cik : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "cik" : "0001694461",
+    "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
+  }, 
+  {
+    "cik" : "0001583751",
+    "name" : "TCI Wealth Advisors, Inc. "
+  }, 
+  {
+    "cik" : "0001356202",
+    "name" : "Beech Hill Advisors, Inc. "
+  },
+  {
+    "cik" : "0001799859",
+    "name" : "Birch Capital Management, LLC "
+  }, 
+  {
+    "cik" : "0001767045",
+    "name" : "Lindbrook Capital, LLC "
+  }, 
+  {
+    "cik" : "0000913760",
+    "name" : "INTL FCSTONE INC. "
+  }, 
+  {
+    "cik" : "0001424322",
+    "name" : "Cubic Asset Management, LLC "
+  }, ...
+]
 ```
 ----
 ## GET /v3/form-thirteen/{cik} <a name="0x8d8118e96a64feddf0fb9017787187247c2fb7f2492d843bb5ab0342a0dd596a"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+FORM 13F statements provides position-level report of all institutional investment managers with more than $100m in assets under management (i.e. Berkshire hathaway cik).
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/form-13f-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5953,21 +6146,51 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-date		// Parameter Description...
-cik		// Parameter Description...
+date : YYYY-MM-DD 
+cik : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "cik" : "0001694461",
+    "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
+  }, 
+  {
+    "cik" : "0001583751",
+    "name" : "TCI Wealth Advisors, Inc. "
+  }, 
+  {
+    "cik" : "0001356202",
+    "name" : "Beech Hill Advisors, Inc. "
+  },
+  {
+    "cik" : "0001799859",
+    "name" : "Birch Capital Management, LLC "
+  }, 
+  {
+    "cik" : "0001767045",
+    "name" : "Lindbrook Capital, LLC "
+  }, 
+  {
+    "cik" : "0000913760",
+    "name" : "INTL FCSTONE INC. "
+  }, 
+  {
+    "cik" : "0001424322",
+    "name" : "Cubic Asset Management, LLC "
+  }, ...
+]
+
 ```
 ----
 ## GET /v3/form-thirteen-date/{cik} <a name="0xb523aa687cf76843842ca727225eab04053dfaad3f44c70d71d87fd0927d7e32"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+13F Filings Dates by cik.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/form-13f-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5976,20 +6199,49 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-cik		// Parameter Description...
+cik : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "cik" : "0001694461",
+    "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
+  }, 
+  {
+    "cik" : "0001583751",
+    "name" : "TCI Wealth Advisors, Inc. "
+  }, 
+  {
+    "cik" : "0001356202",
+    "name" : "Beech Hill Advisors, Inc. "
+  },
+  {
+    "cik" : "0001799859",
+    "name" : "Birch Capital Management, LLC "
+  }, 
+  {
+    "cik" : "0001767045",
+    "name" : "Lindbrook Capital, LLC "
+  }, 
+  {
+    "cik" : "0000913760",
+    "name" : "INTL FCSTONE INC. "
+  }, 
+  {
+    "cik" : "0001424322",
+    "name" : "Cubic Asset Management, LLC "
+  }, ...
+]
 ```
 ----
 ## GET /v3/cusip/{cik} <a name="0x4d4cc8d394727aa0d3e6fb21988e650e91c0ebcda2c8d2cb7206d5dc4bc3dc17"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Cusip mapper.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/form-13f-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -5998,13 +6250,42 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-cik		// Parameter Description...
+cik : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ 
+  {
+    "cik" : "0001694461",
+    "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
+  }, 
+  {
+    "cik" : "0001583751",
+    "name" : "TCI Wealth Advisors, Inc. "
+  }, 
+  {
+    "cik" : "0001356202",
+    "name" : "Beech Hill Advisors, Inc. "
+  },
+  {
+    "cik" : "0001799859",
+    "name" : "Birch Capital Management, LLC "
+  }, 
+  {
+    "cik" : "0001767045",
+    "name" : "Lindbrook Capital, LLC "
+  }, 
+  {
+    "cik" : "0000913760",
+    "name" : "INTL FCSTONE INC. "
+  }, 
+  {
+    "cik" : "0001424322",
+    "name" : "Cubic Asset Management, LLC "
+  }, ...
+]
 ```
 ----
 ## GET /v3/stock/list <a name="0x666544755232226f2b550bd4923b46cbe113b2e431cc7e8c23aa5bdba238f7fb"></a>
