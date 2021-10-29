@@ -6290,9 +6290,9 @@ cik : Number
 ----
 ## GET /v3/stock/list <a name="0x666544755232226f2b550bd4923b46cbe113b2e431cc7e8c23aa5bdba238f7fb"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+A list of all traded and non-traded stocks within our API. Symbol, name, price are all included for each company on the list.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/stock-market-quote-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6307,14 +6307,36 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "SPY",
+    "name" : "SPDR S&P 500 ETF Trust",
+    "price" : 441.4,
+    "exchange" : "New York Stock Exchange Arca",
+    "exchangeShortName" : "NYSE",
+    "type" : "etf"
+  }, {
+    "symbol" : "CMCSA",
+    "name" : "Comcast Corporation",
+    "price" : 57.11,
+    "exchange" : "Nasdaq Global Select",
+    "exchangeShortName" : "NASDAQ",
+    "type" : "stock"
+  }, {
+    "symbol" : "KMI",
+    "name" : "Kinder Morgan, Inc.",
+    "price" : 15.96,
+    "exchange" : "New York Stock Exchange",
+    "exchangeShortName" : "NYSE",
+    "type" : "stock"
+  }, ...
+]
 ```
 ----
 ## GET /v3/available-traded/list <a name="0x7303a24685698095d04dd56361b7834e86931dd9f7fb714e7ec59c289d0bbea3"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+A list of all actively traded stocks within our API. Symbol, name, price, and exchange are all included for each company on the list. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/tradable-list
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6329,14 +6351,33 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "SPY",
+    "name" : "SPDR S&P 500 ETF Trust",
+    "price" : 441.4,
+    "exchange" : "New York Stock Exchange Arca",
+    "exchangeShortName" : "NYSE"
+  }, {
+    "symbol" : "CMCSA",
+    "name" : "Comcast Corporation",
+    "price" : 57.11,
+    "exchange" : "Nasdaq Global Select",
+    "exchangeShortName" : "NASDAQ"
+  }, {
+    "symbol" : "KMI",
+    "name" : "Kinder Morgan, Inc.",
+    "price" : 15.96,
+    "exchange" : "New York Stock Exchange",
+    "exchangeShortName" : "NYSE"
+  }, ...
+]
 ```
 ----
 ## GET /v3/etf/list <a name="0x00133d5d7101daebc253c152632a05849d11a07fe2e84b05bd9d1e0b4af6d552"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+It lists all of the ETFs that we support, as well as their names and prices. You can use it to see if the ETF you're looking for is one we support.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/etf-list
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6351,14 +6392,34 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "SPY",
+    "name" : "SPDR S&P 500 ETF Trust",
+    "price" : 441.4,
+    "exchange" : "New York Stock Exchange Arca",
+    "exchangeShortName" : "NYSE"
+  }, {
+    "symbol" : "GDX",
+    "name" : "VanEck Vectors Gold Miners ETF",
+    "price" : 30.58,
+    "exchange" : "New York Stock Exchange Arca",
+    "exchangeShortName" : "NYSE"
+  }, {
+    "symbol" : "EEM",
+    "name" : "iShares, Inc. - iShares MSCI Emerging Markets ETF",
+    "price" : 51.37,
+    "exchange" : "New York Stock Exchange Arca",
+    "exchangeShortName" : "NYSE"
+  }, ...
+]
 ```
 ----
 ## GET /v4/batch-request-end-of-day-prices <a name="0xe2275fb76d94a2eb09d126210c63cbb019d71545fd68d8e81533231046f5ea7a"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Access a list of all major stock prices, price are updated in realtime.
+The batch request allows you to have multiple stock in one single request. You can therefore access multiple stock price, profile. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/companies-batch-request-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6367,20 +6428,67 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-date		// Parameter Description...
+date : YYYY-MM-DD
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "AAPL",
+    "name" : "Apple Inc.",
+    "price" : 120.96000000,
+    "changesPercentage" : 0.07000000,
+    "change" : 0.08000000,
+    "dayLow" : 110.89000000,
+    "dayHigh" : 123.70000000,
+    "yearHigh" : 137.98000000,
+    "yearLow" : 52.76750000,
+    "marketCap" : 2068718419968.00000000,
+    "priceAvg50" : 112.15875000,
+    "priceAvg200" : 85.41895000,
+    "volume" : 332607163,
+    "avgVolume" : 165778904,
+    "exchange" : "NASDAQ",
+    "open" : 120.07000000,
+    "previousClose" : 120.88000000,
+    "eps" : 3.29600000,
+    "pe" : 36.69902800,
+    "earningsAnnouncement" : "2020-07-30T16:30:00.000+0000",
+    "sharesOutstanding" : 17102500165,
+    "timestamp" : 1599436170
+  }, {
+    "symbol" : "FB",
+    "name" : "Facebook, Inc.",
+    "price" : 282.73000000,
+    "changesPercentage" : -2.88000000,
+    "change" : -8.39000000,
+    "dayLow" : 271.14000000,
+    "dayHigh" : 289.00000000,
+    "yearHigh" : 304.67000000,
+    "yearLow" : 137.10000000,
+    "marketCap" : 805446877184.00000000,
+    "priceAvg50" : 262.02910000,
+    "priceAvg200" : 217.37338000,
+    "volume" : 30333671,
+    "avgVolume" : 25801412,
+    "exchange" : "NASDAQ",
+    "open" : 287.25000000,
+    "previousClose" : 291.12000000,
+    "eps" : 8.17800000,
+    "pe" : 34.57202000,
+    "earningsAnnouncement" : "2020-07-30T16:05:05.000+0000",
+    "sharesOutstanding" : 2848819995,
+    "timestamp" : 1599436170
+  }, ...
+]
 ```
 ----
 ## GET /v4/income-statement-bulk <a name="0xac94bfb37085ab6b1b7eb4a98d26724cc06187a086ff3bef473f4458ee439cdd"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns CSV file that can contain all financial statements for specific year, earnings surprises or all profiles. Data in CSV files is updated every 24 hours. This endpoint is recommended if you want to analyze a lot of data at once, there is no more need to call each financial statement endpoint or profile endpoint few thousand times.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/bulk-endpoint
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6389,8 +6497,8 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-year		// Parameter Description...
+period : annual | quarter
+year : YYYY
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
@@ -6401,9 +6509,9 @@ year		// Parameter Description...
 ----
 ## GET /v4/balance-sheet-statement-bulk <a name="0xa384fa151c7c37df43b2ff2d6d4826917020619eddc1e3189fc9466d6735bec0"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint returns CSV file that can contain all financial statements for specific year, earnings surprises or all profiles. Data in CSV files is updated every 24 hours. This endpoint is recommended if you want to analyze a lot of data at once, there is no more need to call each financial statement endpoint or profile endpoint few thousand times.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/bulk-endpoint
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6412,8 +6520,8 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-year		// Parameter Description...
+period : annual | quarter
+year : YYYY
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
@@ -6424,9 +6532,9 @@ year		// Parameter Description...
 ----
 ## GET /v4/cash-flow-statement-bulk <a name="0x580da25ae71f4949fb50b296248250725e233a9e36b08d13d76e750e74c45dca"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All quarter or annual Cash Flow Statements for specific year.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/bulk-endpoint
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6435,8 +6543,8 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-year		// Parameter Description...
+period : annual | quarter
+year : YYYY
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
@@ -6447,9 +6555,9 @@ year		// Parameter Description...
 ----
 ## GET /v4/ratios-bulk <a name="0x57673de82ce3868af6195f0a77430aa7b0777ba7c5c2b0eb71db300440d1cd9f"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All quarter or annual Ratios for specific year.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/bulk-endpoint
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6458,8 +6566,8 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-year		// Parameter Description...
+period : annual | quarter
+year : YYYY
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
@@ -6470,9 +6578,9 @@ year		// Parameter Description...
 ----
 ## GET /v4/key-metrics-bulk <a name="0xdb78e185aa7dba83fd8928085083cd5ef658a01726e20b4be5c7911fd1f89b04"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All quarter or annual Key Metrics for specific year.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/bulk-endpoint
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6481,8 +6589,8 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-period		// Parameter Description...
-year		// Parameter Description...
+period : annual | quarter
+year : YYYY
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
@@ -6493,9 +6601,9 @@ year		// Parameter Description...
 ----
 ## GET /v4/earnings-surprises-bulk <a name="0xdc4284f0c390df12fdf19a3abae3a5bb528fb78b5103753adffb210dfa41d359"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All Earning Surprises for specific year.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/bulk-endpoint
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6504,7 +6612,7 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-year		// Parameter Description...
+year : YYYY
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
@@ -6515,9 +6623,9 @@ year		// Parameter Description...
 ----
 ## GET /v4/profile/all <a name="0x39941ed918f7be6be8523c5786ee8ef399e094b7d310966da18e91a2acf32042"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+It contains all profiles from our API in one CSV file.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/bulk-endpoint
 
 You'll need the **Endpoint ID** to call this endpoint.
 
