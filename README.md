@@ -3788,7 +3788,7 @@ You'll need the **Endpoint ID** to call this endpoint.
 symbol : Company Symbol, ex. AAPL
 cik : Number
 sic : Number
-industryTitle : String 
+industryTitle : String
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
@@ -3826,7 +3826,7 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "trading_symbol" : "M6",
     "short_name" : "Mexican Peso (M6)"
@@ -3852,7 +3852,7 @@ None
 ## GET /v4/commitment_of_traders_report <a name="0xc3677a186218cf337748b18ff482711c3554882872ebab1067e04c2007c97432"></a>
 
 The Commitments of Traders (COT report) is a weekly market report from the Commodity Futures Trading Commission (CFTC) enumerating the holdings of participants in various markets in the United States.
-This information is very valuable to understand the Major market players position in futures, Forex and Commodities. 
+This information is very valuable to understand the Major market players position in futures, Forex and Commodities.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/cot-reports
 
@@ -3870,7 +3870,7 @@ to : YYYY-MM-DD
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "ZW",
     "date" : "2020-12-29 00:00:00",
@@ -4024,7 +4024,7 @@ symbol : Company Symbol, ex. AAPL
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "ZW",
     "date" : "2020-12-29 00:00:00",
@@ -4162,7 +4162,7 @@ symbol : Company Symbol, ex. AAPL
 ## GET /v4/commitment_of_traders_report_analysis <a name="0x7253ff38494d9dd0e61427a1962dc8bf78625d68eac17d154f028481822bb81d"></a>
 
 The Commitments of Traders (COT report) Analysis is a complete analysis of the COT reports.
-This analysis is done weekly as soon as the Commitments of Traders is published. 
+This analysis is done weekly as soon as the Commitments of Traders is published.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/cot-reports-analysis
 
@@ -4180,7 +4180,7 @@ to : YYYY-MM-DD
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "E6",
     "date" : "2020-12-29 00:00:00",
@@ -4347,7 +4347,7 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-Limit : Number 
+Limit : Number
 Symbol : Company Symbol, ex. AAPL
 ```
 
@@ -4422,7 +4422,7 @@ symbol : Company Symbol, ex. AAPL
 ## GET /v3/analyst-estimates/{symbol} <a name="0x4e12bccc65fefc1c8e7c1dd36cb5b71264e89be188c28a5f1cf52c0617566e9d"></a>
 
 Get ratings and recommendations from FMP analysts, we use CAGR formula to predict and analyse stocks.
-You will access all the key financial figures estimated. We use compound annual growth rate to estimate revenue as we found it gives the most accurate result. 
+You will access all the key financial figures estimated. We use compound annual growth rate to estimate revenue as we found it gives the most accurate result.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/analyst-estimates
 
@@ -4506,13 +4506,13 @@ You'll need the **Endpoint ID** to call this endpoint.
 symbol : Company Symbol, ex. AAPL
 companyCik : Number
 reportingCik : Number
-limit : Number 
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "AAPL",
     "transactionDate" : "2021-02-02",
@@ -4610,7 +4610,7 @@ name : String
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "AAPL",
     "transactionDate" : "2021-02-02",
@@ -4660,7 +4660,7 @@ symbol : Company Symbol, ex. AAPL
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "AAPL",
     "transactionDate" : "2021-02-02",
@@ -4704,13 +4704,13 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-limit : Number 
+limit : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "title" : "4 - GEOSPACE TECHNOLOGIES CORP (0001001115) (Issuer)",
     "fillingDate" : "2021-02-05",
@@ -4738,7 +4738,7 @@ limit : Number
 ----
 ## GET /v4/fail_to_deliver <a name="0x3d07a30ef908c9a1fc5f511ac284f3b6196f167cee678971e6cf3e626dad8bfa"></a>
 
-This endpoint takes data from SEC page and is updated around every two weeks. Fail to deliver is when one party in trading contract doesn't deliver on their obligations. It returns days when it occured, price and quantity. 
+This endpoint takes data from SEC page and is updated around every two weeks. Fail to deliver is when one party in trading contract doesn't deliver on their obligations. It returns days when it occured, price and quantity.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/fail-to-deliver
 
@@ -4806,7 +4806,7 @@ symbol : Company Symbol, ex. AAPL
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "symbol" : "AAPL",
     "name" : "Apple Inc.",
@@ -4853,7 +4853,7 @@ symbol : Company Symbol, ex. AAPL
     "earningsAnnouncement" : "2021-07-28T20:00:00.000+0000",
     "sharesOutstanding" : 2835460136,
     "timestamp" : 1626873796
-  } 
+  }
 ]
 ```
 ----
@@ -5011,7 +5011,7 @@ symbol : Company Symbol, ex. AAPL
       "vwap" : 143.41167,
       "label" : "October 07, 21",
       "changeOverTime" : 0.00161
-    }, {...} 
+    }, {...}
   ]
 }
 
@@ -5019,7 +5019,7 @@ symbol : Company Symbol, ex. AAPL
 ----
 ## GET /v3/historical-chart/15min/{symbol} <a name="0x0bffe32171a75d9244c3146dadb0ccbc313766740a2e674342e1d0173b97b2d4"></a>
 
-Stock fifteen minutes historical stock prices. 
+Stock fifteen minutes historical stock prices.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-stock-data-free-api
 
@@ -5066,7 +5066,7 @@ symbol : Company Symbol, ex. AAPL
       "vwap" : 143.41167,
       "label" : "October 07, 21",
       "changeOverTime" : 0.00161
-    }, {...} 
+    }, {...}
   ]
 }
 
@@ -5121,7 +5121,7 @@ symbol : Company Symbol, ex. AAPL
       "vwap" : 143.41167,
       "label" : "October 07, 21",
       "changeOverTime" : 0.00161
-    }, {...} 
+    }, {...}
   ]
 }
 ```
@@ -5175,7 +5175,7 @@ symbol : Company Symbol, ex. AAPL
       "vwap" : 143.41167,
       "label" : "October 07, 21",
       "changeOverTime" : 0.00161
-    }, {...} 
+    }, {...}
   ]
 }
 ```
@@ -5229,7 +5229,7 @@ symbol : Company Symbol, ex. AAPL
       "vwap" : 143.41167,
       "label" : "October 07, 21",
       "changeOverTime" : 0.00161
-    }, {...} 
+    }, {...}
   ]
 }
 ```
@@ -5250,7 +5250,7 @@ You'll need the **Endpoint ID** to call this endpoint.
 to : YYYY-MM-DD
 from : YYYY-MM-DD
 timeseries : Number (return last x days)
-serietype : line | bar 
+serietype : line | bar
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
@@ -5286,7 +5286,7 @@ serietype : line | bar
       "vwap" : 143.41167,
       "label" : "October 07, 21",
       "changeOverTime" : 0.00161
-    }, {...} 
+    }, {...}
   ]
 }
 ```
@@ -5766,7 +5766,7 @@ Symbol : Company Symbol, ex. AAPL
 ----
 ## GET /v3/etf-holder/{symbol} <a name="0x5ef2e446a611145c6f07c6e0f9c5681ce7d0d12b053eeba5d9c2d14610a2b7cf"></a>
 
-This endpoint returns all stocks held by a specific ETF. Assets, share number, and weight are among the fields returned. For example you can get components of SPY, VOO and more. 
+This endpoint returns all stocks held by a specific ETF. Assets, share number, and weight are among the fields returned. For example you can get components of SPY, VOO and more.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/etf-holders
 
@@ -5982,7 +5982,7 @@ symbol : Company Symbol, ex. AAPL
 ----
 ## GET /v3/cik_list <a name="0x37110d60e2a6eacffe7d79b8f1d3cffc201efd3f61aa01b3271fed1a0332f291"></a>
 
-This endpoint collects data from all Form 13Fs that are submitted to the SEC. All large hedge funds, mutual funds, and other financial institutions must file Form 13F to disclose their assets. Every quarter, Berkshire Hathaway, for example, reports their 13F. 
+This endpoint collects data from all Form 13Fs that are submitted to the SEC. All large hedge funds, mutual funds, and other financial institutions must file Form 13F to disclose their assets. Every quarter, Berkshire Hathaway, for example, reports their 13F.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/form-13f-api
 
@@ -5999,15 +5999,15 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "cik" : "0001694461",
     "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
-  }, 
+  },
   {
     "cik" : "0001583751",
     "name" : "TCI Wealth Advisors, Inc. "
-  }, 
+  },
   {
     "cik" : "0001356202",
     "name" : "Beech Hill Advisors, Inc. "
@@ -6015,15 +6015,15 @@ None
   {
     "cik" : "0001799859",
     "name" : "Birch Capital Management, LLC "
-  }, 
+  },
   {
     "cik" : "0001767045",
     "name" : "Lindbrook Capital, LLC "
-  }, 
+  },
   {
     "cik" : "0000913760",
     "name" : "INTL FCSTONE INC. "
-  }, 
+  },
   {
     "cik" : "0001424322",
     "name" : "Cubic Asset Management, LLC "
@@ -6050,15 +6050,15 @@ name : String
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "cik" : "0001694461",
     "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
-  }, 
+  },
   {
     "cik" : "0001583751",
     "name" : "TCI Wealth Advisors, Inc. "
-  }, 
+  },
   {
     "cik" : "0001356202",
     "name" : "Beech Hill Advisors, Inc. "
@@ -6066,15 +6066,15 @@ name : String
   {
     "cik" : "0001799859",
     "name" : "Birch Capital Management, LLC "
-  }, 
+  },
   {
     "cik" : "0001767045",
     "name" : "Lindbrook Capital, LLC "
-  }, 
+  },
   {
     "cik" : "0000913760",
     "name" : "INTL FCSTONE INC. "
-  }, 
+  },
   {
     "cik" : "0001424322",
     "name" : "Cubic Asset Management, LLC "
@@ -6101,15 +6101,15 @@ cik : Number
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "cik" : "0001694461",
     "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
-  }, 
+  },
   {
     "cik" : "0001583751",
     "name" : "TCI Wealth Advisors, Inc. "
-  }, 
+  },
   {
     "cik" : "0001356202",
     "name" : "Beech Hill Advisors, Inc. "
@@ -6117,15 +6117,15 @@ cik : Number
   {
     "cik" : "0001799859",
     "name" : "Birch Capital Management, LLC "
-  }, 
+  },
   {
     "cik" : "0001767045",
     "name" : "Lindbrook Capital, LLC "
-  }, 
+  },
   {
     "cik" : "0000913760",
     "name" : "INTL FCSTONE INC. "
-  }, 
+  },
   {
     "cik" : "0001424322",
     "name" : "Cubic Asset Management, LLC "
@@ -6146,22 +6146,22 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-date : YYYY-MM-DD 
+date : YYYY-MM-DD
 cik : Number
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "cik" : "0001694461",
     "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
-  }, 
+  },
   {
     "cik" : "0001583751",
     "name" : "TCI Wealth Advisors, Inc. "
-  }, 
+  },
   {
     "cik" : "0001356202",
     "name" : "Beech Hill Advisors, Inc. "
@@ -6169,15 +6169,15 @@ cik : Number
   {
     "cik" : "0001799859",
     "name" : "Birch Capital Management, LLC "
-  }, 
+  },
   {
     "cik" : "0001767045",
     "name" : "Lindbrook Capital, LLC "
-  }, 
+  },
   {
     "cik" : "0000913760",
     "name" : "INTL FCSTONE INC. "
-  }, 
+  },
   {
     "cik" : "0001424322",
     "name" : "Cubic Asset Management, LLC "
@@ -6205,15 +6205,15 @@ cik : Number
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "cik" : "0001694461",
     "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
-  }, 
+  },
   {
     "cik" : "0001583751",
     "name" : "TCI Wealth Advisors, Inc. "
-  }, 
+  },
   {
     "cik" : "0001356202",
     "name" : "Beech Hill Advisors, Inc. "
@@ -6221,15 +6221,15 @@ cik : Number
   {
     "cik" : "0001799859",
     "name" : "Birch Capital Management, LLC "
-  }, 
+  },
   {
     "cik" : "0001767045",
     "name" : "Lindbrook Capital, LLC "
-  }, 
+  },
   {
     "cik" : "0000913760",
     "name" : "INTL FCSTONE INC. "
-  }, 
+  },
   {
     "cik" : "0001424322",
     "name" : "Cubic Asset Management, LLC "
@@ -6256,15 +6256,15 @@ cik : Number
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-[ 
+[
   {
     "cik" : "0001694461",
     "name" : "HARVEST GROUP WEALTH MANAGEMENT, LLC "
-  }, 
+  },
   {
     "cik" : "0001583751",
     "name" : "TCI Wealth Advisors, Inc. "
-  }, 
+  },
   {
     "cik" : "0001356202",
     "name" : "Beech Hill Advisors, Inc. "
@@ -6272,15 +6272,15 @@ cik : Number
   {
     "cik" : "0001799859",
     "name" : "Birch Capital Management, LLC "
-  }, 
+  },
   {
     "cik" : "0001767045",
     "name" : "Lindbrook Capital, LLC "
-  }, 
+  },
   {
     "cik" : "0000913760",
     "name" : "INTL FCSTONE INC. "
-  }, 
+  },
   {
     "cik" : "0001424322",
     "name" : "Cubic Asset Management, LLC "
@@ -6334,7 +6334,7 @@ None
 ----
 ## GET /v3/available-traded/list <a name="0x7303a24685698095d04dd56361b7834e86931dd9f7fb714e7ec59c289d0bbea3"></a>
 
-A list of all actively traded stocks within our API. Symbol, name, price, and exchange are all included for each company on the list. 
+A list of all actively traded stocks within our API. Symbol, name, price, and exchange are all included for each company on the list.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/tradable-list
 
@@ -6417,7 +6417,7 @@ None
 ## GET /v4/batch-request-end-of-day-prices <a name="0xe2275fb76d94a2eb09d126210c63cbb019d71545fd68d8e81533231046f5ea7a"></a>
 
 Access a list of all major stock prices, price are updated in realtime.
-The batch request allows you to have multiple stock in one single request. You can therefore access multiple stock price, profile. 
+The batch request allows you to have multiple stock in one single request. You can therefore access multiple stock price, profile.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/companies-batch-request-free-api
 
@@ -6645,9 +6645,9 @@ None
 ----
 ## GET /v3/quotes/index <a name="0x53810b6bd02e8c55cb9bc1bb73bbf57005ea8049a049a9656a8877d1cd131fb2"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All Majors Indexes (Dow Jones, Nasdaq, S&P 500) Prices Updated by Real-times.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/indexes-in-stock-market-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6662,14 +6662,61 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "^RUITR",
+    "name" : "Russell 1000 Total Return",
+    "price" : 11175.62700000,
+    "changesPercentage" : -0.86000000,
+    "change" : -96.47300000,
+    "dayLow" : 10910.42500000,
+    "dayHigh" : 11349.33700000,
+    "yearHigh" : 11349.33700000,
+    "yearLow" : 10910.42500000,
+    "marketCap" : null,
+    "priceAvg50" : null,
+    "priceAvg200" : null,
+    "volume" : 0,
+    "avgVolume" : null,
+    "exchange" : "INDEX",
+    "open" : 11267.76800000,
+    "previousClose" : 11272.10000000,
+    "eps" : null,
+    "pe" : null,
+    "earningsAnnouncement" : null,
+    "sharesOutstanding" : null,
+    "timestamp" : 1599436300
+  }, {
+    "symbol" : "^NSEI",
+    "name" : "NIFTY 50",
+    "price" : 11333.85000000,
+    "changesPercentage" : -1.68000000,
+    "change" : -193.65000000,
+    "dayLow" : 11303.65000000,
+    "dayHigh" : 11452.05000000,
+    "yearHigh" : 12430.50000000,
+    "yearLow" : 7511.10000000,
+    "marketCap" : null,
+    "priceAvg50" : 11287.06100000,
+    "priceAvg200" : 10177.60000000,
+    "volume" : 0,
+    "avgVolume" : 676837,
+    "exchange" : "INDEX",
+    "open" : 11354.40000000,
+    "previousClose" : 11527.50000000,
+    "eps" : null,
+    "pe" : null,
+    "earningsAnnouncement" : null,
+    "sharesOutstanding" : null,
+    "timestamp" : 1599436300
+  }, ...
+]
 ```
 ----
 ## GET /v3/quote/{index} <a name="0xba6fb29686df04532c934d47094d4161f5a1cd294c7041b0a7b03e3d7037e899"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Real-time Stock market index (S&P 500 ) Price.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/indexes-in-stock-market-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6678,20 +6725,43 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-index		// Parameter Description...
+index : String
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "^GSPC",
+  "name" : "S&P 500",
+  "price" : 4583.91000000,
+  "changesPercentage" : -0.27216324,
+  "change" : -12.50976600,
+  "dayLow" : 4567.59000000,
+  "dayHigh" : 4585.93000000,
+  "yearHigh" : 4598.53000000,
+  "yearLow" : 3233.94000000,
+  "marketCap" : null,
+  "priceAvg50" : 4438.75900000,
+  "priceAvg200" : 4334.34000000,
+  "volume" : 241213909,
+  "avgVolume" : 2975482461,
+  "exchange" : "INDEX",
+  "open" : 4572.87000000,
+  "previousClose" : 4596.42000000,
+  "eps" : null,
+  "pe" : null,
+  "earningsAnnouncement" : null,
+  "sharesOutstanding" : null,
+  "timestamp" : 1635515464
+} ]
 ```
 ----
 ## GET /v3/sp500_constituent <a name="0x0086c9e5229d83dfd28ee90dfb681ca2405153e36fa8548a2c8efeba6a1372cf"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+It returns all S&P 500 constituents. It's one of the most important US stock exchanges, where companies like Adobe and Apple are listed.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/list-of-sp-500-companies-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6701,23 +6771,50 @@ You'll need the **Endpoint ID** to call this endpoint.
 
 ```solidity
 None
-```[Fixed Parameters](https://docs.api3.org/pre-alpha/airnode/specifications/ois.html#_5-3-fixedoperationparameters)
-
-```solidity
-
 ```
+[Fixed Parameters](https://docs.api3.org/pre-alpha/airnode/specifications/ois.html#_5-3-fixedoperationparameters)
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "MMM",
+    "name" : "3M Company",
+    "sector" : "Industrials",
+    "subSector" : "Industrial Conglomerates",
+    "headQuarter" : "St. Paul, Minnesota",
+    "dateFirstAdded" : "1976-08-09",
+    "cik" : "0000066740",
+    "founded" : "1902"
+  },
+  {
+    "symbol" : "ABT",
+    "name" : "Abbott Laboratories",
+    "sector" : "Health Care",
+    "subSector" : "Health Care Equipment",
+    "headQuarter" : "North Chicago, Illinois",
+    "dateFirstAdded" : "1964-03-31",
+    "cik" : "0000001800",
+    "founded" : "1888"
+  },
+  {
+    "symbol" : "ABBV",
+    "name" : "AbbVie Inc.",
+    "sector" : "Health Care",
+    "subSector" : "Pharmaceuticals",
+    "headQuarter" : "North Chicago, Illinois",
+    "dateFirstAdded" : "2012-12-31",
+    "cik" : "0001551152",
+    "founded" : "2013 (1888)"
+}, ...
+]
 ```
 ----
 ## GET /v3/historical/sp500_constituent <a name="0xf0535c78caacd8cfa01bd5ab784deeff1a6b8b125267c2c6725cd8e4fa6a334b"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Downloadable all S&P 500 constituents.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/list-of-sp-500-companies-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6732,14 +6829,44 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "MMM",
+    "name" : "3M Company",
+    "sector" : "Industrials",
+    "subSector" : "Industrial Conglomerates",
+    "headQuarter" : "St. Paul, Minnesota",
+    "dateFirstAdded" : "1976-08-09",
+    "cik" : "0000066740",
+    "founded" : "1902"
+  },
+  {
+    "symbol" : "ABT",
+    "name" : "Abbott Laboratories",
+    "sector" : "Health Care",
+    "subSector" : "Health Care Equipment",
+    "headQuarter" : "North Chicago, Illinois",
+    "dateFirstAdded" : "1964-03-31",
+    "cik" : "0000001800",
+    "founded" : "1888"
+  },
+  {
+    "symbol" : "ABBV",
+    "name" : "AbbVie Inc.",
+    "sector" : "Health Care",
+    "subSector" : "Pharmaceuticals",
+    "headQuarter" : "North Chicago, Illinois",
+    "dateFirstAdded" : "2012-12-31",
+    "cik" : "0001551152",
+    "founded" : "2013 (1888)"
+}, ...
+]
 ```
 ----
 ## GET /v3/nasdaq_constituent <a name="0x11bf4ecec2691ca58a89c76ad0b2d0bb1ac674dff3589ece923863ab8b082071"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Returns Companies in the Nasdaq 100, such as DocuSign and Zoom.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/list-of-nasdaq-companies
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6749,7 +6876,8 @@ You'll need the **Endpoint ID** to call this endpoint.
 
 ```solidity
 None
-```[Fixed Parameters](https://docs.api3.org/pre-alpha/airnode/specifications/ois.html#_5-3-fixedoperationparameters)
+```
+[Fixed Parameters](https://docs.api3.org/pre-alpha/airnode/specifications/ois.html#_5-3-fixedoperationparameters)
 
 ```solidity
 
@@ -6758,14 +6886,33 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "ZM",
+    "name" : "Zoom Video Communications Inc",
+    "sector" : "Communication Services",
+    "subSector" : "Communication Services",
+    "headQuarter" : "San Jose, CALIFORNIA",
+    "dateFirstAdded" : "2019-04-18",
+    "cik" : "0001585521",
+    "founded" : "2019-04-18"
+  }, {
+    "symbol" : "ADP",
+    "name" : "Automatic Data Processing Inc",
+    "sector" : "Industrials",
+    "subSector" : "Industrials",
+    "headQuarter" : "Roseland, NEW JERSEY",
+    "dateFirstAdded" : "1961-09-01",
+    "cik" : "0000008670",
+    "founded" : "1961-09-01"
+  }, ...
+]
 ```
 ----
 ## GET /v3/dowjones_constituent <a name="0x704e6c91c060c739593b0c5c9c5b0a6bf6f75f6e158ee52e561ab89e97d32955"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Returns Companies in the Dow Jones, such as Honeywell and Home Depot.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/list-of-dow-companies
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6775,7 +6922,8 @@ You'll need the **Endpoint ID** to call this endpoint.
 
 ```solidity
 None
-```[Fixed Parameters](https://docs.api3.org/pre-alpha/airnode/specifications/ois.html#_5-3-fixedoperationparameters)
+```
+[Fixed Parameters](https://docs.api3.org/pre-alpha/airnode/specifications/ois.html#_5-3-fixedoperationparameters)
 
 ```solidity
 
@@ -6784,14 +6932,33 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "HON",
+    "name" : "Honeywell International Inc",
+    "sector" : "Industrials",
+    "subSector" : "Industrials",
+    "headQuarter" : "Charlotte, NORTH CAROLINA",
+    "dateFirstAdded" : "1985-09-19",
+    "cik" : "0000773840",
+    "founded" : "1985-09-19"
+  }, {
+    "symbol" : "HD",
+    "name" : "Home Depot Inc",
+    "sector" : "Consumer Cyclical",
+    "subSector" : "Consumer Cyclical",
+    "headQuarter" : "Atlanta, GEORGIA",
+    "dateFirstAdded" : "1984-04-19",
+    "cik" : "0000354950",
+    "founded" : "1984-04-19"
+  }, ...
+]
 ```
 ----
 ## GET /v3/historical/dowjones_constituent <a name="0x05d201f310049da032a2f34e29bdfb3feee8195c69f347079321ad72063f8bcd"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+This endpoint keeps track of securities that have been removed or added to the Dow Jones index, which is one of the largest in the world.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-dow
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6806,14 +6973,31 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "dateAdded" : "August 31, 2020",
+    "addedSecurity" : "Salesforce.Com Inc",
+    "removedTicker" : "",
+    "removedSecurity" : "",
+    "date" : "2020-08-31",
+    "reason" : "Market capitalization change.",
+    "symbol" : "CRM"
+  }, {
+    "dateAdded" : "August 31, 2020",
+    "addedSecurity" : "",
+    "removedTicker" : "RTX",
+    "removedSecurity" : "Raytheon Technologies Corp",
+    "date" : "2020-08-31",
+    "reason" : "Market capitalization change",
+    "symbol" : "RTX"
+  }, ...
+]
 ```
 ----
 ## GET /v3/symbol/available-indexes <a name="0x2158b17f6d31a6170a437bc1beb48ae08d881094db07fd79af29ab70a7722607"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Stock Market Indexes (Dow Jones, Nasdaq, S&P 500) available for historical prices query.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/historical-index-price-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -6828,7 +7012,38 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "^DJI",
+    "name" : "Dow Jones Industrial Average",
+    "currency" : "USD",
+    "stockExchange" : "DJI",
+    "exchangeShortName" : "INDEX"
+  }, {
+    "symbol" : "^STI",
+    "name" : "STI Index",
+    "currency" : "SGD",
+    "stockExchange" : "SES",
+    "exchangeShortName" : "INDEX"
+  }, {
+    "symbol" : "^BVSP",
+    "name" : "IBOVESPA",
+    "currency" : "BRL",
+    "stockExchange" : "Sao Paolo",
+    "exchangeShortName" : "INDEX"
+  }, {
+    "symbol" : "^MXX",
+    "name" : "IPC MEXICO",
+    "currency" : "MXN",
+    "stockExchange" : "Mexico",
+    "exchangeShortName" : "INDEX"
+  }, {
+    "symbol" : "^GSPTSE",
+    "name" : "S&P/TSX Composite index",
+    "currency" : "CAD",
+    "stockExchange" : "Toronto",
+    "exchangeShortName" : "INDEX"
+  }, ...
+]
 ```
 ----
 ## GET /v3/symbol/available-euronext <a name="0x56e465973b2067f14a41fe3f7b8b649d9375bbed49fa69ca75f8109649dcde8c"></a>
