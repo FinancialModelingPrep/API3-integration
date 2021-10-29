@@ -6503,9 +6503,6 @@ year : YYYY
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
 ## GET /v4/balance-sheet-statement-bulk <a name="0xa384fa151c7c37df43b2ff2d6d4826917020619eddc1e3189fc9466d6735bec0"></a>
 
@@ -6526,9 +6523,6 @@ year : YYYY
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
 ## GET /v4/cash-flow-statement-bulk <a name="0x580da25ae71f4949fb50b296248250725e233a9e36b08d13d76e750e74c45dca"></a>
 
@@ -6549,9 +6543,6 @@ year : YYYY
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
 ## GET /v4/ratios-bulk <a name="0x57673de82ce3868af6195f0a77430aa7b0777ba7c5c2b0eb71db300440d1cd9f"></a>
 
@@ -6572,9 +6563,6 @@ year : YYYY
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
 ## GET /v4/key-metrics-bulk <a name="0xdb78e185aa7dba83fd8928085083cd5ef658a01726e20b4be5c7911fd1f89b04"></a>
 
@@ -6595,9 +6583,6 @@ year : YYYY
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
 ## GET /v4/earnings-surprises-bulk <a name="0xdc4284f0c390df12fdf19a3abae3a5bb528fb78b5103753adffb210dfa41d359"></a>
 
@@ -6617,9 +6602,6 @@ year : YYYY
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
 ## GET /v4/profile/all <a name="0x39941ed918f7be6be8523c5786ee8ef399e094b7d310966da18e91a2acf32042"></a>
 
@@ -6639,9 +6621,6 @@ None
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
 ## GET /v3/quotes/index <a name="0x53810b6bd02e8c55cb9bc1bb73bbf57005ea8049a049a9656a8877d1cd131fb2"></a>
 
@@ -7077,7 +7056,7 @@ None
     "marketCap" : 30423642112.00000000,
     "priceAvg50" : 9.91600000,
     "priceAvg200" : 10.13309000,
-    "volume" : 1998436, 
+    "volume" : 1998436,
     "avgVolume" : 1906909,
     "exhange" : "EURONEXT"
   }, {
@@ -7131,9 +7110,6 @@ None
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
 ## GET /v3/symbol/available-tsx <a name="0x4597f014d3e434ae9a7a6ecd01974dbfa8455074f461254fc4f85a7974f38133"></a>
 
@@ -7243,7 +7219,7 @@ None
 ----
 ## GET /v3/quotes/crypto <a name="0x94741d14f09d9de38d6735807f3d7d9bfc367ccd66a09aea0bd7747924125dd6"></a>
 
-Wide range of data feed for digital and Cryptocurrencies. 
+Wide range of data feed for digital and Cryptocurrencies.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/crypto-currency-free-api
 
@@ -7391,7 +7367,7 @@ None
 ----
 ## GET /v3/fx <a name="0x757cd231f1360e7c11b93e6190bf333e1bebe1baaab430712c5ac5a6ac6c769f"></a>
 
-Currency exchange rates (FX). 
+Currency exchange rates (FX).
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/currency-exchange-rate-free-api#Forex-Currency-Exchange-Rate-(FX)
 
@@ -7441,7 +7417,7 @@ None
 ----
 ## GET /v3/quotes/forex <a name="0xbfa94372a7570b36f07429fd80d3c872e4429677bf7d2aae8253d6735f933fa6"></a>
 
-All Real-time Forex Prices. 
+All Real-time Forex Prices.
 
 **Web2 Docs:** https://financialmodelingprep.com/developer/docs/currency-exchange-rate-free-api#Forex-Currency-Exchange-Rate-(FX)
 
@@ -7912,7 +7888,4 @@ None
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
