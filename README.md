@@ -7048,9 +7048,9 @@ None
 ----
 ## GET /v3/symbol/available-euronext <a name="0x56e465973b2067f14a41fe3f7b8b649d9375bbed49fa69ca75f8109649dcde8c"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+EuroNext available symbols for quotes and historical prices query.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/euronext-prices-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7065,14 +7065,59 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "EDF.PA",
+    "price" : 9.83400000,
+    "changesPercentage" : -0.83000000,
+    "change" : -0.08200000,
+    "dayLow" : 9.76000000,
+    "dayHigh" : 9.87600000,
+    "yearHigh" : 15.47500000,
+    "yearLow" : 8.93000000,
+    "marketCap" : 30423642112.00000000,
+    "priceAvg50" : 9.91600000,
+    "priceAvg200" : 10.13309000,
+    "volume" : 1998436, 
+    "avgVolume" : 1906909,
+    "exhange" : "EURONEXT"
+  }, {
+    "symbol" : "KIN.BR",
+    "price" : 56.50000000,
+    "changesPercentage" : -2.42000000,
+    "change" : -1.40000000,
+    "dayLow" : 56.90000000,
+    "dayHigh" : 57.80000000,
+    "yearHigh" : 62.30000000,
+    "yearLow" : 45.80000000,
+    "marketCap" : 1515691648.00000000,
+    "priceAvg50" : 57.90000000,
+    "priceAvg200" : 55.61608500,
+    "volume" : 11043,
+    "avgVolume" : 8817,
+    "exhange" : "EURONEXT"
+  }, {
+    "symbol" : "SCB.LS",
+    "price" : 1.21000000,
+    "changesPercentage" : 0E-8,
+    "change" : 0E-8,
+    "dayLow" : 1.21000000,
+    "dayHigh" : 1.21000000,
+    "yearHigh" : 2.94000000,
+    "yearLow" : 0.94000000,
+    "marketCap" : 1452000.00000000,
+    "priceAvg50" : 1.21000000,
+    "priceAvg200" : 1.23284720,
+    "volume" : 400,
+    "avgVolume" : 5,
+    "exhange" : "EURONEXT"
+  } ]
 ```
 ----
 ## GET /v3/quotes/euronext <a name="0x592362f7700ccf0b4d0ede614875dffe2ad89d3255971b0dc13ea2f0b3f512d8"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All Real-time EuroNext Prices.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/euronext-prices-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7092,9 +7137,9 @@ None
 ----
 ## GET /v3/symbol/available-tsx <a name="0x4597f014d3e434ae9a7a6ecd01974dbfa8455074f461254fc4f85a7974f38133"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+TSX available symbols for quotes and historical prices query.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/tsx-prices-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7109,14 +7154,45 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "PXF.TO",
+    "price" : 9.88000000,
+    "changesPercentage" : 0E-8,
+    "change" : 0E-8,
+    "dayLow" : 9.88000000,
+    "dayHigh" : 9.90000000,
+    "yearHigh" : 9.90000000,
+    "yearLow" : 9.88000000,
+    "marketCap" : null,
+    "priceAvg50" : 9.88000000,
+    "priceAvg200" : 9.88000000,
+    "volume" : 10600,
+    "avgVolume" : 10600,
+    "exhange" : "TSX"
+  }, {
+    "symbol" : "HTO-UN.TO",
+    "price" : null,
+    "changesPercentage" : 0E-8,
+    "change" : null,
+    "dayLow" : null,
+    "dayHigh" : null,
+    "yearHigh" : null,
+    "yearLow" : null,
+    "marketCap" : null,
+    "priceAvg50" : null,
+    "priceAvg200" : null,
+    "volume" : null,
+    "avgVolume" : null,
+    "exhange" : "TSX"
+  }, ...
+]
 ```
 ----
 ## GET /v3/quotes/tsx <a name="0x6c2991676ba0993fbbf340e8f5e759d13fd9228865542000087261a72203b9d1"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All Real-time TSX Prices.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/tsx-prices-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7131,14 +7207,45 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "PXF.TO",
+    "price" : 9.88000000,
+    "changesPercentage" : 0E-8,
+    "change" : 0E-8,
+    "dayLow" : 9.88000000,
+    "dayHigh" : 9.90000000,
+    "yearHigh" : 9.90000000,
+    "yearLow" : 9.88000000,
+    "marketCap" : null,
+    "priceAvg50" : 9.88000000,
+    "priceAvg200" : 9.88000000,
+    "volume" : 10600,
+    "avgVolume" : 10600,
+    "exhange" : "TSX"
+  }, {
+    "symbol" : "HTO-UN.TO",
+    "price" : null,
+    "changesPercentage" : 0E-8,
+    "change" : null,
+    "dayLow" : null,
+    "dayHigh" : null,
+    "yearHigh" : null,
+    "yearLow" : null,
+    "marketCap" : null,
+    "priceAvg50" : null,
+    "priceAvg200" : null,
+    "volume" : null,
+    "avgVolume" : null,
+    "exhange" : "TSX"
+  }, ...
+]
 ```
 ----
 ## GET /v3/quotes/crypto <a name="0x94741d14f09d9de38d6735807f3d7d9bfc367ccd66a09aea0bd7747924125dd6"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Wide range of data feed for digital and Cryptocurrencies. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/crypto-currency-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7153,14 +7260,75 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "USDTUSD",
+    "price" : 0.99820375,
+    "changesPercentage" : -0.32000000,
+    "change" : -0.00316005,
+    "dayLow" : 0.99450374,
+    "dayHigh" : 1.00587390,
+    "yearHigh" : 1.05720280,
+    "yearLow" : 0.96935344,
+    "marketCap" : 4617753088.00000000,
+    "priceAvg50" : 1.00136380,
+    "priceAvg200" : 1.00337120,
+    "volume" : 30541443072,
+    "avgVolume" : 25119813300,
+    "exhange" : "CRYPTO"
+  }, {
+    "symbol" : "FAIRUSD",
+    "price" : 0.03155686,
+    "changesPercentage" : 0E-8,
+    "change" : 0E-8,
+    "dayLow" : 0.03155686,
+    "dayHigh" : 0.03155686,
+    "yearHigh" : 0.13357686,
+    "yearLow" : 0.00455426,
+    "marketCap" : 1678630.00000000,
+    "priceAvg50" : 0.03155686,
+    "priceAvg200" : 0.03928259,
+    "volume" : 0,
+    "avgVolume" : 100,
+    "exhange" : "CRYPTO"
+  }, {
+    "symbol" : "MCOUSD",
+    "price" : 4.49133970,
+    "changesPercentage" : 0.41000000,
+    "change" : 0.01840120,
+    "dayLow" : 4.41920600,
+    "dayHigh" : 4.50886400,
+    "yearHigh" : 7.81482360,
+    "yearLow" : 1.87718930,
+    "marketCap" : 70935456.00000000,
+    "priceAvg50" : 4.47293850,
+    "priceAvg200" : 4.04858700,
+    "volume" : 15240037,
+    "avgVolume" : 13652794,
+    "exhange" : "CRYPTO"
+  }, {
+    "symbol" : "TAASUSD",
+    "price" : 0.52660996,
+    "changesPercentage" : 4.22000000,
+    "change" : 0.02130640,
+    "dayLow" : 0.49625230,
+    "dayHigh" : 0.53111005,
+    "yearHigh" : 1.77895630,
+    "yearLow" : 0.20213737,
+    "marketCap" : 4289765.00000000,
+    "priceAvg50" : 0.50530356,
+    "priceAvg200" : 0.87526520,
+    "volume" : 156,
+    "avgVolume" : 605,
+    "exhange" : "CRYPTO"
+  }, ...
+]
 ```
 ----
 ## GET /v3/symbol/available-cryptocurrencies <a name="0x3812e035581bceddaef8eeb58da8e7829263966849236a8548eb722ef1200cac"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Cryptocurrencies available pairs for historical prices query.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/cryptocurrency-historical-data-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7175,14 +7343,57 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+    "symbol" : "BTC/USD",
+    "historical" : [ {
+        "date" : "2020-01-10",
+        "open" : 7878.307617,
+        "high" : 8166.554199,
+        "low" : 7726.774902,
+        "close" : 8166.554199,
+        "volume" : 2.8714583843E10,
+        "unadjustedVolume" : 2.8714583843E10,
+        "change" : -288.24658,
+        "changePercent" : -3.659,
+        "vwap" : 8019.9611,
+        "label" : "January 10, 20",
+        "changeOverTime" : -0.03659
+      }, {
+        "date" : "2020-01-09",
+        "open" : 8082.295898,
+        "high" : 8082.295898,
+        "low" : 7842.403809,
+        "close" : 7879.071289,
+        "volume" : 2.4045990465E10,
+        "unadjustedVolume" : 2.4045990465E10,
+        "change" : 203.22461,
+        "changePercent" : 2.514,
+        "vwap" : 7934.59033,
+        "label" : "January 09, 20",
+        "changeOverTime" : 0.02514
+      }, {
+        "date" : "2020-01-08",
+        "open" : 8161.935547,
+        "high" : 8396.738281,
+        "low" : 7956.774414,
+        "close" : 8079.862793,
+        "volume" : 3.1672559264E10,
+        "unadjustedVolume" : 3.1672559264E10,
+        "change" : 82.07275,
+        "changePercent" : 1.006,
+        "vwap" : 8144.4585,
+        "label" : "January 08, 20",
+        "changeOverTime" : 0.01006
+      }, ...
+  ]
+}
 ```
 ----
 ## GET /v3/fx <a name="0x757cd231f1360e7c11b93e6190bf333e1bebe1baaab430712c5ac5a6ac6c769f"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Currency exchange rates (FX). 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/currency-exchange-rate-free-api#Forex-Currency-Exchange-Rate-(FX)
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7197,14 +7408,42 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "ticker" : "EUR/USD",
+    "bid" : "1.18382",
+    "ask" : "1.18386",
+    "open" : "1.18458",
+    "low" : "1.18193",
+    "high" : "1.18837",
+    "changes" : -0.062469398436573544,
+    "date" : "2020-09-06 20:41:57"
+  }, {
+    "ticker" : "USD/JPY",
+    "bid" : "106.283",
+    "ask" : "106.288",
+    "open" : "106.262",
+    "low" : "106.105",
+    "high" : "106.403",
+    "changes" : 0.02211514934783697,
+    "date" : "2020-09-06 20:41:57"
+  }, {
+    "ticker" : "GBP/USD",
+    "bid" : "1.32538",
+    "ask" : "1.32547",
+    "open" : "1.32659",
+    "low" : "1.32258",
+    "high" : "1.32916",
+    "changes" : -0.0878191453274833,
+    "date" : "2020-09-06 20:41:57"
+  }, ...
+]
 ```
 ----
 ## GET /v3/quotes/forex <a name="0xbfa94372a7570b36f07429fd80d3c872e4429677bf7d2aae8253d6735f933fa6"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All Real-time Forex Prices. 
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/currency-exchange-rate-free-api#Forex-Currency-Exchange-Rate-(FX)
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7219,14 +7458,42 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "ticker" : "EUR/USD",
+    "bid" : "1.18382",
+    "ask" : "1.18386",
+    "open" : "1.18458",
+    "low" : "1.18193",
+    "high" : "1.18837",
+    "changes" : -0.062469398436573544,
+    "date" : "2020-09-06 20:41:57"
+  }, {
+    "ticker" : "USD/JPY",
+    "bid" : "106.283",
+    "ask" : "106.288",
+    "open" : "106.262",
+    "low" : "106.105",
+    "high" : "106.403",
+    "changes" : 0.02211514934783697,
+    "date" : "2020-09-06 20:41:57"
+  }, {
+    "ticker" : "GBP/USD",
+    "bid" : "1.32538",
+    "ask" : "1.32547",
+    "open" : "1.32659",
+    "low" : "1.32258",
+    "high" : "1.32916",
+    "changes" : -0.0878191453274833,
+    "date" : "2020-09-06 20:41:57"
+  }, ...
+]
 ```
 ----
 ## GET /v3/fx/{pair} <a name="0xdd1ffa0cd57648ce9f4959b3ac63d791a80234531cf852196177702e0af2255a"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Currency exchange rate such as Euro-dollars (EUR/USD)
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/currency-exchange-rate-free-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7235,20 +7502,29 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-pair		// Parameter Description...
+pair : String
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "ticker" : "EUR/USD",
+  "bid" : "1.16006",
+  "ask" : "1.16006",
+  "open" : "1.16831",
+  "low" : "1.15968",
+  "high" : "1.16902",
+  "changes" : -0.007061481969682592,
+  "date" : "2021-10-29 10:27:35"
+} ]
 ```
 ----
 ## GET /v3/symbol/available-forex-currency-pairs <a name="0x51dad5124d84a2a19618c33a7a49368a3bb9c972e7bedc5300315c9e69ecae61"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Forex available pairs for historical prices query.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/forex-historical-data-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7263,14 +7539,58 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+{
+    "symbol" : "JPY/USD",
+    "historical" : [ {
+        "date" : "2020-01-10",
+        "open" : 0.009133,
+        "high" : 0.009136,
+        "low" : 0.009118,
+        "close" : 0.009132,
+        "change" : 0.0,
+        "changePercent" : 0.0,
+        "label" : "January 10, 20",
+        "changeOverTime" : 0.0
+      }, {
+        "date" : "2020-01-09",
+        "open" : 0.00917,
+        "high" : 0.00917,
+        "low" : 0.009126,
+        "close" : 0.009172,
+        "change" : 0.0,
+        "changePercent" : 0.0,
+        "label" : "January 09, 20",
+        "changeOverTime" : 0.0
+      }, {
+        "date" : "2020-01-08",
+        "open" : 0.009261,
+        "high" : 0.009289,
+        "low" : 0.009167,
+        "close" : 0.009258,
+        "change" : 0.0,
+        "changePercent" : 0.0,
+        "label" : "January 08, 20",
+        "changeOverTime" : 0.0
+      }, {
+        "date" : "2020-01-07",
+        "open" : 0.009224,
+        "high" : 0.009237,
+        "low" : 0.009207,
+        "close" : 0.009225,
+        "change" : 0.0,
+        "changePercent" : 0.0,
+        "label" : "January 07, 20",
+        "changeOverTime" : 0.0
+      }, ...
+    ]
+}
 ```
 ----
 ## GET /v3/symbol/available-commodities <a name="0x40ac15c012581e2dce07187c589b19549e8c12429fd4b96f31b0d8ede5a1c6c3"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Commodities available symbols for quotes and historical prices query.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/commodities-prices-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7285,14 +7605,60 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "CLUSD",
+    "price" : 59.12000000,
+    "changesPercentage" : -0.74000000,
+    "change" : -0.44000000,
+    "dayLow" : 58.85000000,
+    "dayHigh" : 59.78000000,
+    "yearHigh" : 65.48000000,
+    "yearLow" : 0E-8,
+    "marketCap" : null,
+    "priceAvg50" : 59.56000000,
+    "priceAvg200" : 58.34536700,
+    "volume" : 553817,
+    "avgVolume" : 157504928,
+    "exhange" : "COMMODITY"
+  }, {
+    "symbol" : "ZGUSD",
+    "price" : 1566.00000000,
+    "changesPercentage" : 0.38000000,
+    "change" : 5.90000000,
+    "dayLow" : 1566.00000000,
+    "dayHigh" : 1566.00000000,
+    "yearHigh" : 1566.00000000,
+    "yearLow" : 1452.00000000,
+    "marketCap" : null,
+    "priceAvg50" : 1560.10000000,
+    "priceAvg200" : 1521.67500000,
+    "volume" : 0,
+    "avgVolume" : 1,
+    "exhange" : "COMMODITY"
+  }, {
+    "symbol" : "HGUSD",
+    "price" : 2.81000000,
+    "changesPercentage" : 0.29000000,
+    "change" : 0.00800000,
+    "dayLow" : 2.79550000,
+    "dayHigh" : 2.83600000,
+    "yearHigh" : 2.83600000,
+    "yearLow" : 2.75950000,
+    "marketCap" : null,
+    "priceAvg50" : 2.80200000,
+    "priceAvg200" : 2.79850000,
+    "volume" : 58820,
+    "avgVolume" : 23833272,
+    "exhange" : "COMMODITY"
+  }, ...
+]
 ```
 ----
 ## GET /v3/quotes/commodity <a name="0xf0b910a9f0fbfad2bf7171390fcb407f0f4609bcf2d0b0984a5393aa2ac2daef"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All real-time commodities prices.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/commodities-prices-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7307,14 +7673,60 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "CLUSD",
+    "price" : 59.12000000,
+    "changesPercentage" : -0.74000000,
+    "change" : -0.44000000,
+    "dayLow" : 58.85000000,
+    "dayHigh" : 59.78000000,
+    "yearHigh" : 65.48000000,
+    "yearLow" : 0E-8,
+    "marketCap" : null,
+    "priceAvg50" : 59.56000000,
+    "priceAvg200" : 58.34536700,
+    "volume" : 553817,
+    "avgVolume" : 157504928,
+    "exhange" : "COMMODITY"
+  }, {
+    "symbol" : "ZGUSD",
+    "price" : 1566.00000000,
+    "changesPercentage" : 0.38000000,
+    "change" : 5.90000000,
+    "dayLow" : 1566.00000000,
+    "dayHigh" : 1566.00000000,
+    "yearHigh" : 1566.00000000,
+    "yearLow" : 1452.00000000,
+    "marketCap" : null,
+    "priceAvg50" : 1560.10000000,
+    "priceAvg200" : 1521.67500000,
+    "volume" : 0,
+    "avgVolume" : 1,
+    "exhange" : "COMMODITY"
+  }, {
+    "symbol" : "HGUSD",
+    "price" : 2.81000000,
+    "changesPercentage" : 0.29000000,
+    "change" : 0.00800000,
+    "dayLow" : 2.79550000,
+    "dayHigh" : 2.83600000,
+    "yearHigh" : 2.83600000,
+    "yearLow" : 2.75950000,
+    "marketCap" : null,
+    "priceAvg50" : 2.80200000,
+    "priceAvg200" : 2.79850000,
+    "volume" : 58820,
+    "avgVolume" : 23833272,
+    "exhange" : "COMMODITY"
+  }, ...
+]
 ```
 ----
 ## GET /v3/symbol/available-etfs <a name="0x9d55f88adb0b1d7bb63f638926153f6e8068c43c142a6eb14175d1cbb7843d55"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+ETF available symbols for quotes and historical prices query.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/etf-prices-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7329,14 +7741,50 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "RODI",
+  "name" : "Barclays Return on Disability ETN",
+  "currency" : "USD",
+  "stockExchange" : "BATS",
+  "exchangeShortName" : "ETF"
+}, {
+  "symbol" : "VFMO",
+  "name" : "Vanguard U.S. Momentum Factor ETF ETF Shares",
+  "currency" : "USD",
+  "stockExchange" : "BATS Exchange",
+  "exchangeShortName" : "ETF"
+}, {
+  "symbol" : "DDWM",
+  "name" : "WisdomTree Dynamic Currency Hedged International Equity Fund",
+  "currency" : "USD",
+  "stockExchange" : "BATS Exchange",
+  "exchangeShortName" : "ETF"
+}, {
+  "symbol" : "DAPR",
+  "name" : null,
+  "currency" : "USD",
+  "stockExchange" : "New York Stock Exchange",
+  "exchangeShortName" : "ETF"
+}, {
+  "symbol" : "REM",
+  "name" : "iShares Mortgage Real Estate Capped ETF",
+  "currency" : "USD",
+  "stockExchange" : "BATS Exchange",
+  "exchangeShortName" : "ETF"
+}, {
+  "symbol" : "PRNT",
+  "name" : "The 3D Printing ETF",
+  "currency" : "USD",
+  "stockExchange" : "BATS Exchange",
+  "exchangeShortName" : "ETF"
+}, ]
 ```
 ----
 ## GET /v3/quotes/etf <a name="0xc30478970247c62b2cbac7cf912008dcee51785e5527bee0a31d042e98f4b764"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All Real-time ETF Prices.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/etf-prices-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7351,14 +7799,60 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+    "symbol" : "SPHQ",
+    "price" : 36.94000000,
+    "changesPercentage" : -0.16000000,
+    "change" : -0.06000000,
+    "dayLow" : 36.89650000,
+    "dayHigh" : 37.13020000,
+    "yearHigh" : 37.13020000,
+    "yearLow" : 28.40000000,
+    "marketCap" : null,
+    "priceAvg50" : 37.00000000,
+    "priceAvg200" : 34.16413000,
+    "volume" : 200863,
+    "avgVolume" : 326940,
+    "exhange" : "ETF"
+  }, {
+    "symbol" : "GULF",
+    "price" : 20.00000000,
+    "changesPercentage" : -0.07000000,
+    "change" : -0.01500000,
+    "dayLow" : 20.00000000,
+    "dayHigh" : 20.05000000,
+    "yearHigh" : 21.84000000,
+    "yearLow" : 19.13000000,
+    "marketCap" : null,
+    "priceAvg50" : 20.01500000,
+    "priceAvg200" : 19.99145000,
+    "volume" : 1302,
+    "avgVolume" : 5080,
+    "exhange" : "ETF"
+  }, {
+    "symbol" : "RDVY",
+    "price" : 36.00000000,
+    "changesPercentage" : -0.50000000,
+    "change" : -0.18200000,
+    "dayLow" : 35.95000000,
+    "dayHigh" : 36.32000000,
+    "yearHigh" : 36.32000000,
+    "yearLow" : 27.41000000,
+    "marketCap" : null,
+    "priceAvg50" : 36.18200000,
+    "priceAvg200" : 32.66533300,
+    "volume" : 239088,
+    "avgVolume" : 259983,
+    "exhange" : "ETF"
+  }, ...
+]
 ```
 ----
 ## GET /v3/symbol/available-mutual-funds <a name="0x09fa92ec3dfd92f9edbb3c30fa07b311f436341036392d17422c556febc8578d"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+Mutual Funds available symbols for quotes and historical prices query.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/mutual-fund-prices-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -7373,14 +7867,38 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ {
+  "symbol" : "VGIVX",
+  "name" : "Vanguard Whitehall Funds - Vanguard Emerging Markets Government Bond ETF",
+  "currency" : "USD",
+  "stockExchange" : "Nasdaq Capital Market",
+  "exchangeShortName" : "MUTUAL_FUND"
+}, {
+  "symbol" : "RAIIX",
+  "name" : "Manning & Napier Rainier International Discovery Series Class I",
+  "currency" : "USD",
+  "stockExchange" : "Nasdaq Capital Market",
+  "exchangeShortName" : "MUTUAL_FUND"
+}, {
+  "symbol" : "NWGSX",
+  "name" : "Nationwide WCM Focused Small Cap Fund Institutional Service Class",
+  "currency" : "USD",
+  "stockExchange" : "Nasdaq Capital Market",
+  "exchangeShortName" : "MUTUAL_FUND"
+}, {
+  "symbol" : "FLCGX",
+  "name" : "Meeder Quantex Fund Retail Class",
+  "currency" : "USD",
+  "stockExchange" : "Nasdaq Capital Market",
+  "exchangeShortName" : "MUTUAL_FUND"
+}, ]
 ```
 ----
 ## GET /v3/quotes/mutual_fund <a name="0x78abc827d77172880ec0137590c4228197198670ddf78da142d4f0de45915773"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+All real-time mutual funds prices.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs/mutual-fund-prices-api
 
 You'll need the **Endpoint ID** to call this endpoint.
 
