@@ -2330,9 +2330,9 @@ limit : Number
 ----
 ## GET /v3/get-all-countries <a name="0x55de15995bf3086d8eb2e95be132c8e8fc683e7360f8f0d464aecc46a7ff38e0"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
+List of countries.
 
-**Web2 Docs:** {{ URL to endpoint documentation }}
+**Web2 Docs:** https://financialmodelingprep.com/developer/docs#Stock-Screener
 
 You'll need the **Endpoint ID** to call this endpoint.
 
@@ -2347,7 +2347,15 @@ None
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
 ```json
-{ Add example response json here }
+[ "US", "MX", "BR", "GB", "CN", "FI", "NL", "SG", "IN", "CA", "ZA", 
+"BM", "DE", "IE", "CH", "LU", "IL", "HK", "TW", "ES", "FR", "MC", 
+"GR", "KR", "PR", "SE", "AU", "RU", "KY", "CL", "CO", "DK", "BE", 
+"JP", "AR", "UY", "CZ", "VI", "JE", "PA", "TH", "ID", "IT", "TR", 
+"PH", "CY", "GG", "MO", "NZ", "NO", "PE", "CR", "BS", "PT", "SN", 
+"CI", "IS", "MA", "CW", "IM", "GA", "ZM", "CK", "VG", "AE", "JO", 
+"MT", "AT", "PL", "FO", "LI", "GI", "AZ", "FK", "UA", "MY", "MU",
+"TC", "NG", "MN", "TG", "GE", "VN", "HU", "KH", "SB", "PG", "BB", 
+"BD", "DO", "SK", "AI", "LT", "BG" ]
 ```
 ----
 ## GET /v3/profile/{symbol} <a name="0xc77379b6803bfb6a3bc8c17652916281c6c687fc9e7d50a6f4c9e6ba56715dca"></a>
@@ -4884,10 +4892,6 @@ symbol : Company Symbol, ex. AAPL
 ----
 ## GET /v3/quotes/{exchange} <a name="0xd5deebc79e31c9eea9506ac8086c96d82793d1b17509b4c9621a2b038808c3d5"></a>
 
-{{ Describe the endpoint. Explain what it does and, if possible, deep link to the Web2 documentation. }}
-
-**Web2 Docs:** {{ URL to endpoint documentation }}
-
 You'll need the **Endpoint ID** to call this endpoint.
 
 **Endpoint ID:** 0xd5deebc79e31c9eea9506ac8086c96d82793d1b17509b4c9621a2b038808c3d5
@@ -4895,14 +4899,11 @@ You'll need the **Endpoint ID** to call this endpoint.
 [Request Parameters](https://docs.api3.org/pre-alpha/protocols/request-response/request.html#request-parameters)
 
 ```solidity
-exchange		// Parameter Description...
+exchange | String
 ```
 
 [Response](https://docs.api3.org/pre-alpha/airnode/specifications/reserved-parameters.html#path)
 
-```json
-{ Add example response json here }
-```
 ----
 ## GET /v3/historical-chart/1min/{symbol} <a name="0xd00d92abb1348429ed9b5ab9c41646ea21a8618b9ff7b38b41e3cc6b894e06f3"></a>
 
